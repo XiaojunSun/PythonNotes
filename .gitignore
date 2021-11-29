@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+_book
+_bookdown_files
+rsconnect
+.vscode
+preamble.tex
+_LearnPython
+_build.sh
+_output.yml
+_bookdown.yml
+PythonNotes.Rproj
+*.Rmd
+*.md
+*.bib
