@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 程序控制流程 | 我的Python笔记</title>
+  <meta name="description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 程序控制流程 | 我的Python笔记" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="github-repo" content="XiaojunSun/PythonNotes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 程序控制流程 | 我的Python笔记" />
+  
+  <meta name="twitter:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  
+
+<meta name="author" content="Xiaojun Sun" />
+
+
+<meta name="date" content="2021-11-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="build-env.html"/>
+<link rel="next" href="built-in-type.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">我的Python笔记</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="build-env.html"><a href="build-env.html"><i class="fa fa-check"></i><b>1</b> 搭建Python运行环境</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="build-env.html"><a href="build-env.html#安装anaconda"><i class="fa fa-check"></i><b>1.1</b> 安装Anaconda</a></li>
+<li class="chapter" data-level="1.2" data-path="build-env.html"><a href="build-env.html#环境管理"><i class="fa fa-check"></i><b>1.2</b> 环境管理</a></li>
+<li class="chapter" data-level="1.3" data-path="build-env.html"><a href="build-env.html#包的管理"><i class="fa fa-check"></i><b>1.3</b> 包的管理</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="build-env.html"><a href="build-env.html#搜索包"><i class="fa fa-check"></i><b>1.3.1</b> 搜索包</a></li>
+<li class="chapter" data-level="1.3.2" data-path="build-env.html"><a href="build-env.html#安装包"><i class="fa fa-check"></i><b>1.3.2</b> 安装包</a></li>
+<li class="chapter" data-level="1.3.3" data-path="build-env.html"><a href="build-env.html#更新包"><i class="fa fa-check"></i><b>1.3.3</b> 更新包</a></li>
+<li class="chapter" data-level="1.3.4" data-path="build-env.html"><a href="build-env.html#卸载包"><i class="fa fa-check"></i><b>1.3.4</b> 卸载包</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="build-env.html"><a href="build-env.html#jupyter-notebook"><i class="fa fa-check"></i><b>1.4</b> Jupyter Notebook</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="build-env.html"><a href="build-env.html#jupyter-notebook常用技巧"><i class="fa fa-check"></i><b>1.4.1</b> Jupyter Notebook常用技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="build-env.html"><a href="build-env.html#ipython简介"><i class="fa fa-check"></i><b>1.5</b> IPython简介</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="build-env.html"><a href="build-env.html#帮助"><i class="fa fa-check"></i><b>1.5.1</b> 帮助</a></li>
+<li class="chapter" data-level="1.5.2" data-path="build-env.html"><a href="build-env.html#tab补全"><i class="fa fa-check"></i><b>1.5.2</b> Tab补全</a></li>
+<li class="chapter" data-level="1.5.3" data-path="build-env.html"><a href="build-env.html#自省"><i class="fa fa-check"></i><b>1.5.3</b> 自省</a></li>
+<li class="chapter" data-level="1.5.4" data-path="build-env.html"><a href="build-env.html#中断运行的代码"><i class="fa fa-check"></i><b>1.5.4</b> 中断运行的代码</a></li>
+<li class="chapter" data-level="1.5.5" data-path="build-env.html"><a href="build-env.html#魔术命令"><i class="fa fa-check"></i><b>1.5.5</b> 魔术命令</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="build-env.html"><a href="build-env.html#pycharm"><i class="fa fa-check"></i><b>1.6</b> PyCharm</a></li>
+<li class="chapter" data-level="1.7" data-path="build-env.html"><a href="build-env.html#运行python程序"><i class="fa fa-check"></i><b>1.7</b> 运行Python程序</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2</b> 程序控制流程</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="control-flow.html"><a href="control-flow.html#if语句"><i class="fa fa-check"></i><b>2.1</b> if语句</a></li>
+<li class="chapter" data-level="2.2" data-path="control-flow.html"><a href="control-flow.html#while循环"><i class="fa fa-check"></i><b>2.2</b> while循环</a></li>
+<li class="chapter" data-level="2.3" data-path="control-flow.html"><a href="control-flow.html#for循环"><i class="fa fa-check"></i><b>2.3</b> for循环</a></li>
+<li class="chapter" data-level="2.4" data-path="control-flow.html"><a href="control-flow.html#continue"><i class="fa fa-check"></i><b>2.4</b> continue</a></li>
+<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html#pass"><i class="fa fa-check"></i><b>2.5</b> pass</a></li>
+<li class="chapter" data-level="2.6" data-path="control-flow.html"><a href="control-flow.html#三元表达式"><i class="fa fa-check"></i><b>2.6</b> 三元表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="built-in-type.html"><a href="built-in-type.html"><i class="fa fa-check"></i><b>3</b> 内置数据类型（一）</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="built-in-type.html"><a href="built-in-type.html#none"><i class="fa fa-check"></i><b>3.1</b> None</a></li>
+<li class="chapter" data-level="3.2" data-path="built-in-type.html"><a href="built-in-type.html#字符串"><i class="fa fa-check"></i><b>3.2</b> 字符串</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="built-in-type.html"><a href="built-in-type.html#字符串格式化语法"><i class="fa fa-check"></i><b>3.2.1</b> 字符串格式化语法</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
+<li class="chapter" data-level="3.6.2" data-path="built-in-type.html"><a href="built-in-type.html#比较运算符"><i class="fa fa-check"></i><b>3.6.2</b> 比较运算符</a></li>
+<li class="chapter" data-level="3.6.3" data-path="built-in-type.html"><a href="built-in-type.html#逻辑运算符"><i class="fa fa-check"></i><b>3.6.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="3.6.4" data-path="built-in-type.html"><a href="built-in-type.html#成员运算符"><i class="fa fa-check"></i><b>3.6.4</b> 成员运算符</a></li>
+<li class="chapter" data-level="3.6.5" data-path="built-in-type.html"><a href="built-in-type.html#身份运算符"><i class="fa fa-check"></i><b>3.6.5</b> 身份运算符</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
+<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
+<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
+<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="module.html"><a href="module.html#命名空间和作用域"><i class="fa fa-check"></i><b>8.0.1</b> <span>命名空间和作用域</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="OOP.html"><a href="OOP.html"><i class="fa fa-check"></i><b>9</b> Python 面向对象</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="OOP.html"><a href="OOP.html#术语简介"><i class="fa fa-check"></i><b>9.1</b> 术语简介</a></li>
+<li class="chapter" data-level="9.2" data-path="OOP.html"><a href="OOP.html#创建类"><i class="fa fa-check"></i><b>9.2</b> 创建类</a></li>
+<li class="chapter" data-level="9.3" data-path="OOP.html"><a href="OOP.html#类对象"><i class="fa fa-check"></i><b>9.3</b> 类对象</a></li>
+<li class="chapter" data-level="9.4" data-path="OOP.html"><a href="OOP.html#实例对象"><i class="fa fa-check"></i><b>9.4</b> 实例对象</a></li>
+<li class="chapter" data-level="9.5" data-path="OOP.html"><a href="OOP.html#方法对象"><i class="fa fa-check"></i><b>9.5</b> 方法对象</a></li>
+<li class="chapter" data-level="9.6" data-path="OOP.html"><a href="OOP.html#类和实例变量"><i class="fa fa-check"></i><b>9.6</b> 类和实例变量</a></li>
+<li class="chapter" data-level="9.7" data-path="OOP.html"><a href="OOP.html#python内置类属性"><i class="fa fa-check"></i><b>9.7</b> Python内置类属性</a></li>
+<li class="chapter" data-level="9.8" data-path="OOP.html"><a href="OOP.html#补充说明"><i class="fa fa-check"></i><b>9.8</b> 补充说明</a></li>
+<li class="chapter" data-level="9.9" data-path="OOP.html"><a href="OOP.html#类的继承"><i class="fa fa-check"></i><b>9.9</b> 类的继承</a></li>
+<li class="chapter" data-level="9.10" data-path="OOP.html"><a href="OOP.html#私有变量"><i class="fa fa-check"></i><b>9.10</b> 私有变量</a></li>
+<li class="chapter" data-level="9.11" data-path="OOP.html"><a href="OOP.html#元类"><i class="fa fa-check"></i><b>9.11</b> 元类</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="functional.html"><a href="functional.html"><i class="fa fa-check"></i><b>10</b> 函数式编程</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
+<li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
+<li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
+<li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="specialized-data-types.html"><a href="specialized-data-types.html"><i class="fa fa-check"></i><b>11</b> 专门数据类型</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="specialized-data-types.html"><a href="specialized-data-types.html#日期和时间"><i class="fa fa-check"></i><b>11.1</b> 日期和时间</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>13.0.1</b> 文件和操作系统</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">我的Python笔记</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="control-flow" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> 程序控制流程</h1>
+<div id="if语句" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> if语句</h2>
+<p>Python中if语句的一般形式如下所示：</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="control-flow.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition_1:</span>
+<span id="cb20-2"><a href="control-flow.html#cb20-2" aria-hidden="true" tabindex="-1"></a>    statement_block_1</span>
+<span id="cb20-3"><a href="control-flow.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> condition_2:</span>
+<span id="cb20-4"><a href="control-flow.html#cb20-4" aria-hidden="true" tabindex="-1"></a>    statement_block_2</span>
+<span id="cb20-5"><a href="control-flow.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb20-6"><a href="control-flow.html#cb20-6" aria-hidden="true" tabindex="-1"></a>    statement_block_3</span></code></pre></div>
+<p>注意：</p>
+<ul>
+<li>每个条件后面要使用冒号 <strong>:</strong>，表示接下来是满足条件后要执行的语句块。</li>
+<li>使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块(block)。Python语言依靠冒号与缩进来表示“从属关系”。</li>
+<li>在Python中没有switch – case语句。</li>
+</ul>
+</div>
+<div id="while循环" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> while循环</h2>
+<p>从 while 后面的冒号开始，下面相对while存在缩进的连续代码均属于“循环体”，将会被重复执行。而从第一个不相对while缩进的语句开始，后面的代码都不再属于这个while的循环体；对于这些语句，只有当while循环彻底结束后才会被执行到。</p>
+<p>while 循环在每执行一次循环体后，都会重新检查循环条件。如果循环条件仍然成立则再次执行循环体，否则结束循环。因此假如循环体中的代码不可能改变循环条件的判断结果，那么该循环将永远执行下去，成为“死循环”。构造死循环正规的方式是 <code>while True</code> 。</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="control-flow.html#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">256</span><span class="op">;</span> total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb21-2"><a href="control-flow.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb21-3"><a href="control-flow.html#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> total <span class="op">&gt;</span> <span class="dv">500</span>:</span>
+<span id="cb21-4"><a href="control-flow.html#cb21-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb21-5"><a href="control-flow.html#cb21-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> x</span>
+<span id="cb21-6"><a href="control-flow.html#cb21-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x<span class="op">//</span><span class="dv">2</span></span>
+<span id="cb21-7"><a href="control-flow.html#cb21-7" aria-hidden="true" tabindex="-1"></a>total</span></code></pre></div>
+<pre><code>## 504</code></pre>
+<p>break语句可以跳出当前循环。在多重循环中，一个break语句只能跳出它所在的那一层循环，并不会一次跳出所有循环。continue语句则是直接进入下一次循环、跳过循环体后面的剩余代码。</p>
+</div>
+<div id="for循环" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> for循环</h2>
+<p>for循环是在一个集合（列表或元组）中进行迭代。循环语句可能带有一个 <code>else</code> 子句；它会在循环遍历完列表 (使用 <code>for</code>) 或是在条件变为假 (使用 <code>while</code>) 的时候被执行，但是不会在循环被 <a href="https://docs.python.org/zh-cn/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops"><code>break</code></a> 语句终止时被执行。</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="control-flow.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>, <span class="dv">6</span>):</span>
+<span id="cb23-2"><a href="control-flow.html#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> w <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n):</span>
+<span id="cb23-3"><a href="control-flow.html#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> w <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb23-4"><a href="control-flow.html#cb23-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(n, <span class="st">&#39;=&#39;</span>, w, <span class="st">&#39;*&#39;</span>, n <span class="op">//</span> w)</span>
+<span id="cb23-5"><a href="control-flow.html#cb23-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb23-6"><a href="control-flow.html#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb23-7"><a href="control-flow.html#cb23-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># loop fell through without finding a factor</span></span>
+<span id="cb23-8"><a href="control-flow.html#cb23-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(n, <span class="st">&#39;is a prime number&#39;</span>)</span></code></pre></div>
+<pre><code>## 4 = 2 * 2
+## 5 is a prime number</code></pre>
+<p>其中，range函数返回一个迭代器，它产生一个均匀分布的整数序列，使用方法为：range(start, stop[, step])。比如：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="control-flow.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 产生0到4的整数</span></span>
+<span id="cb25-2"><a href="control-flow.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb25-3"><a href="control-flow.html#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb25-4"><a href="control-flow.html#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="control-flow.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 产生0到6的整偶数</span></span></code></pre></div>
+<pre><code>## 0
+## 1
+## 2
+## 3
+## 4</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="control-flow.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">2</span>):</span>
+<span id="cb27-2"><a href="control-flow.html#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<pre><code>## 0
+## 2
+## 4</code></pre>
+<p><strong>注意</strong>：如果在循环内需要修改序列中的值（比如重复某些选中的元素），推荐你先拷贝一份副本，切片操作使这件事非常简单：</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="control-flow.html#cb29-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;my&quot;</span>, <span class="st">&quot;darling&quot;</span>]</span>
+<span id="cb29-2"><a href="control-flow.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> w <span class="kw">in</span> words[:]:  <span class="co"># Loop over a slice copy of the entire list.</span></span>
+<span id="cb29-3"><a href="control-flow.html#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(w) <span class="op">&gt;</span> <span class="dv">6</span>:</span>
+<span id="cb29-4"><a href="control-flow.html#cb29-4" aria-hidden="true" tabindex="-1"></a>        words.insert(<span class="dv">0</span>, w)</span></code></pre></div>
+<p>如果写成 <code>for w in words:</code>，这个示例就会创建无限长的列表。</p>
+</div>
+<div id="continue" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> continue</h2>
+<p><a href="https://docs.python.org/zh-cn/3/reference/simple_stmts.html#continue"><code>continue</code></a> 在语法上只会出现于<code>for</code>或 <code>while</code> 循环所嵌套的代码，它会继续执行最近的外层循环的下一个轮次。</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="control-flow.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>, <span class="dv">6</span>):</span>
+<span id="cb30-2"><a href="control-flow.html#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb30-3"><a href="control-flow.html#cb30-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Find a even number: &#39;</span>, n)</span>
+<span id="cb30-4"><a href="control-flow.html#cb30-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb30-5"><a href="control-flow.html#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Find a odd number: &#39;</span>, n)</span></code></pre></div>
+<pre><code>## Find a odd number:  3
+## Find a even number:  4
+## Find a odd number:  5</code></pre>
+</div>
+<div id="pass" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> pass</h2>
+<p><code>pass</code>是空语句，是为了保持程序结构的完整性，它不做任何事情，一般用做占位语句。</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="control-flow.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb32-2"><a href="control-flow.html#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;negative!&#39;</span>)</span>
+<span id="cb32-3"><a href="control-flow.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb32-4"><a href="control-flow.html#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb32-5"><a href="control-flow.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb32-6"><a href="control-flow.html#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;positive!&#39;</span>)</span></code></pre></div>
+</div>
+<div id="三元表达式" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> 三元表达式</h2>
+<p>Python中的三元表达式可以将if-else语句放到一行里。语法为：</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="control-flow.html#cb33-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> true<span class="op">-</span>expr <span class="cf">if</span> condition <span class="cf">else</span> false<span class="op">-</span>expr</span></code></pre></div>
+<p>举例：</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="control-flow.html#cb34-1" aria-hidden="true" tabindex="-1"></a>cond <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb34-2"><a href="control-flow.html#cb34-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">100</span> <span class="cf">if</span> cond <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb34-3"><a href="control-flow.html#cb34-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## 100</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="build-env.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="built-in-type.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-29" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -311,23 +311,23 @@ div.csl-indent {
 <div id="迭代器" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> 迭代器</h2>
 <p>你可能注意到大多数容器对象都可以用 <a href="https://yiyibooks.cn/__trs__/xx/python_352/reference/compound_stmts.html#for"><code>for</code></a> 遍历：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="container.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
-<span id="cb1-2"><a href="container.html#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
-<span id="cb1-3"><a href="container.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>):</span>
-<span id="cb1-4"><a href="container.html#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
-<span id="cb1-5"><a href="container.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> {<span class="st">&#39;one&#39;</span>:<span class="dv">1</span>, <span class="st">&#39;two&#39;</span>:<span class="dv">2</span>}:</span>
-<span id="cb1-6"><a href="container.html#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span>
-<span id="cb1-7"><a href="container.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">&quot;123&quot;</span>:</span>
-<span id="cb1-8"><a href="container.html#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(char)</span>
-<span id="cb1-9"><a href="container.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;myfile.txt&quot;</span>):</span>
-<span id="cb1-10"><a href="container.html#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line, end<span class="op">=</span><span class="st">&#39;&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb175-1"><a href="container.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
+<span id="cb175-2"><a href="container.html#cb175-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
+<span id="cb175-3"><a href="container.html#cb175-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>):</span>
+<span id="cb175-4"><a href="container.html#cb175-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
+<span id="cb175-5"><a href="container.html#cb175-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> {<span class="st">&#39;one&#39;</span>:<span class="dv">1</span>, <span class="st">&#39;two&#39;</span>:<span class="dv">2</span>}:</span>
+<span id="cb175-6"><a href="container.html#cb175-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span>
+<span id="cb175-7"><a href="container.html#cb175-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">&quot;123&quot;</span>:</span>
+<span id="cb175-8"><a href="container.html#cb175-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(char)</span>
+<span id="cb175-9"><a href="container.html#cb175-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;myfile.txt&quot;</span>):</span>
+<span id="cb175-10"><a href="container.html#cb175-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line, end<span class="op">=</span><span class="st">&#39;&#39;</span>)</span></code></pre></div>
 <p>这种访问风格清晰、 简洁又方便。迭代器的用法在 Python 中普遍而且统一。在后台，for语句调用容器对象的<code>iter()</code>方法。该函数返回一个定义了<code>__next__()</code>方法的迭代器对象，它一次访问容器中的一个元素。没有后续的元素时，<code>__next__()</code> 会引发<code>StopIteration</code>异常，告诉 <code>for</code>循环停止迭代。你可以使用内建的 <code>next()</code>来调用<code>__next__()</code>，例子如下：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="container.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
-<span id="cb2-2"><a href="container.html#cb2-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
-<span id="cb2-3"><a href="container.html#cb2-3" aria-hidden="true" tabindex="-1"></a>it <span class="op">=</span> <span class="bu">iter</span>(s)</span>
-<span id="cb2-4"><a href="container.html#cb2-4" aria-hidden="true" tabindex="-1"></a>it</span></code></pre></div>
-<pre><code>## &lt;str_iterator object at 0x0000000026647700&gt;</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="container.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(it),<span class="bu">next</span>(it),<span class="bu">next</span>(it)</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="container.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb176-2"><a href="container.html#cb176-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
+<span id="cb176-3"><a href="container.html#cb176-3" aria-hidden="true" tabindex="-1"></a>it <span class="op">=</span> <span class="bu">iter</span>(s)</span>
+<span id="cb176-4"><a href="container.html#cb176-4" aria-hidden="true" tabindex="-1"></a>it</span></code></pre></div>
+<pre><code>## &lt;str_iterator object at 0x0000000029EF7A90&gt;</code></pre>
+<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="container.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(it),<span class="bu">next</span>(it),<span class="bu">next</span>(it)</span></code></pre></div>
 <pre><code>## (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)</code></pre>
 
 </div>
@@ -379,6 +379,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-29" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -309,36 +309,36 @@ div.csl-indent {
 <div id="module" class="section level1" number="8">
 <h1><span class="header-section-number">Chapter 8</span> 模块</h1>
 <p>模块是一个包含Python定义和声明的文件。文件名就是模块名后跟文件后缀 .py 。在一个模块内部，模块名（作为一个字符串）可以通过全局变量 <code>__name__</code> 的值获得。例如，使用在当前目录下创建一个名为 fibo.py 的文件， 文件中含有以下内容：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="module.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fibo.py</span></span>
-<span id="cb6-2"><a href="module.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(n):</span>
-<span id="cb6-3"><a href="module.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
-<span id="cb6-4"><a href="module.html#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
-<span id="cb6-5"><a href="module.html#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, end<span class="op">=</span><span class="st">&#39; &#39;</span>)</span>
-<span id="cb6-6"><a href="module.html#cb6-6" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a<span class="op">+</span>b</span>
-<span id="cb6-7"><a href="module.html#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
-<span id="cb6-8"><a href="module.html#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="module.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib2(n):</span>
-<span id="cb6-10"><a href="module.html#cb6-10" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb6-11"><a href="module.html#cb6-11" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
-<span id="cb6-12"><a href="module.html#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
-<span id="cb6-13"><a href="module.html#cb6-13" aria-hidden="true" tabindex="-1"></a>        result.append(a)</span>
-<span id="cb6-14"><a href="module.html#cb6-14" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a<span class="op">+</span>b</span>
-<span id="cb6-15"><a href="module.html#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb180-1"><a href="module.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fibo.py</span></span>
+<span id="cb180-2"><a href="module.html#cb180-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(n):</span>
+<span id="cb180-3"><a href="module.html#cb180-3" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb180-4"><a href="module.html#cb180-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
+<span id="cb180-5"><a href="module.html#cb180-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, end<span class="op">=</span><span class="st">&#39; &#39;</span>)</span>
+<span id="cb180-6"><a href="module.html#cb180-6" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a<span class="op">+</span>b</span>
+<span id="cb180-7"><a href="module.html#cb180-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb180-8"><a href="module.html#cb180-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb180-9"><a href="module.html#cb180-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib2(n):</span>
+<span id="cb180-10"><a href="module.html#cb180-10" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb180-11"><a href="module.html#cb180-11" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb180-12"><a href="module.html#cb180-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
+<span id="cb180-13"><a href="module.html#cb180-13" aria-hidden="true" tabindex="-1"></a>        result.append(a)</span>
+<span id="cb180-14"><a href="module.html#cb180-14" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a<span class="op">+</span>b</span>
+<span id="cb180-15"><a href="module.html#cb180-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>导入该模块：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="module.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> fibo</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb181-1"><a href="module.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> fibo</span></code></pre></div>
 <p>模块名fibo被导入到当前符号表中，但是fibo中定义的函数名称不会直接导入当前工作表内。可以用模块名访问这些函数：</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="module.html#cb8-1" aria-hidden="true" tabindex="-1"></a>fibo.fib(<span class="dv">50</span>)</span>
-<span id="cb8-2"><a href="module.html#cb8-2" aria-hidden="true" tabindex="-1"></a>fibo.<span class="va">__name__</span>  <span class="co">#&#39;fibo&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb182-1"><a href="module.html#cb182-1" aria-hidden="true" tabindex="-1"></a>fibo.fib(<span class="dv">50</span>)</span>
+<span id="cb182-2"><a href="module.html#cb182-2" aria-hidden="true" tabindex="-1"></a>fibo.<span class="va">__name__</span>  <span class="co">#&#39;fibo&#39;</span></span></code></pre></div>
 <p>如果你想经常使用某个函数，你可以把它赋值给一个本地名称:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="module.html#cb9-1" aria-hidden="true" tabindex="-1"></a>myfib <span class="op">=</span> fibo.fib</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb183-1"><a href="module.html#cb183-1" aria-hidden="true" tabindex="-1"></a>myfib <span class="op">=</span> fibo.fib</span></code></pre></div>
 <p>模块可以包含可执行语句以及已定义的函数。这些语句通常用于初始化模块。只有在导入语句中第一次遇到模块名称时，才会执行。如果文件以脚本的方式执行，它们也会运行。</p>
 <p>每个模块都有自己的私有符号表，它被定义在模块中所有函数当作全局符号表一样使用。</p>
 <p>模块中可以导入其它模块。一般来说，习惯性地将所有 <code>import</code> 语句放在模块（或脚本）的开头，但这不是必须的。被导入的模块的名字存放在导入模块的全局符号表中。</p>
 <p>另外有一种<code>import</code>语句的变种，可以从一个模块直接将名称导入到当前符号表中。例如：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="module.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fibo <span class="im">import</span> fib, fib2</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb184-1"><a href="module.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fibo <span class="im">import</span> fib, fib2</span></code></pre></div>
 <p>一般情况下不建议使用<code>from fibo import *</code>这种导入方式，因为它会引入一系列未知的名称到解释器中，这很可能覆盖你已经定义的一些东西。</p>
 <p>使用<code>as</code>关键词，你可以给导入的名称重命名：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="module.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fibo <span class="im">import</span> fib <span class="im">as</span> fun1, fib2 <span class="im">as</span> fun2</span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb185-1"><a href="module.html#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fibo <span class="im">import</span> fib <span class="im">as</span> fun1, fib2 <span class="im">as</span> fun2</span></code></pre></div>
 <div id="以脚本的方式执行模块" class="section level4" number="8.0.0.1">
 <h4><span class="header-section-number">8.0.0.1</span> 以脚本的方式执行模块</h4>
 <p>一个 Python 源码文件除了可以被直接运行外，还可以作为模块（也就是库）被导入。不管是导入还是直接运行，最顶层的代码都会被运行（Python 用缩进来区分代码层次）。</p>
@@ -346,10 +346,10 @@ div.csl-indent {
 <p><a href="https://docs.python.org/zh-cn/3.7/library/__main__.html"><code>__main__</code></a> 是顶层代码执行的作用域的名称。模块的 <code>__name__</code> 在通过标准输入、脚本文件或是交互式命令读入的时候会等于 <code>__main__</code>。</p>
 <p>模块可以通过检查自己的 <code>__name__</code> 来得知是否运行在 main 作用域中，这使得模块可以在作为脚本或是通过 python -m 运行时条件性地执行一些代码，而在被 import 时不会执行。</p>
 <p>实现方式是在模块中添加<code>if __name__ == '__main__'</code> 代码块：</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="module.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb12-2"><a href="module.html#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> sys</span>
-<span id="cb12-3"><a href="module.html#cb12-3" aria-hidden="true" tabindex="-1"></a>    fib(<span class="bu">int</span>(sys.argv[<span class="dv">1</span>]))</span></code></pre></div>
-<p>简单的理解就是： 如果模块是被直接运行的，则代码块被运行，如果模块是被导入的，则代码块不被运行。<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb186-1"><a href="module.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb186-2"><a href="module.html#cb186-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> sys</span>
+<span id="cb186-3"><a href="module.html#cb186-3" aria-hidden="true" tabindex="-1"></a>    fib(<span class="bu">int</span>(sys.argv[<span class="dv">1</span>]))</span></code></pre></div>
+<p>简单的理解就是： 如果模块是被直接运行的，则代码块被运行，如果模块是被导入的，则代码块不被运行。<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <p>对软件包来说，通过加入 <code>__main__.py</code> 模块可以达到同样的效果，当使用 <code>-m</code> 运行模块时，其中的代码会被执行。</p>
 </div>
 <div id="编译好的模块" class="section level4" number="8.0.0.2">
@@ -361,16 +361,16 @@ div.csl-indent {
 <div id="标准模块" class="section level4" number="8.0.0.3">
 <h4><span class="header-section-number">8.0.0.3</span> 标准模块</h4>
 <p>Python附带了一个标准模块库，有单独的Python库参考手册。有一些模块内置于解释器中；它们提供对不属于语言核心但仍然内置的操作的访问，以提高效率或提供对系统调用等操作系统原语的访问。这些模块的集合是一个配置选项，它也取决于底层平台。例如，winreg 模块只在Windows操作系统上提供。一个特别值得注意的模块 sys，它被内嵌到每一个Python解释器中。变量 sys.ps1 和 sys.ps2 定义了主提示符和辅助提示符使用的字符串:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="module.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb13-2"><a href="module.html#cb13-2" aria-hidden="true" tabindex="-1"></a>sys.ps1</span>
-<span id="cb13-3"><a href="module.html#cb13-3" aria-hidden="true" tabindex="-1"></a>sys.ps2</span>
-<span id="cb13-4"><a href="module.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 注意：只有在交互式模式中，这两个变量才有定义</span></span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="module.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb187-2"><a href="module.html#cb187-2" aria-hidden="true" tabindex="-1"></a>sys.ps1</span>
+<span id="cb187-3"><a href="module.html#cb187-3" aria-hidden="true" tabindex="-1"></a>sys.ps2</span>
+<span id="cb187-4"><a href="module.html#cb187-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 注意：只有在交互式模式中，这两个变量才有定义</span></span></code></pre></div>
 </div>
 <div id="dir函数" class="section level4" number="8.0.0.4">
 <h4><span class="header-section-number">8.0.0.4</span> dir()函数</h4>
 <p>内置函数 dir() 用来找出模块中定义了哪些名称。它返回一个排好序的字符串列表：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="module.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(fibo)</span>
-<span id="cb14-2"><a href="module.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># [&#39;__name__&#39;, &#39;fib&#39;, &#39;fib2&#39;]</span></span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb188-1"><a href="module.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(fibo)</span>
+<span id="cb188-2"><a href="module.html#cb188-2" aria-hidden="true" tabindex="-1"></a><span class="co"># [&#39;__name__&#39;, &#39;fib&#39;, &#39;fib2&#39;]</span></span></code></pre></div>
 <p>如果不带参数， dir() 列出当前环境中已定义的名称。dir()不会列出内置的函数和变量的名称。</p>
 </div>
 <div id="包" class="section level4" number="8.0.0.5">
@@ -397,52 +397,52 @@ div.csl-indent {
 <li>Built-in(outtermost): Python <code>__builtin__</code> 模块。包含了内建的变量/关键字等。</li>
 </ul>
 <p>作用域的搜索顺序是：Local -&gt; Enclosing -&gt; Global -&gt; Built-in</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="module.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> scope_test():</span>
-<span id="cb15-2"><a href="module.html#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_local():</span>
-<span id="cb15-3"><a href="module.html#cb15-3" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;local spam&quot;</span></span>
-<span id="cb15-4"><a href="module.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="module.html#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_nonlocal():</span>
-<span id="cb15-6"><a href="module.html#cb15-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">nonlocal</span> spam</span>
-<span id="cb15-7"><a href="module.html#cb15-7" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;nonlocal spam&quot;</span></span>
-<span id="cb15-8"><a href="module.html#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="module.html#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_global():</span>
-<span id="cb15-10"><a href="module.html#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">global</span> spam</span>
-<span id="cb15-11"><a href="module.html#cb15-11" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;global spam&quot;</span></span>
-<span id="cb15-12"><a href="module.html#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-13"><a href="module.html#cb15-13" aria-hidden="true" tabindex="-1"></a>    spam <span class="op">=</span> <span class="st">&quot;test spam&quot;</span></span>
-<span id="cb15-14"><a href="module.html#cb15-14" aria-hidden="true" tabindex="-1"></a>    do_local()</span>
-<span id="cb15-15"><a href="module.html#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After local assignment:&quot;</span>, spam)</span>
-<span id="cb15-16"><a href="module.html#cb15-16" aria-hidden="true" tabindex="-1"></a>    do_nonlocal()</span>
-<span id="cb15-17"><a href="module.html#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After nonlocal assignment:&quot;</span>, spam)</span>
-<span id="cb15-18"><a href="module.html#cb15-18" aria-hidden="true" tabindex="-1"></a>    do_global()</span>
-<span id="cb15-19"><a href="module.html#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After global assignment:&quot;</span>, spam)</span>
-<span id="cb15-20"><a href="module.html#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="module.html#cb15-21" aria-hidden="true" tabindex="-1"></a>scope_test()</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="module.html#cb189-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> scope_test():</span>
+<span id="cb189-2"><a href="module.html#cb189-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_local():</span>
+<span id="cb189-3"><a href="module.html#cb189-3" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;local spam&quot;</span></span>
+<span id="cb189-4"><a href="module.html#cb189-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb189-5"><a href="module.html#cb189-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_nonlocal():</span>
+<span id="cb189-6"><a href="module.html#cb189-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">nonlocal</span> spam</span>
+<span id="cb189-7"><a href="module.html#cb189-7" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;nonlocal spam&quot;</span></span>
+<span id="cb189-8"><a href="module.html#cb189-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb189-9"><a href="module.html#cb189-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> do_global():</span>
+<span id="cb189-10"><a href="module.html#cb189-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">global</span> spam</span>
+<span id="cb189-11"><a href="module.html#cb189-11" aria-hidden="true" tabindex="-1"></a>        spam <span class="op">=</span> <span class="st">&quot;global spam&quot;</span></span>
+<span id="cb189-12"><a href="module.html#cb189-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb189-13"><a href="module.html#cb189-13" aria-hidden="true" tabindex="-1"></a>    spam <span class="op">=</span> <span class="st">&quot;test spam&quot;</span></span>
+<span id="cb189-14"><a href="module.html#cb189-14" aria-hidden="true" tabindex="-1"></a>    do_local()</span>
+<span id="cb189-15"><a href="module.html#cb189-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After local assignment:&quot;</span>, spam)</span>
+<span id="cb189-16"><a href="module.html#cb189-16" aria-hidden="true" tabindex="-1"></a>    do_nonlocal()</span>
+<span id="cb189-17"><a href="module.html#cb189-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After nonlocal assignment:&quot;</span>, spam)</span>
+<span id="cb189-18"><a href="module.html#cb189-18" aria-hidden="true" tabindex="-1"></a>    do_global()</span>
+<span id="cb189-19"><a href="module.html#cb189-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;After global assignment:&quot;</span>, spam)</span>
+<span id="cb189-20"><a href="module.html#cb189-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb189-21"><a href="module.html#cb189-21" aria-hidden="true" tabindex="-1"></a>scope_test()</span></code></pre></div>
 <pre><code>## After local assignment: test spam
 ## After nonlocal assignment: nonlocal spam
 ## After global assignment: nonlocal spam</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="module.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;In global scope:&quot;</span>, spam)</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb191-1"><a href="module.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;In global scope:&quot;</span>, spam)</span></code></pre></div>
 <pre><code>## In global scope: global spam</code></pre>
 <p>可以看到，局部赋值不会改变 scope_test 对 spam 的绑定（enclosing）。 nonlocal 赋值会改变 scope_test 对 spam 的绑定，而 global 赋值会改变模块层级的绑定。</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="module.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> outer():</span>
-<span id="cb19-2"><a href="module.html#cb19-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb19-3"><a href="module.html#cb19-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb19-4"><a href="module.html#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> inner():</span>
-<span id="cb19-5"><a href="module.html#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span>
-<span id="cb19-6"><a href="module.html#cb19-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(b)</span>
-<span id="cb19-7"><a href="module.html#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b += 1        # A</span></span>
-<span id="cb19-8"><a href="module.html#cb19-8" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> <span class="dv">4</span>           <span class="co"># B</span></span>
-<span id="cb19-9"><a href="module.html#cb19-9" aria-hidden="true" tabindex="-1"></a>    inner()</span>
-<span id="cb19-10"><a href="module.html#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-11"><a href="module.html#cb19-11" aria-hidden="true" tabindex="-1"></a>outer()</span>
-<span id="cb19-12"><a href="module.html#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># UnboundLocalError: local variable &#39;b&#39; referenced before assignment</span></span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="module.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> outer():</span>
+<span id="cb193-2"><a href="module.html#cb193-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb193-3"><a href="module.html#cb193-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb193-4"><a href="module.html#cb193-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> inner():</span>
+<span id="cb193-5"><a href="module.html#cb193-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span>
+<span id="cb193-6"><a href="module.html#cb193-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(b)</span>
+<span id="cb193-7"><a href="module.html#cb193-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b += 1        # A</span></span>
+<span id="cb193-8"><a href="module.html#cb193-8" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> <span class="dv">4</span>           <span class="co"># B</span></span>
+<span id="cb193-9"><a href="module.html#cb193-9" aria-hidden="true" tabindex="-1"></a>    inner()</span>
+<span id="cb193-10"><a href="module.html#cb193-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb193-11"><a href="module.html#cb193-11" aria-hidden="true" tabindex="-1"></a>outer()</span>
+<span id="cb193-12"><a href="module.html#cb193-12" aria-hidden="true" tabindex="-1"></a><span class="co"># UnboundLocalError: local variable &#39;b&#39; referenced before assignment</span></span></code></pre></div>
 <p>Python解释器执行到 inner() 中的 print b 时，发现有个变量 b，在当前作用域(local)中无法找到该变量。它继续尝试把整块代码解释完，b 是属于 inner() 作用域的，既然对变量 b 的赋值（声明）发生在 print 语句之后， print 语句执行时变量 b 是还未被声明的，于是抛出错误：变量在赋值前就被引用。在这个例子中，只有A语句没有B语句也会导致同样的结果。</p>
 <p>因为b没有被声明为非本地变量(nonlocal)，在inner()的局部空间中b是只读的（尝试写入b的赋值语句只会在最内层作用域中创建一个新的局部变量，而同名的外部变量保持不变）。</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="module.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>): <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb194-1"><a href="module.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>): <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## 0
 ## 1
 ## 2</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="module.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;i =&quot;</span>, i)</span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb196-1"><a href="module.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;i =&quot;</span>, i)</span></code></pre></div>
 <pre><code>## i = 2</code></pre>
 <p>for 后面跟着的变量(target list)在循环结束后是不会被删除的，但如果 for 循环的序列为空，这些变量是完全不会被赋值的。</p>
 
@@ -450,8 +450,8 @@ div.csl-indent {
 </div>
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p>参考资料：<a href="http://blog.konghy.cn/2017/04/24/python-entry-program/">Python 中的 if <code>__name__</code> == <code>__main__</code> 该如何理解</a><a href="module.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>参考资料：<a href="http://blog.konghy.cn/2017/04/24/python-entry-program/">Python 中的 if <code>__name__</code> == <code>__main__</code> 该如何理解</a><a href="module.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -501,6 +501,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

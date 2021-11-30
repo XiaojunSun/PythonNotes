@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 内置数据类型（二） | 我的Python笔记</title>
+  <meta name="description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 内置数据类型（二） | 我的Python笔记" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="github-repo" content="XiaojunSun/PythonNotes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 内置数据类型（二） | 我的Python笔记" />
+  
+  <meta name="twitter:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  
+
+<meta name="author" content="Xiaojun Sun" />
+
+
+<meta name="date" content="2021-11-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="built-in-type.html"/>
+<link rel="next" href="function.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">我的Python笔记</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="build-env.html"><a href="build-env.html"><i class="fa fa-check"></i><b>1</b> 搭建Python运行环境</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="build-env.html"><a href="build-env.html#安装anaconda"><i class="fa fa-check"></i><b>1.1</b> 安装Anaconda</a></li>
+<li class="chapter" data-level="1.2" data-path="build-env.html"><a href="build-env.html#环境管理"><i class="fa fa-check"></i><b>1.2</b> 环境管理</a></li>
+<li class="chapter" data-level="1.3" data-path="build-env.html"><a href="build-env.html#包的管理"><i class="fa fa-check"></i><b>1.3</b> 包的管理</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="build-env.html"><a href="build-env.html#搜索包"><i class="fa fa-check"></i><b>1.3.1</b> 搜索包</a></li>
+<li class="chapter" data-level="1.3.2" data-path="build-env.html"><a href="build-env.html#安装包"><i class="fa fa-check"></i><b>1.3.2</b> 安装包</a></li>
+<li class="chapter" data-level="1.3.3" data-path="build-env.html"><a href="build-env.html#更新包"><i class="fa fa-check"></i><b>1.3.3</b> 更新包</a></li>
+<li class="chapter" data-level="1.3.4" data-path="build-env.html"><a href="build-env.html#卸载包"><i class="fa fa-check"></i><b>1.3.4</b> 卸载包</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="build-env.html"><a href="build-env.html#jupyter-notebook"><i class="fa fa-check"></i><b>1.4</b> Jupyter Notebook</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="build-env.html"><a href="build-env.html#jupyter-notebook常用技巧"><i class="fa fa-check"></i><b>1.4.1</b> Jupyter Notebook常用技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="build-env.html"><a href="build-env.html#ipython简介"><i class="fa fa-check"></i><b>1.5</b> IPython简介</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="build-env.html"><a href="build-env.html#帮助"><i class="fa fa-check"></i><b>1.5.1</b> 帮助</a></li>
+<li class="chapter" data-level="1.5.2" data-path="build-env.html"><a href="build-env.html#tab补全"><i class="fa fa-check"></i><b>1.5.2</b> Tab补全</a></li>
+<li class="chapter" data-level="1.5.3" data-path="build-env.html"><a href="build-env.html#自省"><i class="fa fa-check"></i><b>1.5.3</b> 自省</a></li>
+<li class="chapter" data-level="1.5.4" data-path="build-env.html"><a href="build-env.html#中断运行的代码"><i class="fa fa-check"></i><b>1.5.4</b> 中断运行的代码</a></li>
+<li class="chapter" data-level="1.5.5" data-path="build-env.html"><a href="build-env.html#魔术命令"><i class="fa fa-check"></i><b>1.5.5</b> 魔术命令</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="build-env.html"><a href="build-env.html#pycharm"><i class="fa fa-check"></i><b>1.6</b> PyCharm</a></li>
+<li class="chapter" data-level="1.7" data-path="build-env.html"><a href="build-env.html#运行python程序"><i class="fa fa-check"></i><b>1.7</b> 运行Python程序</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2</b> 程序控制流程</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="control-flow.html"><a href="control-flow.html#if语句"><i class="fa fa-check"></i><b>2.1</b> if语句</a></li>
+<li class="chapter" data-level="2.2" data-path="control-flow.html"><a href="control-flow.html#while循环"><i class="fa fa-check"></i><b>2.2</b> while循环</a></li>
+<li class="chapter" data-level="2.3" data-path="control-flow.html"><a href="control-flow.html#for循环"><i class="fa fa-check"></i><b>2.3</b> for循环</a></li>
+<li class="chapter" data-level="2.4" data-path="control-flow.html"><a href="control-flow.html#continue"><i class="fa fa-check"></i><b>2.4</b> continue</a></li>
+<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html#pass"><i class="fa fa-check"></i><b>2.5</b> pass</a></li>
+<li class="chapter" data-level="2.6" data-path="control-flow.html"><a href="control-flow.html#三元表达式"><i class="fa fa-check"></i><b>2.6</b> 三元表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="built-in-type.html"><a href="built-in-type.html"><i class="fa fa-check"></i><b>3</b> 内置数据类型（一）</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="built-in-type.html"><a href="built-in-type.html#none"><i class="fa fa-check"></i><b>3.1</b> None</a></li>
+<li class="chapter" data-level="3.2" data-path="built-in-type.html"><a href="built-in-type.html#字符串"><i class="fa fa-check"></i><b>3.2</b> 字符串</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="built-in-type.html"><a href="built-in-type.html#字符串格式化语法"><i class="fa fa-check"></i><b>3.2.1</b> 字符串格式化语法</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
+<li class="chapter" data-level="3.6.2" data-path="built-in-type.html"><a href="built-in-type.html#比较运算符"><i class="fa fa-check"></i><b>3.6.2</b> 比较运算符</a></li>
+<li class="chapter" data-level="3.6.3" data-path="built-in-type.html"><a href="built-in-type.html#逻辑运算符"><i class="fa fa-check"></i><b>3.6.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="3.6.4" data-path="built-in-type.html"><a href="built-in-type.html#成员运算符"><i class="fa fa-check"></i><b>3.6.4</b> 成员运算符</a></li>
+<li class="chapter" data-level="3.6.5" data-path="built-in-type.html"><a href="built-in-type.html#身份运算符"><i class="fa fa-check"></i><b>3.6.5</b> 身份运算符</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
+<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
+<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
+<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="module.html"><a href="module.html#命名空间和作用域"><i class="fa fa-check"></i><b>8.0.1</b> <span>命名空间和作用域</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="OOP.html"><a href="OOP.html"><i class="fa fa-check"></i><b>9</b> Python 面向对象</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="OOP.html"><a href="OOP.html#术语简介"><i class="fa fa-check"></i><b>9.1</b> 术语简介</a></li>
+<li class="chapter" data-level="9.2" data-path="OOP.html"><a href="OOP.html#创建类"><i class="fa fa-check"></i><b>9.2</b> 创建类</a></li>
+<li class="chapter" data-level="9.3" data-path="OOP.html"><a href="OOP.html#类对象"><i class="fa fa-check"></i><b>9.3</b> 类对象</a></li>
+<li class="chapter" data-level="9.4" data-path="OOP.html"><a href="OOP.html#实例对象"><i class="fa fa-check"></i><b>9.4</b> 实例对象</a></li>
+<li class="chapter" data-level="9.5" data-path="OOP.html"><a href="OOP.html#方法对象"><i class="fa fa-check"></i><b>9.5</b> 方法对象</a></li>
+<li class="chapter" data-level="9.6" data-path="OOP.html"><a href="OOP.html#类和实例变量"><i class="fa fa-check"></i><b>9.6</b> 类和实例变量</a></li>
+<li class="chapter" data-level="9.7" data-path="OOP.html"><a href="OOP.html#python内置类属性"><i class="fa fa-check"></i><b>9.7</b> Python内置类属性</a></li>
+<li class="chapter" data-level="9.8" data-path="OOP.html"><a href="OOP.html#补充说明"><i class="fa fa-check"></i><b>9.8</b> 补充说明</a></li>
+<li class="chapter" data-level="9.9" data-path="OOP.html"><a href="OOP.html#类的继承"><i class="fa fa-check"></i><b>9.9</b> 类的继承</a></li>
+<li class="chapter" data-level="9.10" data-path="OOP.html"><a href="OOP.html#私有变量"><i class="fa fa-check"></i><b>9.10</b> 私有变量</a></li>
+<li class="chapter" data-level="9.11" data-path="OOP.html"><a href="OOP.html#元类"><i class="fa fa-check"></i><b>9.11</b> 元类</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="functional.html"><a href="functional.html"><i class="fa fa-check"></i><b>10</b> 函数式编程</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
+<li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
+<li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
+<li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="specialized-data-types.html"><a href="specialized-data-types.html"><i class="fa fa-check"></i><b>11</b> 专门数据类型</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="specialized-data-types.html"><a href="specialized-data-types.html#日期和时间"><i class="fa fa-check"></i><b>11.1</b> 日期和时间</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>13.0.1</b> 文件和操作系统</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">我的Python笔记</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="built-in-type2" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> 内置数据类型（二）</h1>
+<div id="列表list" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> 列表list</h2>
+<p>list是Python内置的一种数据类型，list是一个可变的有序表，可以随时添加和删除其中的元素。比如，列出班里所有同学的名字，就可以用一个list表示：</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="built-in-type2.html#cb114-1" aria-hidden="true" tabindex="-1"></a>classmates <span class="op">=</span> [<span class="st">&#39;Michael&#39;</span>, <span class="st">&#39;Bob&#39;</span>, <span class="st">&#39;Tracy&#39;</span>]</span></code></pre></div>
+<p>用<code>len()</code>函数可以计算list中元素的个数。用索引可以访问list中每一个位置的元素，记得索引是从<code>0</code>开始的，最后一个元素的索引是<code>len(classmates) - 1</code> ，还可以用<code>-1</code>做索引直接获取最后一个元素；用<code>-2</code>做索引可以直接获取倒数第二个元素。</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="built-in-type2.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以往list中追加元素到末尾</span></span>
+<span id="cb115-2"><a href="built-in-type2.html#cb115-2" aria-hidden="true" tabindex="-1"></a>classmates.append(<span class="st">&#39;Adam&#39;</span>)</span>
+<span id="cb115-3"><a href="built-in-type2.html#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="co">#用extend方法可以追加多个元素</span></span>
+<span id="cb115-4"><a href="built-in-type2.html#cb115-4" aria-hidden="true" tabindex="-1"></a>classmates.extend(<span class="st">&#39;Jony&#39;</span>,<span class="st">&#39;Tom&#39;</span>)</span>
+<span id="cb115-5"><a href="built-in-type2.html#cb115-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 也可以把元素插入到指定的位置</span></span>
+<span id="cb115-6"><a href="built-in-type2.html#cb115-6" aria-hidden="true" tabindex="-1"></a>classmates.insert(<span class="dv">1</span>, <span class="st">&#39;Jack&#39;</span>)</span>
+<span id="cb115-7"><a href="built-in-type2.html#cb115-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以用pop()方法删除list中的元素</span></span>
+<span id="cb115-8"><a href="built-in-type2.html#cb115-8" aria-hidden="true" tabindex="-1"></a>classmates.pop(<span class="dv">2</span>)</span>
+<span id="cb115-9"><a href="built-in-type2.html#cb115-9" aria-hidden="true" tabindex="-1"></a><span class="co">#可以直接赋值给对应的索引位置</span></span>
+<span id="cb115-10"><a href="built-in-type2.html#cb115-10" aria-hidden="true" tabindex="-1"></a>classmates[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;Sarah&#39;</span></span>
+<span id="cb115-11"><a href="built-in-type2.html#cb115-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以把元素插入到指定的位置</span></span>
+<span id="cb115-12"><a href="built-in-type2.html#cb115-12" aria-hidden="true" tabindex="-1"></a>classmates.insert(<span class="dv">1</span>, <span class="st">&#39;Jack&#39;</span>)</span>
+<span id="cb115-13"><a href="built-in-type2.html#cb115-13" aria-hidden="true" tabindex="-1"></a><span class="co">#list里面的元素的数据类型也可以不同</span></span>
+<span id="cb115-14"><a href="built-in-type2.html#cb115-14" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> [<span class="st">&#39;Apple&#39;</span>, <span class="dv">123</span>, <span class="va">True</span>]</span>
+<span id="cb115-15"><a href="built-in-type2.html#cb115-15" aria-hidden="true" tabindex="-1"></a><span class="co">#list的元素也可以是另一个list</span></span>
+<span id="cb115-16"><a href="built-in-type2.html#cb115-16" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="st">&#39;python&#39;</span>, <span class="st">&#39;java&#39;</span>, [<span class="st">&#39;asp&#39;</span>, <span class="st">&#39;php&#39;</span>], <span class="st">&#39;scheme&#39;</span>]</span>
+<span id="cb115-17"><a href="built-in-type2.html#cb115-17" aria-hidden="true" tabindex="-1"></a><span class="co">#用in可以检查列表是否包含某个值</span></span>
+<span id="cb115-18"><a href="built-in-type2.html#cb115-18" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;java&#39;</span> <span class="kw">in</span> s  <span class="co">#TRUE</span></span>
+<span id="cb115-19"><a href="built-in-type2.html#cb115-19" aria-hidden="true" tabindex="-1"></a><span class="co">#可以用加号将两个列表串联起来，但没有extend好</span></span>
+<span id="cb115-20"><a href="built-in-type2.html#cb115-20" aria-hidden="true" tabindex="-1"></a>[<span class="dv">4</span>, <span class="va">None</span>, <span class="st">&#39;foo&#39;</span>] <span class="op">+</span> [<span class="dv">7</span>, <span class="dv">8</span>, (<span class="dv">2</span>, <span class="dv">3</span>)]</span>
+<span id="cb115-21"><a href="built-in-type2.html#cb115-21" aria-hidden="true" tabindex="-1"></a><span class="co">#[4, None, &#39;foo&#39;, 7, 8, (2, 3)]</span></span>
+<span id="cb115-22"><a href="built-in-type2.html#cb115-22" aria-hidden="true" tabindex="-1"></a><span class="co">#排序方法</span></span>
+<span id="cb115-23"><a href="built-in-type2.html#cb115-23" aria-hidden="true" tabindex="-1"></a>s.sort()</span>
+<span id="cb115-24"><a href="built-in-type2.html#cb115-24" aria-hidden="true" tabindex="-1"></a>s.sort(key<span class="op">=</span><span class="bu">len</span>) <span class="co">#二级排序key</span></span>
+<span id="cb115-25"><a href="built-in-type2.html#cb115-25" aria-hidden="true" tabindex="-1"></a><span class="co">#切片</span></span>
+<span id="cb115-26"><a href="built-in-type2.html#cb115-26" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">3</span>]<span class="op">;</span> s[<span class="op">-</span><span class="dv">2</span>:]</span></code></pre></div>
+</div>
+<div id="元组tuple" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> 元组tuple</h2>
+<p>另一种有序列表叫元组：tuple。t uple和list非常类似，但是tuple一旦初始化就不能修改。</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="built-in-type2.html#cb116-1" aria-hidden="true" tabindex="-1"></a>classmates <span class="op">=</span> (<span class="st">&#39;Michael&#39;</span>, <span class="st">&#39;Bob&#39;</span>, <span class="st">&#39;Tracy&#39;</span>)</span></code></pre></div>
+<p>现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用<code>classmates[0]</code>，<code>classmates[-1]</code>，但不能赋值成另外的元素。不可变的tuple有什么意义？因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。</p>
+<p>只有1个元素的tuple定义时必须加一个逗号<code>,</code>，来消除歧义</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="built-in-type2.html#cb117-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (<span class="dv">1</span>,)</span>
+<span id="cb117-2"><a href="built-in-type2.html#cb117-2" aria-hidden="true" tabindex="-1"></a>t</span></code></pre></div>
+<pre><code>## (1,)</code></pre>
+<p>可以用加号运算符将元组串联起来：</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="built-in-type2.html#cb119-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">4</span>, <span class="va">None</span>, <span class="st">&#39;foo&#39;</span>) <span class="op">+</span> (<span class="dv">6</span>, <span class="dv">0</span>) <span class="op">+</span> (<span class="st">&#39;bar&#39;</span>,)</span></code></pre></div>
+<pre><code>## (4, None, &#39;foo&#39;, 6, 0, &#39;bar&#39;)</code></pre>
+<p>拆分元组：</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="built-in-type2.html#cb121-1" aria-hidden="true" tabindex="-1"></a>tup <span class="op">=</span> (<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
+<span id="cb121-2"><a href="built-in-type2.html#cb121-2" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> tup</span>
+<span id="cb121-3"><a href="built-in-type2.html#cb121-3" aria-hidden="true" tabindex="-1"></a>a, b <span class="op">=</span> <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb121-4"><a href="built-in-type2.html#cb121-4" aria-hidden="true" tabindex="-1"></a>b, a <span class="op">=</span> a, b</span>
+<span id="cb121-5"><a href="built-in-type2.html#cb121-5" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span></span>
+<span id="cb121-6"><a href="built-in-type2.html#cb121-6" aria-hidden="true" tabindex="-1"></a>a, b, <span class="op">*</span>rest <span class="op">=</span> values</span></code></pre></div>
+</div>
+<div id="字典dict" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> 字典dict</h2>
+<p>Python内置了字典（dict），dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="built-in-type2.html#cb122-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">&#39;Michael&#39;</span>: <span class="dv">95</span>, <span class="st">&#39;Bob&#39;</span>: <span class="dv">75</span>, <span class="st">&#39;Tracy&#39;</span>: <span class="dv">85</span>}</span>
+<span id="cb122-2"><a href="built-in-type2.html#cb122-2" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&#39;Michael&#39;</span>]</span></code></pre></div>
+<pre><code>## 95</code></pre>
+<p>给定一个名字，比如<code>'Michael'</code>，dict在内部就可以直接计算出<code>Michael</code>对应的存放成绩的”页码”，也就是<code>95</code>这个数字存放的内存地址，直接取出来，所以速度非常快。</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="built-in-type2.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="co">#把数据放入dict，除了初始化时指定外，还可以通过key放入</span></span>
+<span id="cb124-2"><a href="built-in-type2.html#cb124-2" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&#39;Adam&#39;</span>] <span class="op">=</span> <span class="dv">67</span></span>
+<span id="cb124-3"><a href="built-in-type2.html#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="co">#删除一个key</span></span>
+<span id="cb124-4"><a href="built-in-type2.html#cb124-4" aria-hidden="true" tabindex="-1"></a>d.pop(<span class="st">&#39;Bob&#39;</span>)</span>
+<span id="cb124-5"><a href="built-in-type2.html#cb124-5" aria-hidden="true" tabindex="-1"></a><span class="co">#dict可以接受2元元组的列表</span></span></code></pre></div>
+<pre><code>## 75</code></pre>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="built-in-type2.html#cb126-1" aria-hidden="true" tabindex="-1"></a>mapping <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(<span class="bu">range</span>(<span class="dv">5</span>), <span class="bu">reversed</span>(<span class="bu">range</span>(<span class="dv">5</span>))))</span></code></pre></div>
+<p>dict内部存放的顺序和key放入的顺序是没有关系的。和 list比较，dict有以下几个特点：</p>
+<ol style="list-style-type: decimal">
+<li>查找和插入的速度极快，不会随着key的增加而变慢；</li>
+<li>需要占用大量的内存，内存浪费多。</li>
+</ol>
+<p>而list相反：</p>
+<ol style="list-style-type: decimal">
+<li>查找和插入的时间随着元素的增加而增加；</li>
+<li>占用空间小，浪费内存很少。</li>
+</ol>
+<p>所以，dict是用空间来换取时间的一种方法。</p>
+<p>dict可以用在需要高速查找的很多地方，在Python代码中几乎无处不在，正确使用dict非常重要，需要牢记的第一条就是dict的key必须是<strong>不可变对象</strong>。</p>
+<p>这是因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这 个通过key计算位置的算法称为哈希算法（Hash）。要 保证hash的正确性，作为key的对象就不能变。在 Python中，字符串、整数等都是不可变的，因此，可以放心地作为key。而 list是可变的，就不能作为key。</p>
+</div>
+<div id="集合set" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 集合set</h2>
+<p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以在set中没有重复的key。</p>
+<p>要创建一个set，可以提供一个list作为输入集合，或者使用<code>{...}</code>：</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="built-in-type2.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span></code></pre></div>
+<pre><code>## {1, 2, 3}</code></pre>
+<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="built-in-type2.html#cb129-1" aria-hidden="true" tabindex="-1"></a>{<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>}</span></code></pre></div>
+<pre><code>## {1, 2, 3}</code></pre>
+<p>注意，传入的参数<code>[1, 2, 3]</code>是一个list，而显示的<code>{1, 2, 3}</code>只是告诉你这个set内部有1，2，3这三个元素，显示的顺序也不表示set是有序的。</p>
+<p>重复元素在set中自动被过滤：</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb131-1"><a href="built-in-type2.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>])</span></code></pre></div>
+<pre><code>## {1, 2, 3}</code></pre>
+<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="built-in-type2.html#cb133-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>}</span>
+<span id="cb133-2"><a href="built-in-type2.html#cb133-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以添加元素到set中</span></span>
+<span id="cb133-3"><a href="built-in-type2.html#cb133-3" aria-hidden="true" tabindex="-1"></a>s.add(<span class="dv">4</span>)</span>
+<span id="cb133-4"><a href="built-in-type2.html#cb133-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以删除元素</span></span>
+<span id="cb133-5"><a href="built-in-type2.html#cb133-5" aria-hidden="true" tabindex="-1"></a>s.remove(<span class="dv">4</span>) </span></code></pre></div>
+<p>set可以看成数学意义上的<strong>无序</strong>和<strong>无重复元素</strong>的集合，因此，两个set可以做数学意义上的交集、并集等操作：</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="built-in-type2.html#cb134-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> <span class="bu">set</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb134-2"><a href="built-in-type2.html#cb134-2" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> <span class="bu">set</span>([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb134-3"><a href="built-in-type2.html#cb134-3" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">&amp;</span> s2</span></code></pre></div>
+<pre><code>## {2, 3}</code></pre>
+<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="built-in-type2.html#cb136-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">|</span> s2</span></code></pre></div>
+<pre><code>## {1, 2, 3, 4}</code></pre>
+<div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="built-in-type2.html#cb138-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">-</span> s2</span></code></pre></div>
+<pre><code>## {1}</code></pre>
+</div>
+<div id="不可变对象" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> 不可变对象</h2>
+<p>Python中的大多数对象，比如列表、字典、NumPy数组、用户定义的类，都是可变的。这意味着这些对象或包含的值可以被修改：</p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="built-in-type2.html#cb140-1" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="dv">2</span>, [<span class="dv">4</span>, <span class="dv">5</span>]]</span>
+<span id="cb140-2"><a href="built-in-type2.html#cb140-2" aria-hidden="true" tabindex="-1"></a>a_list[<span class="dv">2</span>] <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">4</span>)</span></code></pre></div>
+<p>其它的，比如字符串和元组，是不可变的：</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb141-1"><a href="built-in-type2.html#cb141-1" aria-hidden="true" tabindex="-1"></a>a_tuple <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">5</span>, (<span class="dv">4</span>, <span class="dv">5</span>))</span>
+<span id="cb141-2"><a href="built-in-type2.html#cb141-2" aria-hidden="true" tabindex="-1"></a>a_tuple[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;four&#39;</span> <span class="co">#TypeError</span></span></code></pre></div>
+<p>注意，可以修改一个对象并不意味就要修改它，这被称为<em>副作用</em>。</p>
+</div>
+<div id="序列函数" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> 序列函数</h2>
+<div id="enumerate函数" class="section level3" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> enumerate函数</h3>
+<p><code>enumerate</code>函数可以返回<code>(i, value)</code>元组序列</p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="built-in-type2.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, v <span class="kw">in</span> <span class="bu">enumerate</span>(some_list):</span>
+<span id="cb142-2"><a href="built-in-type2.html#cb142-2" aria-hidden="true" tabindex="-1"></a>    mapping[v] <span class="op">=</span> i</span></code></pre></div>
+</div>
+<div id="sorted函数" class="section level3" number="4.6.2">
+<h3><span class="header-section-number">4.6.2</span> sorted函数</h3>
+<p><code>sorted</code>函数可以从任意序列的元素返回一个新的排好序的列表，<code>sorted</code>函数可以接受和<code>sort</code>方法相同的参数。</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb143-1"><a href="built-in-type2.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>([<span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## [0, 1, 2, 2, 3, 6, 7]</code></pre>
+</div>
+<div id="zip函数" class="section level3" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> zip函数</h3>
+<p><code>zip</code>可以将多个列表、元组或其它序列成对组合成一个元组列表：</p>
+<div class="sourceCode" id="cb145"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb145-1"><a href="built-in-type2.html#cb145-1" aria-hidden="true" tabindex="-1"></a>seq1 <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;baz&#39;</span>]</span>
+<span id="cb145-2"><a href="built-in-type2.html#cb145-2" aria-hidden="true" tabindex="-1"></a>seq2 <span class="op">=</span> [<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>, <span class="st">&#39;three&#39;</span>]</span>
+<span id="cb145-3"><a href="built-in-type2.html#cb145-3" aria-hidden="true" tabindex="-1"></a>zipped <span class="op">=</span> <span class="bu">zip</span>(seq1, seq2)</span>
+<span id="cb145-4"><a href="built-in-type2.html#cb145-4" aria-hidden="true" tabindex="-1"></a>zipped</span></code></pre></div>
+<pre><code>## &lt;zip object at 0x0000000029A0F6C0&gt;</code></pre>
+<p><code>zip</code>可以处理任意多的序列，元素的个数取决于最短的序列。<code>zip</code>的常见用法之一是同时迭代多个序列，可能结合<code>enumerate</code>使用 。</p>
+<p><code>zip</code>也可以当作把行的列表转换为列的列表（很神奇）。</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb147-1"><a href="built-in-type2.html#cb147-1" aria-hidden="true" tabindex="-1"></a>pitchers <span class="op">=</span> [(<span class="st">&#39;Nolan&#39;</span>, <span class="st">&#39;Ryan&#39;</span>), (<span class="st">&#39;Roger&#39;</span>, <span class="st">&#39;Clemens&#39;</span>), (<span class="st">&#39;Schilling&#39;</span>, <span class="st">&#39;Curt&#39;</span>)]</span>
+<span id="cb147-2"><a href="built-in-type2.html#cb147-2" aria-hidden="true" tabindex="-1"></a>first_names, last_names <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>pitchers)</span>
+<span id="cb147-3"><a href="built-in-type2.html#cb147-3" aria-hidden="true" tabindex="-1"></a>first_names<span class="op">;</span>last_names</span></code></pre></div>
+<pre><code>## (&#39;Nolan&#39;, &#39;Roger&#39;, &#39;Schilling&#39;)
+## (&#39;Ryan&#39;, &#39;Clemens&#39;, &#39;Curt&#39;)</code></pre>
+</div>
+</div>
+<div id="列表推导式" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> 列表推导式</h2>
+<p>列表推导式(list comprehensions)是Python最受喜爱的特性之一。它允许用户方便的从一个集合过滤元素，形成列表，在传递参数的过程中还可以修改元素。</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb149-1"><a href="built-in-type2.html#cb149-1" aria-hidden="true" tabindex="-1"></a>[expr <span class="cf">for</span> val <span class="kw">in</span> collection <span class="cf">if</span> condition]</span>
+<span id="cb149-2"><a href="built-in-type2.html#cb149-2" aria-hidden="true" tabindex="-1"></a>dict_comp <span class="op">=</span> {key<span class="op">-</span>expr : value<span class="op">-</span>expr <span class="cf">for</span> value <span class="kw">in</span> collection <span class="cf">if</span> condition} <span class="co">#字典</span></span>
+<span id="cb149-3"><a href="built-in-type2.html#cb149-3" aria-hidden="true" tabindex="-1"></a>set_comp <span class="op">=</span> {expr <span class="cf">for</span> value <span class="kw">in</span> collection <span class="cf">if</span> condition} <span class="co">#集合</span></span></code></pre></div>
+<p>举例如下：</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb150-1"><a href="built-in-type2.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([i<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>) <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="kw">is</span> <span class="dv">0</span>])</span></code></pre></div>
+<pre><code>## [0, 9, 36, 81, 144, 225, 324]</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb152-1"><a href="built-in-type2.html#cb152-1" aria-hidden="true" tabindex="-1"></a>mcase <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">10</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">34</span>}</span>
+<span id="cb152-2"><a href="built-in-type2.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>({v: k <span class="cf">for</span> k, v <span class="kw">in</span> mcase.items()})</span></code></pre></div>
+<pre><code>## {10: &#39;a&#39;, 34: &#39;b&#39;}</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb154-1"><a href="built-in-type2.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>({x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>]})</span></code></pre></div>
+<pre><code>## {1, 4}</code></pre>
+<p>嵌套列表推导式，包含两层for循环：</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="built-in-type2.html#cb156-1" aria-hidden="true" tabindex="-1"></a>some_tuples <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), (<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), (<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)]</span>
+<span id="cb156-2"><a href="built-in-type2.html#cb156-2" aria-hidden="true" tabindex="-1"></a>flattened <span class="op">=</span> [x <span class="cf">for</span> tup <span class="kw">in</span> some_tuples <span class="cf">for</span> x <span class="kw">in</span> tup <span class="cf">if</span> x<span class="op">&gt;</span><span class="dv">5</span>]</span>
+<span id="cb156-3"><a href="built-in-type2.html#cb156-3" aria-hidden="true" tabindex="-1"></a>flattened</span></code></pre></div>
+<pre><code>## [6, 7, 8, 9]</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="built-in-type.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

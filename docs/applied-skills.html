@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-29" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -312,57 +312,57 @@ div.csl-indent {
 <h3><span class="header-section-number">13.0.1</span> 文件和操作系统</h3>
 <div id="文件的读写和关闭" class="section level4" number="13.0.1.1">
 <h4><span class="header-section-number">13.0.1.1</span> 文件的读写和关闭</h4>
-<div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="applied-skills.html#cb156-1" aria-hidden="true" tabindex="-1"></a>f<span class="op">=</span><span class="bu">open</span>(<span class="st">&#39;somefile.txt&#39;</span>)</span>
-<span id="cb156-2"><a href="applied-skills.html#cb156-2" aria-hidden="true" tabindex="-1"></a>f.readline()<span class="co">#表示读文件的一行</span></span>
-<span id="cb156-3"><a href="applied-skills.html#cb156-3" aria-hidden="true" tabindex="-1"></a>f.readlines()<span class="co">#表示把文件从头到尾都读出来，并保存为一个列表</span></span>
-<span id="cb156-4"><a href="applied-skills.html#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="co">#使用文件应该牢记关闭</span></span>
-<span id="cb156-5"><a href="applied-skills.html#cb156-5" aria-hidden="true" tabindex="-1"></a>f.close()</span>
-<span id="cb156-6"><a href="applied-skills.html#cb156-6" aria-hidden="true" tabindex="-1"></a><span class="co">#更推荐下面这种方法，因为它会自动帮你关闭文件</span></span>
-<span id="cb156-7"><a href="applied-skills.html#cb156-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="vs">r&#39;somefile.txt&#39;</span>) <span class="im">as</span> f:</span>
-<span id="cb156-8"><a href="applied-skills.html#cb156-8" aria-hidden="true" tabindex="-1"></a>    f.readlines()</span>
-<span id="cb156-9"><a href="applied-skills.html#cb156-9" aria-hidden="true" tabindex="-1"></a><span class="co">#写入</span></span>
-<span id="cb156-10"><a href="applied-skills.html#cb156-10" aria-hidden="true" tabindex="-1"></a>f.write()<span class="co">#表示把字符串写入</span></span>
-<span id="cb156-11"><a href="applied-skills.html#cb156-11" aria-hidden="true" tabindex="-1"></a>f.writelines()<span class="co">#表示把一个列表写入</span></span></code></pre></div>
+<div class="sourceCode" id="cb330"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb330-1"><a href="applied-skills.html#cb330-1" aria-hidden="true" tabindex="-1"></a>f<span class="op">=</span><span class="bu">open</span>(<span class="st">&#39;somefile.txt&#39;</span>)</span>
+<span id="cb330-2"><a href="applied-skills.html#cb330-2" aria-hidden="true" tabindex="-1"></a>f.readline()<span class="co">#表示读文件的一行</span></span>
+<span id="cb330-3"><a href="applied-skills.html#cb330-3" aria-hidden="true" tabindex="-1"></a>f.readlines()<span class="co">#表示把文件从头到尾都读出来，并保存为一个列表</span></span>
+<span id="cb330-4"><a href="applied-skills.html#cb330-4" aria-hidden="true" tabindex="-1"></a><span class="co">#使用文件应该牢记关闭</span></span>
+<span id="cb330-5"><a href="applied-skills.html#cb330-5" aria-hidden="true" tabindex="-1"></a>f.close()</span>
+<span id="cb330-6"><a href="applied-skills.html#cb330-6" aria-hidden="true" tabindex="-1"></a><span class="co">#更推荐下面这种方法，因为它会自动帮你关闭文件</span></span>
+<span id="cb330-7"><a href="applied-skills.html#cb330-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="vs">r&#39;somefile.txt&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb330-8"><a href="applied-skills.html#cb330-8" aria-hidden="true" tabindex="-1"></a>    f.readlines()</span>
+<span id="cb330-9"><a href="applied-skills.html#cb330-9" aria-hidden="true" tabindex="-1"></a><span class="co">#写入</span></span>
+<span id="cb330-10"><a href="applied-skills.html#cb330-10" aria-hidden="true" tabindex="-1"></a>f.write()<span class="co">#表示把字符串写入</span></span>
+<span id="cb330-11"><a href="applied-skills.html#cb330-11" aria-hidden="true" tabindex="-1"></a>f.writelines()<span class="co">#表示把一个列表写入</span></span></code></pre></div>
 <p><img src="https://ww1.sinaimg.cn/large/748b26cfly1g1nicb5l0nj20jg069dhg.jpg" /></p>
 </div>
 <div id="os模块" class="section level4" number="13.0.1.2">
 <h4><span class="header-section-number">13.0.1.2</span> os模块</h4>
 <p><a href="https://python101.pythonlibrary.org/chapter16_os.html">os模块</a>提供了一种方便的使用操作系统函数的方法。</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="applied-skills.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb157-2"><a href="applied-skills.html#cb157-2" aria-hidden="true" tabindex="-1"></a><span class="co">#假设在当前的目录下有一个abc.txt</span></span>
-<span id="cb157-3"><a href="applied-skills.html#cb157-3" aria-hidden="true" tabindex="-1"></a><span class="co">#重命名文件</span></span>
-<span id="cb157-4"><a href="applied-skills.html#cb157-4" aria-hidden="true" tabindex="-1"></a>os.rename(<span class="st">&#39;abc.txt&#39;</span>,<span class="st">&#39;a123.txt&#39;</span>)</span>
-<span id="cb157-5"><a href="applied-skills.html#cb157-5" aria-hidden="true" tabindex="-1"></a><span class="co">#删除文件</span></span>
-<span id="cb157-6"><a href="applied-skills.html#cb157-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.exists(<span class="st">&#39;a123.txt&#39;</span>):</span>
-<span id="cb157-7"><a href="applied-skills.html#cb157-7" aria-hidden="true" tabindex="-1"></a>  os.remove(<span class="st">&#39;a123.txt&#39;</span>)</span>
-<span id="cb157-8"><a href="applied-skills.html#cb157-8" aria-hidden="true" tabindex="-1"></a><span class="co">#文件路径的处理</span></span>
-<span id="cb157-9"><a href="applied-skills.html#cb157-9" aria-hidden="true" tabindex="-1"></a><span class="co">#假设有一个文件路径：path=&#39;/users/Python/Data/info.txt&#39;</span></span>
-<span id="cb157-10"><a href="applied-skills.html#cb157-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.dirname(path))</span>
-<span id="cb157-11"><a href="applied-skills.html#cb157-11" aria-hidden="true" tabindex="-1"></a><span class="co">#分割文件名</span></span>
-<span id="cb157-12"><a href="applied-skills.html#cb157-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.basename(path))</span>
-<span id="cb157-13"><a href="applied-skills.html#cb157-13" aria-hidden="true" tabindex="-1"></a><span class="co">#分割文件的后缀</span></span>
-<span id="cb157-14"><a href="applied-skills.html#cb157-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.split(path)) <span class="co">#(&#39;/users/Python/Data&#39;, &#39;info.txt&#39;)</span></span>
-<span id="cb157-15"><a href="applied-skills.html#cb157-15" aria-hidden="true" tabindex="-1"></a><span class="co">#创建目录</span></span>
-<span id="cb157-16"><a href="applied-skills.html#cb157-16" aria-hidden="true" tabindex="-1"></a>os.mkdir(<span class="st">&#39;test01&#39;</span>)<span class="co">#在当前目录下创建一个test01目录</span></span>
-<span id="cb157-17"><a href="applied-skills.html#cb157-17" aria-hidden="true" tabindex="-1"></a>os.mkdir(<span class="st">&#39;test02&#39;</span>)<span class="co">#在当前目录下创建一个test02目录</span></span>
-<span id="cb157-18"><a href="applied-skills.html#cb157-18" aria-hidden="true" tabindex="-1"></a><span class="co">#最后先判断目录是否存在</span></span>
-<span id="cb157-19"><a href="applied-skills.html#cb157-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(<span class="st">&#39;test01&#39;</span>):</span>
-<span id="cb157-20"><a href="applied-skills.html#cb157-20" aria-hidden="true" tabindex="-1"></a>    os.mkdir(<span class="st">&#39;test01&#39;</span>)</span>
-<span id="cb157-21"><a href="applied-skills.html#cb157-21" aria-hidden="true" tabindex="-1"></a><span class="co">#列出当前目录下的所有文件和文件夹</span></span>
-<span id="cb157-22"><a href="applied-skills.html#cb157-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.listdir(<span class="st">&#39;.&#39;</span>)</span>
-<span id="cb157-23"><a href="applied-skills.html#cb157-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> <span class="bu">list</span>(os.walk(<span class="st">&#39;.&#39;</span>)) </span>
-<span id="cb157-24"><a href="applied-skills.html#cb157-24" aria-hidden="true" tabindex="-1"></a><span class="co">#返回当前的目录</span></span>
-<span id="cb157-25"><a href="applied-skills.html#cb157-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.getcwd()</span>
-<span id="cb157-26"><a href="applied-skills.html#cb157-26" aria-hidden="true" tabindex="-1"></a><span class="co">#删除目录，目录不为空时会报错</span></span>
-<span id="cb157-27"><a href="applied-skills.html#cb157-27" aria-hidden="true" tabindex="-1"></a>os.rmdir(<span class="st">&#39;test02&#39;</span>)</span>
-<span id="cb157-28"><a href="applied-skills.html#cb157-28" aria-hidden="true" tabindex="-1"></a><span class="co">#shutil模块可以删除非空目录</span></span>
-<span id="cb157-29"><a href="applied-skills.html#cb157-29" aria-hidden="true" tabindex="-1"></a>shutil.rmtree(<span class="st">&#39;test02&#39;</span>)</span>
-<span id="cb157-30"><a href="applied-skills.html#cb157-30" aria-hidden="true" tabindex="-1"></a><span class="co">#判断是否为文件</span></span>
-<span id="cb157-31"><a href="applied-skills.html#cb157-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.isfile(<span class="st">&#39;test01&#39;</span>)</span>
-<span id="cb157-32"><a href="applied-skills.html#cb157-32" aria-hidden="true" tabindex="-1"></a><span class="co">#判断是否为目录</span></span>
-<span id="cb157-33"><a href="applied-skills.html#cb157-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.isdir(<span class="st">&#39;test01&#39;</span>)</span>
-<span id="cb157-34"><a href="applied-skills.html#cb157-34" aria-hidden="true" tabindex="-1"></a><span class="co">#判断文件或者目录是否存在</span></span>
-<span id="cb157-35"><a href="applied-skills.html#cb157-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.exists(<span class="st">&#39;demo_file.py&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb331-1"><a href="applied-skills.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb331-2"><a href="applied-skills.html#cb331-2" aria-hidden="true" tabindex="-1"></a><span class="co">#假设在当前的目录下有一个abc.txt</span></span>
+<span id="cb331-3"><a href="applied-skills.html#cb331-3" aria-hidden="true" tabindex="-1"></a><span class="co">#重命名文件</span></span>
+<span id="cb331-4"><a href="applied-skills.html#cb331-4" aria-hidden="true" tabindex="-1"></a>os.rename(<span class="st">&#39;abc.txt&#39;</span>,<span class="st">&#39;a123.txt&#39;</span>)</span>
+<span id="cb331-5"><a href="applied-skills.html#cb331-5" aria-hidden="true" tabindex="-1"></a><span class="co">#删除文件</span></span>
+<span id="cb331-6"><a href="applied-skills.html#cb331-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.exists(<span class="st">&#39;a123.txt&#39;</span>):</span>
+<span id="cb331-7"><a href="applied-skills.html#cb331-7" aria-hidden="true" tabindex="-1"></a>  os.remove(<span class="st">&#39;a123.txt&#39;</span>)</span>
+<span id="cb331-8"><a href="applied-skills.html#cb331-8" aria-hidden="true" tabindex="-1"></a><span class="co">#文件路径的处理</span></span>
+<span id="cb331-9"><a href="applied-skills.html#cb331-9" aria-hidden="true" tabindex="-1"></a><span class="co">#假设有一个文件路径：path=&#39;/users/Python/Data/info.txt&#39;</span></span>
+<span id="cb331-10"><a href="applied-skills.html#cb331-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.dirname(path))</span>
+<span id="cb331-11"><a href="applied-skills.html#cb331-11" aria-hidden="true" tabindex="-1"></a><span class="co">#分割文件名</span></span>
+<span id="cb331-12"><a href="applied-skills.html#cb331-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.basename(path))</span>
+<span id="cb331-13"><a href="applied-skills.html#cb331-13" aria-hidden="true" tabindex="-1"></a><span class="co">#分割文件的后缀</span></span>
+<span id="cb331-14"><a href="applied-skills.html#cb331-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.path.split(path)) <span class="co">#(&#39;/users/Python/Data&#39;, &#39;info.txt&#39;)</span></span>
+<span id="cb331-15"><a href="applied-skills.html#cb331-15" aria-hidden="true" tabindex="-1"></a><span class="co">#创建目录</span></span>
+<span id="cb331-16"><a href="applied-skills.html#cb331-16" aria-hidden="true" tabindex="-1"></a>os.mkdir(<span class="st">&#39;test01&#39;</span>)<span class="co">#在当前目录下创建一个test01目录</span></span>
+<span id="cb331-17"><a href="applied-skills.html#cb331-17" aria-hidden="true" tabindex="-1"></a>os.mkdir(<span class="st">&#39;test02&#39;</span>)<span class="co">#在当前目录下创建一个test02目录</span></span>
+<span id="cb331-18"><a href="applied-skills.html#cb331-18" aria-hidden="true" tabindex="-1"></a><span class="co">#最后先判断目录是否存在</span></span>
+<span id="cb331-19"><a href="applied-skills.html#cb331-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(<span class="st">&#39;test01&#39;</span>):</span>
+<span id="cb331-20"><a href="applied-skills.html#cb331-20" aria-hidden="true" tabindex="-1"></a>    os.mkdir(<span class="st">&#39;test01&#39;</span>)</span>
+<span id="cb331-21"><a href="applied-skills.html#cb331-21" aria-hidden="true" tabindex="-1"></a><span class="co">#列出当前目录下的所有文件和文件夹</span></span>
+<span id="cb331-22"><a href="applied-skills.html#cb331-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.listdir(<span class="st">&#39;.&#39;</span>)</span>
+<span id="cb331-23"><a href="applied-skills.html#cb331-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> <span class="bu">list</span>(os.walk(<span class="st">&#39;.&#39;</span>)) </span>
+<span id="cb331-24"><a href="applied-skills.html#cb331-24" aria-hidden="true" tabindex="-1"></a><span class="co">#返回当前的目录</span></span>
+<span id="cb331-25"><a href="applied-skills.html#cb331-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.getcwd()</span>
+<span id="cb331-26"><a href="applied-skills.html#cb331-26" aria-hidden="true" tabindex="-1"></a><span class="co">#删除目录，目录不为空时会报错</span></span>
+<span id="cb331-27"><a href="applied-skills.html#cb331-27" aria-hidden="true" tabindex="-1"></a>os.rmdir(<span class="st">&#39;test02&#39;</span>)</span>
+<span id="cb331-28"><a href="applied-skills.html#cb331-28" aria-hidden="true" tabindex="-1"></a><span class="co">#shutil模块可以删除非空目录</span></span>
+<span id="cb331-29"><a href="applied-skills.html#cb331-29" aria-hidden="true" tabindex="-1"></a>shutil.rmtree(<span class="st">&#39;test02&#39;</span>)</span>
+<span id="cb331-30"><a href="applied-skills.html#cb331-30" aria-hidden="true" tabindex="-1"></a><span class="co">#判断是否为文件</span></span>
+<span id="cb331-31"><a href="applied-skills.html#cb331-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.isfile(<span class="st">&#39;test01&#39;</span>)</span>
+<span id="cb331-32"><a href="applied-skills.html#cb331-32" aria-hidden="true" tabindex="-1"></a><span class="co">#判断是否为目录</span></span>
+<span id="cb331-33"><a href="applied-skills.html#cb331-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.isdir(<span class="st">&#39;test01&#39;</span>)</span>
+<span id="cb331-34"><a href="applied-skills.html#cb331-34" aria-hidden="true" tabindex="-1"></a><span class="co">#判断文件或者目录是否存在</span></span>
+<span id="cb331-35"><a href="applied-skills.html#cb331-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> os.path.exists(<span class="st">&#39;demo_file.py&#39;</span>)</span></code></pre></div>
 <p>标准库中的os模块里提供了system()函数，可以执行操作系统命令。比如在windows中，系统命令 <code>start D:\a.txt</code> 就是启动程序自动打开D盘根目录中的 a.txt 文件。所以在Python程序中执行 <code>os.system('start D:/a.txt')</code> 就可以自动打开记事本显示该文件。</p>
 
 </div>
@@ -415,6 +415,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

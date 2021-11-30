@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-29" />
+<meta name="date" content="2021-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -326,32 +326,32 @@ div.csl-indent {
 <div id="创建类" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> 创建类</h2>
 <p>类(classes)定义的形式如下：</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="OOP.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ClassName:</span>
-<span id="cb24-2"><a href="OOP.html#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;类的帮助信息&#39;</span> </span>
-<span id="cb24-3"><a href="OOP.html#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span><span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb24-4"><a href="OOP.html#cb24-4" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb24-5"><a href="OOP.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span>N<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb198-1"><a href="OOP.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ClassName:</span>
+<span id="cb198-2"><a href="OOP.html#cb198-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;类的帮助信息&#39;</span> </span>
+<span id="cb198-3"><a href="OOP.html#cb198-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span><span class="dv">1</span><span class="op">&gt;</span></span>
+<span id="cb198-4"><a href="OOP.html#cb198-4" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb198-5"><a href="OOP.html#cb198-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span>N<span class="op">&gt;</span></span></code></pre></div>
 <p>类定义与函数定义 (def 语句) 一样必须被执行才会起作用。当进入类定义时，将创建一个新的命名空间，并将其用作局部作用域。因此，所有对局部变量的赋值都是在这个新命名空间之内。</p>
 </div>
 <div id="类对象" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> 类对象</h2>
 <p>类对象支持两种操作：属性引用和实例化。</p>
 <p>类对象的属性引用使用 Python 中所有属性引用所使用的标准语法: obj.name。 有效的属性名称是类对象被创建时存在于类命名空间中的所有名称。 因此，如果类定义是这样的:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="OOP.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyClass:</span>
-<span id="cb25-2"><a href="OOP.html#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;A simple example class&quot;&quot;&quot;</span></span>
-<span id="cb25-3"><a href="OOP.html#cb25-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">12345</span></span>
-<span id="cb25-4"><a href="OOP.html#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> f(<span class="va">self</span>):</span>
-<span id="cb25-5"><a href="OOP.html#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;hello world&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb199-1"><a href="OOP.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyClass:</span>
+<span id="cb199-2"><a href="OOP.html#cb199-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;A simple example class&quot;&quot;&quot;</span></span>
+<span id="cb199-3"><a href="OOP.html#cb199-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">12345</span></span>
+<span id="cb199-4"><a href="OOP.html#cb199-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> f(<span class="va">self</span>):</span>
+<span id="cb199-5"><a href="OOP.html#cb199-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;hello world&#39;</span></span></code></pre></div>
 <p>那么 <code>MyClass.i</code> 和 <code>MyClass.f</code> 就是有效的属性引用，将分别返回一个整数和一个函数对象。 类属性也可以被赋值，因此可以通过赋值来更改 MyClass.i 的值。 <code>__doc__</code> 也是一个有效的属性，将返回所属类的文档字符串：“A simple example class”。</p>
 <p>类的实例化使用函数表示法，可以假装类对象就是会返回一个新的类实例的函数。 举例来说：<code>x = MyClass()</code>，将创建MyClass类的新实例并将此对象分配给局部变量<code>x</code>。</p>
 <p>如果一个类定义了 <code>__init__()</code> 方法，创建了这个类的实例时就会调用该方法，可以看成是类实例的初始化操作。 当然，<code>__init__()</code> 方法还可以有额外参数以实现更高灵活性。在这种情况下，提供给类实例化运算符的参数将被传递给 <code>__init__()</code>。 例如：</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="OOP.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Complex:</span>
-<span id="cb26-2"><a href="OOP.html#cb26-2" aria-hidden="true" tabindex="-1"></a>     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, realpart, imagpart):</span>
-<span id="cb26-3"><a href="OOP.html#cb26-3" aria-hidden="true" tabindex="-1"></a>         <span class="va">self</span>.r <span class="op">=</span> realpart</span>
-<span id="cb26-4"><a href="OOP.html#cb26-4" aria-hidden="true" tabindex="-1"></a>         <span class="va">self</span>.i <span class="op">=</span> imagpart</span>
-<span id="cb26-5"><a href="OOP.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-6"><a href="OOP.html#cb26-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Complex(<span class="fl">3.0</span>, <span class="op">-</span><span class="fl">4.5</span>)</span>
-<span id="cb26-7"><a href="OOP.html#cb26-7" aria-hidden="true" tabindex="-1"></a>x.r, x.i</span></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb200-1"><a href="OOP.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Complex:</span>
+<span id="cb200-2"><a href="OOP.html#cb200-2" aria-hidden="true" tabindex="-1"></a>     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, realpart, imagpart):</span>
+<span id="cb200-3"><a href="OOP.html#cb200-3" aria-hidden="true" tabindex="-1"></a>         <span class="va">self</span>.r <span class="op">=</span> realpart</span>
+<span id="cb200-4"><a href="OOP.html#cb200-4" aria-hidden="true" tabindex="-1"></a>         <span class="va">self</span>.i <span class="op">=</span> imagpart</span>
+<span id="cb200-5"><a href="OOP.html#cb200-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb200-6"><a href="OOP.html#cb200-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Complex(<span class="fl">3.0</span>, <span class="op">-</span><span class="fl">4.5</span>)</span>
+<span id="cb200-7"><a href="OOP.html#cb200-7" aria-hidden="true" tabindex="-1"></a>x.r, x.i</span></code></pre></div>
 <pre><code>## (3.0, -4.5)</code></pre>
 </div>
 <div id="实例对象" class="section level2" number="9.4">
@@ -361,32 +361,32 @@ div.csl-indent {
 <div id="方法对象" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> 方法对象</h2>
 <p><code>x.f</code> 是一个方法对象，它可以被保存起来以后再调用。</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="OOP.html#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> MyClass()</span>
-<span id="cb28-2"><a href="OOP.html#cb28-2" aria-hidden="true" tabindex="-1"></a>x.f()</span></code></pre></div>
+<div class="sourceCode" id="cb202"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb202-1"><a href="OOP.html#cb202-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> MyClass()</span>
+<span id="cb202-2"><a href="OOP.html#cb202-2" aria-hidden="true" tabindex="-1"></a>x.f()</span></code></pre></div>
 <pre><code>## &#39;hello world&#39;</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="OOP.html#cb30-1" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> x.f</span>
-<span id="cb30-2"><a href="OOP.html#cb30-2" aria-hidden="true" tabindex="-1"></a>xf()</span></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb204-1"><a href="OOP.html#cb204-1" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> x.f</span>
+<span id="cb204-2"><a href="OOP.html#cb204-2" aria-hidden="true" tabindex="-1"></a>xf()</span></code></pre></div>
 <pre><code>## &#39;hello world&#39;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="OOP.html#cb32-1" aria-hidden="true" tabindex="-1"></a>MyClass.f()</span>
-<span id="cb32-2"><a href="OOP.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># TypeError: f() missing 1 required positional argument: &#39;self&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb206-1"><a href="OOP.html#cb206-1" aria-hidden="true" tabindex="-1"></a>MyClass.f()</span>
+<span id="cb206-2"><a href="OOP.html#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="co"># TypeError: f() missing 1 required positional argument: &#39;self&#39;</span></span></code></pre></div>
 <p>可以看到， <code>x.f()</code>没有报错，但 <code>MyClass.f()</code> 报错了。所以 <code>x.f</code> 与 <code>MyClass.f</code> 并不是一回事，它们是一个方法对象，一个是函数对象。</p>
 <p>方法的特殊之处就在于实例对象会作为函数的第一个参数被传入。 在我们的示例中，调用 x.f() 其实就相当于 MyClass.f(x)。总之，调用一个具有n个参数的实例方法就相当于调用n+1个参数的对应函数，增加的这个参数值就是方法所属的实例对象，位置在其他参数之前。</p>
 </div>
 <div id="类和实例变量" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> 类和实例变量</h2>
 <p>一般来说，实例变量(instance variable)是唯一属于每个实例的数据，而类变量(class variable)则是类的所有实例共享的属性和方法：</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="OOP.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
-<span id="cb33-2"><a href="OOP.html#cb33-2" aria-hidden="true" tabindex="-1"></a>    kind <span class="op">=</span> <span class="st">&#39;canine&#39;</span>         <span class="co"># class variable shared by all instances</span></span>
-<span id="cb33-3"><a href="OOP.html#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
-<span id="cb33-4"><a href="OOP.html#cb33-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name    <span class="co"># instance variable unique to each instance</span></span>
-<span id="cb33-5"><a href="OOP.html#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-6"><a href="OOP.html#cb33-6" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> Dog(<span class="st">&#39;Fido&#39;</span>)</span>
-<span id="cb33-7"><a href="OOP.html#cb33-7" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Dog(<span class="st">&#39;Buddy&#39;</span>)</span>
-<span id="cb33-8"><a href="OOP.html#cb33-8" aria-hidden="true" tabindex="-1"></a>d.kind, e.kind          <span class="co"># shared by all dogs</span></span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb207-1"><a href="OOP.html#cb207-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
+<span id="cb207-2"><a href="OOP.html#cb207-2" aria-hidden="true" tabindex="-1"></a>    kind <span class="op">=</span> <span class="st">&#39;canine&#39;</span>         <span class="co"># class variable shared by all instances</span></span>
+<span id="cb207-3"><a href="OOP.html#cb207-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb207-4"><a href="OOP.html#cb207-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name    <span class="co"># instance variable unique to each instance</span></span>
+<span id="cb207-5"><a href="OOP.html#cb207-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb207-6"><a href="OOP.html#cb207-6" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> Dog(<span class="st">&#39;Fido&#39;</span>)</span>
+<span id="cb207-7"><a href="OOP.html#cb207-7" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Dog(<span class="st">&#39;Buddy&#39;</span>)</span>
+<span id="cb207-8"><a href="OOP.html#cb207-8" aria-hidden="true" tabindex="-1"></a>d.kind, e.kind          <span class="co"># shared by all dogs</span></span></code></pre></div>
 <pre><code>## (&#39;canine&#39;, &#39;canine&#39;)</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="OOP.html#cb35-1" aria-hidden="true" tabindex="-1"></a>d.name                  <span class="co"># unique to d</span></span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb209-1"><a href="OOP.html#cb209-1" aria-hidden="true" tabindex="-1"></a>d.name                  <span class="co"># unique to d</span></span></code></pre></div>
 <pre><code>## &#39;Fido&#39;</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="OOP.html#cb37-1" aria-hidden="true" tabindex="-1"></a>e.name                  <span class="co"># unique to e</span></span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb211-1"><a href="OOP.html#cb211-1" aria-hidden="true" tabindex="-1"></a>e.name                  <span class="co"># unique to e</span></span></code></pre></div>
 <pre><code>## &#39;Buddy&#39;</code></pre>
 </div>
 <div id="python内置类属性" class="section level2" number="9.7">
@@ -398,78 +398,78 @@ div.csl-indent {
 <li><code>__module__</code>: 类定义所在的模块（类的全名是<code>__main__.className</code>，如果类位于一个导入模块<code>mymod</code>中，那么<code>className.__module__</code> 等于 <code>mymod</code>）</li>
 <li><code>__bases__</code> : 类的所有父类构成元素（包含了一个由所有父类组成的元组）</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="OOP.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Employee:</span>
-<span id="cb39-2"><a href="OOP.html#cb39-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">&#39;base class&#39;</span></span>
-<span id="cb39-3"><a href="OOP.html#cb39-3" aria-hidden="true" tabindex="-1"></a>   empCount <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb39-4"><a href="OOP.html#cb39-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb39-5"><a href="OOP.html#cb39-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, salary):</span>
-<span id="cb39-6"><a href="OOP.html#cb39-6" aria-hidden="true" tabindex="-1"></a>      <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb39-7"><a href="OOP.html#cb39-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">self</span>.salary <span class="op">=</span> salary</span>
-<span id="cb39-8"><a href="OOP.html#cb39-8" aria-hidden="true" tabindex="-1"></a>      Employee.empCount <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb39-9"><a href="OOP.html#cb39-9" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb39-10"><a href="OOP.html#cb39-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> displayCount(<span class="va">self</span>):</span>
-<span id="cb39-11"><a href="OOP.html#cb39-11" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="st">&quot;Total Employee </span><span class="sc">%d</span><span class="st">&quot;</span> <span class="op">%</span> Employee.empCount)</span>
-<span id="cb39-12"><a href="OOP.html#cb39-12" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb39-13"><a href="OOP.html#cb39-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> displayEmployee(<span class="va">self</span>):</span>
-<span id="cb39-14"><a href="OOP.html#cb39-14" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Name : &quot;</span>, <span class="va">self</span>.name,  <span class="st">&quot;, Salary: &quot;</span>, <span class="va">self</span>.salary)</span>
-<span id="cb39-15"><a href="OOP.html#cb39-15" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb39-16"><a href="OOP.html#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__doc__:&quot;</span>, Employee.__doc__)</span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb213-1"><a href="OOP.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Employee:</span>
+<span id="cb213-2"><a href="OOP.html#cb213-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">&#39;base class&#39;</span></span>
+<span id="cb213-3"><a href="OOP.html#cb213-3" aria-hidden="true" tabindex="-1"></a>   empCount <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb213-4"><a href="OOP.html#cb213-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb213-5"><a href="OOP.html#cb213-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, salary):</span>
+<span id="cb213-6"><a href="OOP.html#cb213-6" aria-hidden="true" tabindex="-1"></a>      <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb213-7"><a href="OOP.html#cb213-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">self</span>.salary <span class="op">=</span> salary</span>
+<span id="cb213-8"><a href="OOP.html#cb213-8" aria-hidden="true" tabindex="-1"></a>      Employee.empCount <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb213-9"><a href="OOP.html#cb213-9" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb213-10"><a href="OOP.html#cb213-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> displayCount(<span class="va">self</span>):</span>
+<span id="cb213-11"><a href="OOP.html#cb213-11" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="st">&quot;Total Employee </span><span class="sc">%d</span><span class="st">&quot;</span> <span class="op">%</span> Employee.empCount)</span>
+<span id="cb213-12"><a href="OOP.html#cb213-12" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb213-13"><a href="OOP.html#cb213-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> displayEmployee(<span class="va">self</span>):</span>
+<span id="cb213-14"><a href="OOP.html#cb213-14" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Name : &quot;</span>, <span class="va">self</span>.name,  <span class="st">&quot;, Salary: &quot;</span>, <span class="va">self</span>.salary)</span>
+<span id="cb213-15"><a href="OOP.html#cb213-15" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb213-16"><a href="OOP.html#cb213-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__doc__:&quot;</span>, Employee.__doc__)</span></code></pre></div>
 <pre><code>## Employee.__doc__: base class</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="OOP.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__name__:&quot;</span>, Employee.<span class="va">__name__</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb215-1"><a href="OOP.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__name__:&quot;</span>, Employee.<span class="va">__name__</span>)</span></code></pre></div>
 <pre><code>## Employee.__name__: Employee</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="OOP.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__module__:&quot;</span>, Employee.__module__)</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb217-1"><a href="OOP.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__module__:&quot;</span>, Employee.__module__)</span></code></pre></div>
 <pre><code>## Employee.__module__: __main__</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="OOP.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__bases__:&quot;</span>, Employee.__bases__)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb219-1"><a href="OOP.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__bases__:&quot;</span>, Employee.__bases__)</span></code></pre></div>
 <pre><code>## Employee.__bases__: (&lt;class &#39;object&#39;&gt;,)</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="OOP.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__dict__:&quot;</span>, Employee.__dict__)</span></code></pre></div>
-<pre><code>## Employee.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: &#39;base class&#39;, &#39;empCount&#39;: 0, &#39;__init__&#39;: &lt;function Employee.__init__ at 0x00000000266D23A0&gt;, &#39;displayCount&#39;: &lt;function Employee.displayCount at 0x00000000266D2430&gt;, &#39;displayEmployee&#39;: &lt;function Employee.displayEmployee at 0x00000000266D24C0&gt;, &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;Employee&#39; objects&gt;, &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;Employee&#39; objects&gt;}</code></pre>
+<div class="sourceCode" id="cb221"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb221-1"><a href="OOP.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Employee.__dict__:&quot;</span>, Employee.__dict__)</span></code></pre></div>
+<pre><code>## Employee.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: &#39;base class&#39;, &#39;empCount&#39;: 0, &#39;__init__&#39;: &lt;function Employee.__init__ at 0x0000000029A1B280&gt;, &#39;displayCount&#39;: &lt;function Employee.displayCount at 0x0000000029A1B310&gt;, &#39;displayEmployee&#39;: &lt;function Employee.displayEmployee at 0x0000000029A1B3A0&gt;, &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;Employee&#39; objects&gt;, &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;Employee&#39; objects&gt;}</code></pre>
 </div>
 <div id="补充说明" class="section level2" number="9.8">
 <h2><span class="header-section-number">9.8</span> 补充说明</h2>
 <p>数据属性会覆盖同名的方法属性，这在大型程序中可能带来极难发现的 bug。为了避免意外的命名冲突，使用一些约定来减少冲突的几率是明智的。可能的约定包括：方法属性名称的首字母大写，数据属性名称的前缀使用一个唯一的小写的字符串（也许只是一个下划线），或者方法使用动词而数据属性使用名词。</p>
 <p>类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的<strong>第一个参数名称</strong>，按照惯例它的名称是 <code>self</code>。这仅仅是一个约定， <code>self</code> 对 Python 而言绝对没有任何特殊含义。但是如果不遵循这个约定，对其他的 Python 程序员而言你的代码可读性就会变差，而且有些类 查看器程序也可能是遵循此约定编写的。</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="OOP.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Test:</span>
-<span id="cb49-2"><a href="OOP.html#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> prt(<span class="va">self</span>):</span>
-<span id="cb49-3"><a href="OOP.html#cb49-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="va">self</span>)</span>
-<span id="cb49-4"><a href="OOP.html#cb49-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="va">self</span>.__class__)</span>
-<span id="cb49-5"><a href="OOP.html#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-6"><a href="OOP.html#cb49-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Test()</span>
-<span id="cb49-7"><a href="OOP.html#cb49-7" aria-hidden="true" tabindex="-1"></a>t.prt()</span></code></pre></div>
-<pre><code>## &lt;__main__.Test object at 0x00000000266DC1F0&gt;
+<div class="sourceCode" id="cb223"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb223-1"><a href="OOP.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Test:</span>
+<span id="cb223-2"><a href="OOP.html#cb223-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> prt(<span class="va">self</span>):</span>
+<span id="cb223-3"><a href="OOP.html#cb223-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="va">self</span>)</span>
+<span id="cb223-4"><a href="OOP.html#cb223-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="va">self</span>.__class__)</span>
+<span id="cb223-5"><a href="OOP.html#cb223-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-6"><a href="OOP.html#cb223-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Test()</span>
+<span id="cb223-7"><a href="OOP.html#cb223-7" aria-hidden="true" tabindex="-1"></a>t.prt()</span></code></pre></div>
+<pre><code>## &lt;__main__.Test object at 0x0000000029C21730&gt;
 ## &lt;class &#39;__main__.Test&#39;&gt;</code></pre>
 <p>从执行结果可以很明显的看出，self 代表的是类的实例，代表当前对象的地址，而 <strong><code>self.__class__</code></strong> 则指向类。</p>
 <p>类属性的任何函数对象都为那个类的实例定义了一个方法。函数定义代码不一定非得定义在类中：也可以将一个函数对象赋值给类中的一个局部变量。例如：</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="OOP.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function defined outside the class</span></span>
-<span id="cb51-2"><a href="OOP.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f1(<span class="va">self</span>, x, y):</span>
-<span id="cb51-3"><a href="OOP.html#cb51-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">min</span>(x, x<span class="op">+</span>y)</span>
-<span id="cb51-4"><a href="OOP.html#cb51-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-5"><a href="OOP.html#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> C:</span>
-<span id="cb51-6"><a href="OOP.html#cb51-6" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> f1</span>
-<span id="cb51-7"><a href="OOP.html#cb51-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> g(<span class="va">self</span>):</span>
-<span id="cb51-8"><a href="OOP.html#cb51-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;hello world&#39;</span></span>
-<span id="cb51-9"><a href="OOP.html#cb51-9" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> g</span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb225-1"><a href="OOP.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function defined outside the class</span></span>
+<span id="cb225-2"><a href="OOP.html#cb225-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f1(<span class="va">self</span>, x, y):</span>
+<span id="cb225-3"><a href="OOP.html#cb225-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">min</span>(x, x<span class="op">+</span>y)</span>
+<span id="cb225-4"><a href="OOP.html#cb225-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb225-5"><a href="OOP.html#cb225-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> C:</span>
+<span id="cb225-6"><a href="OOP.html#cb225-6" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> f1</span>
+<span id="cb225-7"><a href="OOP.html#cb225-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> g(<span class="va">self</span>):</span>
+<span id="cb225-8"><a href="OOP.html#cb225-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;hello world&#39;</span></span>
+<span id="cb225-9"><a href="OOP.html#cb225-9" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> g</span></code></pre></div>
 <p>现在 <code>f</code>、<code>g</code> 和 <code>h</code> 都是 <code>C</code>类中的函数对象，因此它们都是 <code>C</code> 的实例的方法 —— <code>h</code> 完全等同于 <code>g</code> 。请注意，这种做法通常只会使阅读程序的人产生困惑。</p>
 <p>方法可以通过使用 <code>self</code> 参数的方法属性，调用其他方法：</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="OOP.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bag:</span>
-<span id="cb52-2"><a href="OOP.html#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb52-3"><a href="OOP.html#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> []</span>
-<span id="cb52-4"><a href="OOP.html#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-5"><a href="OOP.html#cb52-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add(<span class="va">self</span>, x):</span>
-<span id="cb52-6"><a href="OOP.html#cb52-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data.append(x)</span>
-<span id="cb52-7"><a href="OOP.html#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-8"><a href="OOP.html#cb52-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> addtwice(<span class="va">self</span>, x):</span>
-<span id="cb52-9"><a href="OOP.html#cb52-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.add(x)</span>
-<span id="cb52-10"><a href="OOP.html#cb52-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.add(x)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb226-1"><a href="OOP.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bag:</span>
+<span id="cb226-2"><a href="OOP.html#cb226-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb226-3"><a href="OOP.html#cb226-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> []</span>
+<span id="cb226-4"><a href="OOP.html#cb226-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-5"><a href="OOP.html#cb226-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add(<span class="va">self</span>, x):</span>
+<span id="cb226-6"><a href="OOP.html#cb226-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data.append(x)</span>
+<span id="cb226-7"><a href="OOP.html#cb226-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-8"><a href="OOP.html#cb226-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> addtwice(<span class="va">self</span>, x):</span>
+<span id="cb226-9"><a href="OOP.html#cb226-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.add(x)</span>
+<span id="cb226-10"><a href="OOP.html#cb226-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.add(x)</span></code></pre></div>
 <p>方法可以像普通函数那样引用全局命名。与方法关联的全局作用域是包含这个方法的定义的模块（类）。（类本身永远不会作为全局作用域使用）</p>
 </div>
 <div id="类的继承" class="section level2" number="9.9">
 <h2><span class="header-section-number">9.9</span> 类的继承</h2>
 <p>面向对象的编程带来的主要好处之一是代码的重用，实现这种重用的方法之一是通过继承机制。</p>
 <p>通过继承创建的新类称为<strong>子类</strong>或<strong>派生类</strong>，被继承的类称为<strong>基类</strong>或<strong>父类</strong>。</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="OOP.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DerivedClassName(BaseClassName):</span>
-<span id="cb53-2"><a href="OOP.html#cb53-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span><span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb53-3"><a href="OOP.html#cb53-3" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb53-4"><a href="OOP.html#cb53-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span>N<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb227-1"><a href="OOP.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DerivedClassName(BaseClassName):</span>
+<span id="cb227-2"><a href="OOP.html#cb227-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span><span class="dv">1</span><span class="op">&gt;</span></span>
+<span id="cb227-3"><a href="OOP.html#cb227-3" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb227-4"><a href="OOP.html#cb227-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>statement<span class="op">-</span>N<span class="op">&gt;</span></span></code></pre></div>
 <p>在python中继承中的一些特点：</p>
 <ol style="list-style-type: decimal">
 <li>如果在子类中需要父类的构造方法就需要显示的调用父类的构造方法，或者不重写父类的构造方法。详细说明可查看：<a href="http://www.runoob.com/w3cnote/python-extends-init.html">Python 子类继承父类构造函数说明</a>。</li>
@@ -477,35 +477,35 @@ div.csl-indent {
 <li>Python 总是首先查找对应类型的方法，如果它不能在派生类中找到对应的方法，它才开始到基类中逐个查找。</li>
 </ol>
 <p>如果在继承元组中列了一个以上的类，那么它就被称作”多重继承” 。</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="OOP.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent:       </span>
-<span id="cb54-2"><a href="OOP.html#cb54-2" aria-hidden="true" tabindex="-1"></a>   parentAttr <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb54-3"><a href="OOP.html#cb54-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb54-4"><a href="OOP.html#cb54-4" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Call the parent class constructor&quot;</span>)</span>
-<span id="cb54-5"><a href="OOP.html#cb54-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-6"><a href="OOP.html#cb54-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> parentMethod(<span class="va">self</span>):</span>
-<span id="cb54-7"><a href="OOP.html#cb54-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call the parent class method&#39;</span>)</span>
-<span id="cb54-8"><a href="OOP.html#cb54-8" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-9"><a href="OOP.html#cb54-9" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> setAttr(<span class="va">self</span>, attr):</span>
-<span id="cb54-10"><a href="OOP.html#cb54-10" aria-hidden="true" tabindex="-1"></a>      Parent.parentAttr <span class="op">=</span> attr</span>
-<span id="cb54-11"><a href="OOP.html#cb54-11" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-12"><a href="OOP.html#cb54-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> getAttr(<span class="va">self</span>):</span>
-<span id="cb54-13"><a href="OOP.html#cb54-13" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Parent class attribute :&quot;</span>, Parent.parentAttr)</span>
-<span id="cb54-14"><a href="OOP.html#cb54-14" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-15"><a href="OOP.html#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Child(Parent): </span>
-<span id="cb54-16"><a href="OOP.html#cb54-16" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb54-17"><a href="OOP.html#cb54-17" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Call subclass constructor&quot;</span>)</span>
-<span id="cb54-18"><a href="OOP.html#cb54-18" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-19"><a href="OOP.html#cb54-19" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> childMethod(<span class="va">self</span>):</span>
-<span id="cb54-20"><a href="OOP.html#cb54-20" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call subclass method&#39;</span>)</span>
-<span id="cb54-21"><a href="OOP.html#cb54-21" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb54-22"><a href="OOP.html#cb54-22" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Child()          </span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb228-1"><a href="OOP.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent:       </span>
+<span id="cb228-2"><a href="OOP.html#cb228-2" aria-hidden="true" tabindex="-1"></a>   parentAttr <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb228-3"><a href="OOP.html#cb228-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb228-4"><a href="OOP.html#cb228-4" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Call the parent class constructor&quot;</span>)</span>
+<span id="cb228-5"><a href="OOP.html#cb228-5" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-6"><a href="OOP.html#cb228-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> parentMethod(<span class="va">self</span>):</span>
+<span id="cb228-7"><a href="OOP.html#cb228-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call the parent class method&#39;</span>)</span>
+<span id="cb228-8"><a href="OOP.html#cb228-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-9"><a href="OOP.html#cb228-9" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> setAttr(<span class="va">self</span>, attr):</span>
+<span id="cb228-10"><a href="OOP.html#cb228-10" aria-hidden="true" tabindex="-1"></a>      Parent.parentAttr <span class="op">=</span> attr</span>
+<span id="cb228-11"><a href="OOP.html#cb228-11" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-12"><a href="OOP.html#cb228-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> getAttr(<span class="va">self</span>):</span>
+<span id="cb228-13"><a href="OOP.html#cb228-13" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Parent class attribute :&quot;</span>, Parent.parentAttr)</span>
+<span id="cb228-14"><a href="OOP.html#cb228-14" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-15"><a href="OOP.html#cb228-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Child(Parent): </span>
+<span id="cb228-16"><a href="OOP.html#cb228-16" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb228-17"><a href="OOP.html#cb228-17" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Call subclass constructor&quot;</span>)</span>
+<span id="cb228-18"><a href="OOP.html#cb228-18" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-19"><a href="OOP.html#cb228-19" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> childMethod(<span class="va">self</span>):</span>
+<span id="cb228-20"><a href="OOP.html#cb228-20" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call subclass method&#39;</span>)</span>
+<span id="cb228-21"><a href="OOP.html#cb228-21" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb228-22"><a href="OOP.html#cb228-22" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Child()          </span></code></pre></div>
 <pre><code>## Call subclass constructor</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="OOP.html#cb56-1" aria-hidden="true" tabindex="-1"></a>c.childMethod()      </span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb230-1"><a href="OOP.html#cb230-1" aria-hidden="true" tabindex="-1"></a>c.childMethod()      </span></code></pre></div>
 <pre><code>## Call subclass method</code></pre>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="OOP.html#cb58-1" aria-hidden="true" tabindex="-1"></a>c.parentMethod()     </span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb232-1"><a href="OOP.html#cb232-1" aria-hidden="true" tabindex="-1"></a>c.parentMethod()     </span></code></pre></div>
 <pre><code>## Call the parent class method</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="OOP.html#cb60-1" aria-hidden="true" tabindex="-1"></a>c.setAttr(<span class="dv">200</span>)       </span>
-<span id="cb60-2"><a href="OOP.html#cb60-2" aria-hidden="true" tabindex="-1"></a>c.getAttr() </span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb234-1"><a href="OOP.html#cb234-1" aria-hidden="true" tabindex="-1"></a>c.setAttr(<span class="dv">200</span>)       </span>
+<span id="cb234-2"><a href="OOP.html#cb234-2" aria-hidden="true" tabindex="-1"></a>c.getAttr() </span></code></pre></div>
 <pre><code>## Parent class attribute : 200</code></pre>
 <p>派生类定义的执行过程和基类是相同的。在解析属性的引用时，如果在类中找不到请求的属性，搜索会在基类中继续。如果基类本身是由别的类派生而来，这个规则会递归应用。</p>
 <p>派生类的实例化没有什么特殊之处： <code>DerivedClassName()</code> 创建类的一个新的实例。方法的引用按如下规则解析： 搜索对应的类的属性，必要时沿基类链逐级搜索，如果找到了函数对象这个方法引用就是合法的。</p>
@@ -515,16 +515,16 @@ div.csl-indent {
 <li><code>isinstance(obj, Class)</code>布尔函数，如果obj是Class类的实例对象或者是一个Class子类的实例对象则返回true。</li>
 </ul>
 <p>派生类可以重写基类中的方法。</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="OOP.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent: </span>
-<span id="cb62-2"><a href="OOP.html#cb62-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> myMethod(<span class="va">self</span>):</span>
-<span id="cb62-3"><a href="OOP.html#cb62-3" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call parent class method&#39;</span>)</span>
-<span id="cb62-4"><a href="OOP.html#cb62-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb62-5"><a href="OOP.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Child(Parent): </span>
-<span id="cb62-6"><a href="OOP.html#cb62-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> myMethod(<span class="va">self</span>):</span>
-<span id="cb62-7"><a href="OOP.html#cb62-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call subclass method&#39;</span>)</span>
-<span id="cb62-8"><a href="OOP.html#cb62-8" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb62-9"><a href="OOP.html#cb62-9" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Child()</span>
-<span id="cb62-10"><a href="OOP.html#cb62-10" aria-hidden="true" tabindex="-1"></a>c.myMethod()</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb236-1"><a href="OOP.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent: </span>
+<span id="cb236-2"><a href="OOP.html#cb236-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> myMethod(<span class="va">self</span>):</span>
+<span id="cb236-3"><a href="OOP.html#cb236-3" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call parent class method&#39;</span>)</span>
+<span id="cb236-4"><a href="OOP.html#cb236-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb236-5"><a href="OOP.html#cb236-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Child(Parent): </span>
+<span id="cb236-6"><a href="OOP.html#cb236-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> myMethod(<span class="va">self</span>):</span>
+<span id="cb236-7"><a href="OOP.html#cb236-7" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Call subclass method&#39;</span>)</span>
+<span id="cb236-8"><a href="OOP.html#cb236-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb236-9"><a href="OOP.html#cb236-9" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Child()</span>
+<span id="cb236-10"><a href="OOP.html#cb236-10" aria-hidden="true" tabindex="-1"></a>c.myMethod()</span></code></pre></div>
 <pre><code>## Call subclass method</code></pre>
 <p>派生类中的覆盖方法可能是想要扩充而不是简单的替代基类中的重名方法。有一个简单的方法可以直接调用基类方法：只要调用 <code>BaseClassName.methodname(self, arguments)</code>。</p>
 </div>
@@ -533,103 +533,103 @@ div.csl-indent {
 <p>Python中并不存在所谓只能在对象内部才能访问的“私有”实例变量。然而，有一项大多数 Python 代码都遵循的习惯：带有一个下划线前缀的名称（例如<code>_spam</code> ）应被视为非公开的 API 的一部分（无论是函数、 方法还是数据成员）。</p>
 <p>由于存在一种合理的类私有成员使用场景（例如为了避免名称与子类所定义名称的冲突），Python 对这种机制提供了简单的支持，即所谓“名称重整” （<em>name mangling</em>）。<code>__spam</code> 形式的任何标识符（前面至少两个下划线，后面至多一个下划线）将被替换为 <code>_classname__spam</code>，其中 <code>classname</code> 为去除了前缀下划线的当前类名称。这种替换不考虑标识符的句法位置，只要它出现在类的定义内就会进行。</p>
 <p>名称重整有利于子类重写父类的方法而不会破坏类内部的方法调用</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="OOP.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Mapping:</span>
-<span id="cb64-2"><a href="OOP.html#cb64-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, iterable):</span>
-<span id="cb64-3"><a href="OOP.html#cb64-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.items_list <span class="op">=</span> []</span>
-<span id="cb64-4"><a href="OOP.html#cb64-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.__update(iterable)</span>
-<span id="cb64-5"><a href="OOP.html#cb64-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-6"><a href="OOP.html#cb64-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>, iterable):</span>
-<span id="cb64-7"><a href="OOP.html#cb64-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> item <span class="kw">in</span> iterable:</span>
-<span id="cb64-8"><a href="OOP.html#cb64-8" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.items_list.append(item)</span>
-<span id="cb64-9"><a href="OOP.html#cb64-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-10"><a href="OOP.html#cb64-10" aria-hidden="true" tabindex="-1"></a>    __update <span class="op">=</span> update   <span class="co"># private copy of original update() method</span></span>
-<span id="cb64-11"><a href="OOP.html#cb64-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-12"><a href="OOP.html#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MappingSubclass(Mapping):</span>
-<span id="cb64-13"><a href="OOP.html#cb64-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>, keys, values):</span>
-<span id="cb64-14"><a href="OOP.html#cb64-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># provides new signature for update()</span></span>
-<span id="cb64-15"><a href="OOP.html#cb64-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># but does not break __init__()</span></span>
-<span id="cb64-16"><a href="OOP.html#cb64-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> item <span class="kw">in</span> <span class="bu">zip</span>(keys, values):</span>
-<span id="cb64-17"><a href="OOP.html#cb64-17" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.items_list.append(item)</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb238-1"><a href="OOP.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Mapping:</span>
+<span id="cb238-2"><a href="OOP.html#cb238-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, iterable):</span>
+<span id="cb238-3"><a href="OOP.html#cb238-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.items_list <span class="op">=</span> []</span>
+<span id="cb238-4"><a href="OOP.html#cb238-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.__update(iterable)</span>
+<span id="cb238-5"><a href="OOP.html#cb238-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb238-6"><a href="OOP.html#cb238-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>, iterable):</span>
+<span id="cb238-7"><a href="OOP.html#cb238-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> item <span class="kw">in</span> iterable:</span>
+<span id="cb238-8"><a href="OOP.html#cb238-8" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.items_list.append(item)</span>
+<span id="cb238-9"><a href="OOP.html#cb238-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb238-10"><a href="OOP.html#cb238-10" aria-hidden="true" tabindex="-1"></a>    __update <span class="op">=</span> update   <span class="co"># private copy of original update() method</span></span>
+<span id="cb238-11"><a href="OOP.html#cb238-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb238-12"><a href="OOP.html#cb238-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MappingSubclass(Mapping):</span>
+<span id="cb238-13"><a href="OOP.html#cb238-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>, keys, values):</span>
+<span id="cb238-14"><a href="OOP.html#cb238-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># provides new signature for update()</span></span>
+<span id="cb238-15"><a href="OOP.html#cb238-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># but does not break __init__()</span></span>
+<span id="cb238-16"><a href="OOP.html#cb238-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> item <span class="kw">in</span> <span class="bu">zip</span>(keys, values):</span>
+<span id="cb238-17"><a href="OOP.html#cb238-17" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.items_list.append(item)</span></code></pre></div>
 </div>
 <div id="元类" class="section level2" number="9.11">
 <h2><span class="header-section-number">9.11</span> 元类</h2>
 <p>在Python中，类也是对象（Classes are objects）。</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="OOP.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ObjectCreator:</span>
-<span id="cb65-2"><a href="OOP.html#cb65-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb239-1"><a href="OOP.html#cb239-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ObjectCreator:</span>
+<span id="cb239-2"><a href="OOP.html#cb239-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
 <p>会在内存中创造一个名为<code>ObjectCreator</code>的类对象。这个类对象具备创造对象的能力，同时它本身也是一个对象。它可以被赋值给别的变量，可以被复制，可以给它添加属性，可以作为函数参数传递。</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="OOP.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ObjectCreator)</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb240-1"><a href="OOP.html#cb240-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ObjectCreator)</span></code></pre></div>
 <pre><code>## &lt;class &#39;__main__.ObjectCreator&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="OOP.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> echo(o):</span>
-<span id="cb68-2"><a href="OOP.html#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(o)</span>
-<span id="cb68-3"><a href="OOP.html#cb68-3" aria-hidden="true" tabindex="-1"></a>echo(ObjectCreator)</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb242-1"><a href="OOP.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> echo(o):</span>
+<span id="cb242-2"><a href="OOP.html#cb242-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(o)</span>
+<span id="cb242-3"><a href="OOP.html#cb242-3" aria-hidden="true" tabindex="-1"></a>echo(ObjectCreator)</span></code></pre></div>
 <pre><code>## &lt;class &#39;__main__.ObjectCreator&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="OOP.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="bu">hasattr</span>(ObjectCreator, <span class="st">&#39;new_attr&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb244-1"><a href="OOP.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="bu">hasattr</span>(ObjectCreator, <span class="st">&#39;new_attr&#39;</span>)</span></code></pre></div>
 <pre><code>## False</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="OOP.html#cb72-1" aria-hidden="true" tabindex="-1"></a>ObjectCreator.new_attr <span class="op">=</span> <span class="st">&#39;foo&#39;</span></span>
-<span id="cb72-2"><a href="OOP.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="bu">hasattr</span>(ObjectCreator, <span class="st">&#39;new_attr&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb246-1"><a href="OOP.html#cb246-1" aria-hidden="true" tabindex="-1"></a>ObjectCreator.new_attr <span class="op">=</span> <span class="st">&#39;foo&#39;</span></span>
+<span id="cb246-2"><a href="OOP.html#cb246-2" aria-hidden="true" tabindex="-1"></a><span class="bu">hasattr</span>(ObjectCreator, <span class="st">&#39;new_attr&#39;</span>)</span></code></pre></div>
 <pre><code>## True</code></pre>
-<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="OOP.html#cb74-1" aria-hidden="true" tabindex="-1"></a>ObjectCreator.new_attr</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb248-1"><a href="OOP.html#cb248-1" aria-hidden="true" tabindex="-1"></a>ObjectCreator.new_attr</span></code></pre></div>
 <pre><code>## &#39;foo&#39;</code></pre>
-<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="OOP.html#cb76-1" aria-hidden="true" tabindex="-1"></a>ObjectCreatorMirror <span class="op">=</span> ObjectCreator</span>
-<span id="cb76-2"><a href="OOP.html#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ObjectCreatorMirror())</span></code></pre></div>
-<pre><code>## &lt;__main__.ObjectCreator object at 0x00000000266E8E80&gt;</code></pre>
+<div class="sourceCode" id="cb250"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb250-1"><a href="OOP.html#cb250-1" aria-hidden="true" tabindex="-1"></a>ObjectCreatorMirror <span class="op">=</span> ObjectCreator</span>
+<span id="cb250-2"><a href="OOP.html#cb250-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ObjectCreatorMirror())</span></code></pre></div>
+<pre><code>## &lt;__main__.ObjectCreator object at 0x0000000029C28130&gt;</code></pre>
 <p>因为类是对象，所以你可以想对象一样动态地创建它们。</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="OOP.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> choose_class(name):</span>
-<span id="cb78-2"><a href="OOP.html#cb78-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">&quot;foo&quot;</span>:</span>
-<span id="cb78-3"><a href="OOP.html#cb78-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">class</span> Foo:</span>
-<span id="cb78-4"><a href="OOP.html#cb78-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
-<span id="cb78-5"><a href="OOP.html#cb78-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> Foo</span>
-<span id="cb78-6"><a href="OOP.html#cb78-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb78-7"><a href="OOP.html#cb78-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">class</span> Bar:</span>
-<span id="cb78-8"><a href="OOP.html#cb78-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
-<span id="cb78-9"><a href="OOP.html#cb78-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> Bar</span>
-<span id="cb78-10"><a href="OOP.html#cb78-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-11"><a href="OOP.html#cb78-11" aria-hidden="true" tabindex="-1"></a>myclass <span class="op">=</span> choose_class(<span class="st">&#39;foo&#39;</span>)</span>
-<span id="cb78-12"><a href="OOP.html#cb78-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myclass)</span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb252-1"><a href="OOP.html#cb252-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> choose_class(name):</span>
+<span id="cb252-2"><a href="OOP.html#cb252-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">&quot;foo&quot;</span>:</span>
+<span id="cb252-3"><a href="OOP.html#cb252-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">class</span> Foo:</span>
+<span id="cb252-4"><a href="OOP.html#cb252-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb252-5"><a href="OOP.html#cb252-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> Foo</span>
+<span id="cb252-6"><a href="OOP.html#cb252-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb252-7"><a href="OOP.html#cb252-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">class</span> Bar:</span>
+<span id="cb252-8"><a href="OOP.html#cb252-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb252-9"><a href="OOP.html#cb252-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> Bar</span>
+<span id="cb252-10"><a href="OOP.html#cb252-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb252-11"><a href="OOP.html#cb252-11" aria-hidden="true" tabindex="-1"></a>myclass <span class="op">=</span> choose_class(<span class="st">&#39;foo&#39;</span>)</span>
+<span id="cb252-12"><a href="OOP.html#cb252-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myclass)</span></code></pre></div>
 <pre><code>## &lt;class &#39;__main__.choose_class.&lt;locals&gt;.Foo&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="OOP.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myclass())</span></code></pre></div>
-<pre><code>## &lt;__main__.choose_class.&lt;locals&gt;.Foo object at 0x00000000266E8EB0&gt;</code></pre>
+<div class="sourceCode" id="cb254"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb254-1"><a href="OOP.html#cb254-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myclass())</span></code></pre></div>
+<pre><code>## &lt;__main__.choose_class.&lt;locals&gt;.Foo object at 0x0000000029C272E0&gt;</code></pre>
 <p>因为类是对象，所以肯定可以由某些东西来创建。一种是使用关键词<code>class</code>，另一种是使用<code>type</code>函数手动创建。<code>type</code>函数常见的作用是查看对象的类型（type）。</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="OOP.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb256-1"><a href="OOP.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="OOP.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="st">&#39;1&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb258-1"><a href="OOP.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="st">&#39;1&#39;</span>)</span></code></pre></div>
 <pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="OOP.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ObjectCreator)</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb260-1"><a href="OOP.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ObjectCreator)</span></code></pre></div>
 <pre><code>## &lt;class &#39;type&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="OOP.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ObjectCreator())</span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb262-1"><a href="OOP.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ObjectCreator())</span></code></pre></div>
 <pre><code>## &lt;class &#39;__main__.ObjectCreator&#39;&gt;</code></pre>
 <p><code>type</code>可以按照以下方式定义类：</p>
 <pre><code>type(name of the class,
      tuple of the parent class (for inheritance, can be empty),
      dictionary containing attributes names and values)</code></pre>
 <p>比如：</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="OOP.html#cb91-1" aria-hidden="true" tabindex="-1"></a>MyShinyClass <span class="op">=</span> <span class="bu">type</span>(<span class="st">&#39;MyShinyClass&#39;</span>, (), {})</span>
-<span id="cb91-2"><a href="OOP.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyShinyClass)</span></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb265-1"><a href="OOP.html#cb265-1" aria-hidden="true" tabindex="-1"></a>MyShinyClass <span class="op">=</span> <span class="bu">type</span>(<span class="st">&#39;MyShinyClass&#39;</span>, (), {})</span>
+<span id="cb265-2"><a href="OOP.html#cb265-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyShinyClass)</span></code></pre></div>
 <pre><code>## &lt;class &#39;__main__.MyShinyClass&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="OOP.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyShinyClass())</span></code></pre></div>
-<pre><code>## &lt;__main__.MyShinyClass object at 0x00000000266E7EE0&gt;</code></pre>
-<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="OOP.html#cb95-1" aria-hidden="true" tabindex="-1"></a>Foo <span class="op">=</span> <span class="bu">type</span>(<span class="st">&#39;Foo&#39;</span>, (MyShinyClass,), {<span class="st">&#39;bar&#39;</span>:<span class="va">True</span>}) <span class="co">#inherit from MyShinyClass</span></span>
-<span id="cb95-2"><a href="OOP.html#cb95-2" aria-hidden="true" tabindex="-1"></a>Foo.bar</span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb267-1"><a href="OOP.html#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyShinyClass())</span></code></pre></div>
+<pre><code>## &lt;__main__.MyShinyClass object at 0x0000000029C382E0&gt;</code></pre>
+<div class="sourceCode" id="cb269"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb269-1"><a href="OOP.html#cb269-1" aria-hidden="true" tabindex="-1"></a>Foo <span class="op">=</span> <span class="bu">type</span>(<span class="st">&#39;Foo&#39;</span>, (MyShinyClass,), {<span class="st">&#39;bar&#39;</span>:<span class="va">True</span>}) <span class="co">#inherit from MyShinyClass</span></span>
+<span id="cb269-2"><a href="OOP.html#cb269-2" aria-hidden="true" tabindex="-1"></a>Foo.bar</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p>元类是创建类的类。<code>type</code>就是Python中的元类。</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="OOP.html#cb97-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">35</span></span>
-<span id="cb97-2"><a href="OOP.html#cb97-2" aria-hidden="true" tabindex="-1"></a>age.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb271-1"><a href="OOP.html#cb271-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">35</span></span>
+<span id="cb271-2"><a href="OOP.html#cb271-2" aria-hidden="true" tabindex="-1"></a>age.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="OOP.html#cb99-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;bob&#39;</span></span>
-<span id="cb99-2"><a href="OOP.html#cb99-2" aria-hidden="true" tabindex="-1"></a>name.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb273-1"><a href="OOP.html#cb273-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;bob&#39;</span></span>
+<span id="cb273-2"><a href="OOP.html#cb273-2" aria-hidden="true" tabindex="-1"></a>name.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="OOP.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(): <span class="cf">pass</span></span>
-<span id="cb101-2"><a href="OOP.html#cb101-2" aria-hidden="true" tabindex="-1"></a>foo.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb275-1"><a href="OOP.html#cb275-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(): <span class="cf">pass</span></span>
+<span id="cb275-2"><a href="OOP.html#cb275-2" aria-hidden="true" tabindex="-1"></a>foo.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;function&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="OOP.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> bar: <span class="cf">pass</span></span>
-<span id="cb103-2"><a href="OOP.html#cb103-2" aria-hidden="true" tabindex="-1"></a>bar.__class__</span>
-<span id="cb103-3"><a href="OOP.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then</span></span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb277-1"><a href="OOP.html#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> bar: <span class="cf">pass</span></span>
+<span id="cb277-2"><a href="OOP.html#cb277-2" aria-hidden="true" tabindex="-1"></a>bar.__class__</span>
+<span id="cb277-3"><a href="OOP.html#cb277-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then</span></span></code></pre></div>
 <pre><code>## &lt;class &#39;type&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="OOP.html#cb105-1" aria-hidden="true" tabindex="-1"></a>age.__class__.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb279"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb279-1"><a href="OOP.html#cb279-1" aria-hidden="true" tabindex="-1"></a>age.__class__.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;type&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="OOP.html#cb107-1" aria-hidden="true" tabindex="-1"></a>name.__class__.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb281"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb281-1"><a href="OOP.html#cb281-1" aria-hidden="true" tabindex="-1"></a>name.__class__.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;type&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="OOP.html#cb109-1" aria-hidden="true" tabindex="-1"></a>foo.__class__.__class__</span></code></pre></div>
+<div class="sourceCode" id="cb283"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb283-1"><a href="OOP.html#cb283-1" aria-hidden="true" tabindex="-1"></a>foo.__class__.__class__</span></code></pre></div>
 <pre><code>## &lt;class &#39;type&#39;&gt;</code></pre>
 <p>参考资料：</p>
 <ul>
@@ -691,6 +691,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

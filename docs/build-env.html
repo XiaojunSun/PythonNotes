@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 搭建Python运行环境 | 我的Python笔记</title>
+  <meta name="description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 搭建Python运行环境 | 我的Python笔记" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  <meta name="github-repo" content="XiaojunSun/PythonNotes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 搭建Python运行环境 | 我的Python笔记" />
+  
+  <meta name="twitter:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
+  
+
+<meta name="author" content="Xiaojun Sun" />
+
+
+<meta name="date" content="2021-11-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="control-flow.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">我的Python笔记</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="build-env.html"><a href="build-env.html"><i class="fa fa-check"></i><b>1</b> 搭建Python运行环境</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="build-env.html"><a href="build-env.html#安装anaconda"><i class="fa fa-check"></i><b>1.1</b> 安装Anaconda</a></li>
+<li class="chapter" data-level="1.2" data-path="build-env.html"><a href="build-env.html#环境管理"><i class="fa fa-check"></i><b>1.2</b> 环境管理</a></li>
+<li class="chapter" data-level="1.3" data-path="build-env.html"><a href="build-env.html#包的管理"><i class="fa fa-check"></i><b>1.3</b> 包的管理</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="build-env.html"><a href="build-env.html#搜索包"><i class="fa fa-check"></i><b>1.3.1</b> 搜索包</a></li>
+<li class="chapter" data-level="1.3.2" data-path="build-env.html"><a href="build-env.html#安装包"><i class="fa fa-check"></i><b>1.3.2</b> 安装包</a></li>
+<li class="chapter" data-level="1.3.3" data-path="build-env.html"><a href="build-env.html#更新包"><i class="fa fa-check"></i><b>1.3.3</b> 更新包</a></li>
+<li class="chapter" data-level="1.3.4" data-path="build-env.html"><a href="build-env.html#卸载包"><i class="fa fa-check"></i><b>1.3.4</b> 卸载包</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="build-env.html"><a href="build-env.html#jupyter-notebook"><i class="fa fa-check"></i><b>1.4</b> Jupyter Notebook</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="build-env.html"><a href="build-env.html#jupyter-notebook常用技巧"><i class="fa fa-check"></i><b>1.4.1</b> Jupyter Notebook常用技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="build-env.html"><a href="build-env.html#ipython简介"><i class="fa fa-check"></i><b>1.5</b> IPython简介</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="build-env.html"><a href="build-env.html#帮助"><i class="fa fa-check"></i><b>1.5.1</b> 帮助</a></li>
+<li class="chapter" data-level="1.5.2" data-path="build-env.html"><a href="build-env.html#tab补全"><i class="fa fa-check"></i><b>1.5.2</b> Tab补全</a></li>
+<li class="chapter" data-level="1.5.3" data-path="build-env.html"><a href="build-env.html#自省"><i class="fa fa-check"></i><b>1.5.3</b> 自省</a></li>
+<li class="chapter" data-level="1.5.4" data-path="build-env.html"><a href="build-env.html#中断运行的代码"><i class="fa fa-check"></i><b>1.5.4</b> 中断运行的代码</a></li>
+<li class="chapter" data-level="1.5.5" data-path="build-env.html"><a href="build-env.html#魔术命令"><i class="fa fa-check"></i><b>1.5.5</b> 魔术命令</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="build-env.html"><a href="build-env.html#pycharm"><i class="fa fa-check"></i><b>1.6</b> PyCharm</a></li>
+<li class="chapter" data-level="1.7" data-path="build-env.html"><a href="build-env.html#运行python程序"><i class="fa fa-check"></i><b>1.7</b> 运行Python程序</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2</b> 程序控制流程</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="control-flow.html"><a href="control-flow.html#if语句"><i class="fa fa-check"></i><b>2.1</b> if语句</a></li>
+<li class="chapter" data-level="2.2" data-path="control-flow.html"><a href="control-flow.html#while循环"><i class="fa fa-check"></i><b>2.2</b> while循环</a></li>
+<li class="chapter" data-level="2.3" data-path="control-flow.html"><a href="control-flow.html#for循环"><i class="fa fa-check"></i><b>2.3</b> for循环</a></li>
+<li class="chapter" data-level="2.4" data-path="control-flow.html"><a href="control-flow.html#continue"><i class="fa fa-check"></i><b>2.4</b> continue</a></li>
+<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html#pass"><i class="fa fa-check"></i><b>2.5</b> pass</a></li>
+<li class="chapter" data-level="2.6" data-path="control-flow.html"><a href="control-flow.html#三元表达式"><i class="fa fa-check"></i><b>2.6</b> 三元表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="built-in-type.html"><a href="built-in-type.html"><i class="fa fa-check"></i><b>3</b> 内置数据类型（一）</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="built-in-type.html"><a href="built-in-type.html#none"><i class="fa fa-check"></i><b>3.1</b> None</a></li>
+<li class="chapter" data-level="3.2" data-path="built-in-type.html"><a href="built-in-type.html#字符串"><i class="fa fa-check"></i><b>3.2</b> 字符串</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="built-in-type.html"><a href="built-in-type.html#字符串格式化语法"><i class="fa fa-check"></i><b>3.2.1</b> 字符串格式化语法</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
+<li class="chapter" data-level="3.6.2" data-path="built-in-type.html"><a href="built-in-type.html#比较运算符"><i class="fa fa-check"></i><b>3.6.2</b> 比较运算符</a></li>
+<li class="chapter" data-level="3.6.3" data-path="built-in-type.html"><a href="built-in-type.html#逻辑运算符"><i class="fa fa-check"></i><b>3.6.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="3.6.4" data-path="built-in-type.html"><a href="built-in-type.html#成员运算符"><i class="fa fa-check"></i><b>3.6.4</b> 成员运算符</a></li>
+<li class="chapter" data-level="3.6.5" data-path="built-in-type.html"><a href="built-in-type.html#身份运算符"><i class="fa fa-check"></i><b>3.6.5</b> 身份运算符</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
+<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
+<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
+<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="module.html"><a href="module.html#命名空间和作用域"><i class="fa fa-check"></i><b>8.0.1</b> <span>命名空间和作用域</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="OOP.html"><a href="OOP.html"><i class="fa fa-check"></i><b>9</b> Python 面向对象</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="OOP.html"><a href="OOP.html#术语简介"><i class="fa fa-check"></i><b>9.1</b> 术语简介</a></li>
+<li class="chapter" data-level="9.2" data-path="OOP.html"><a href="OOP.html#创建类"><i class="fa fa-check"></i><b>9.2</b> 创建类</a></li>
+<li class="chapter" data-level="9.3" data-path="OOP.html"><a href="OOP.html#类对象"><i class="fa fa-check"></i><b>9.3</b> 类对象</a></li>
+<li class="chapter" data-level="9.4" data-path="OOP.html"><a href="OOP.html#实例对象"><i class="fa fa-check"></i><b>9.4</b> 实例对象</a></li>
+<li class="chapter" data-level="9.5" data-path="OOP.html"><a href="OOP.html#方法对象"><i class="fa fa-check"></i><b>9.5</b> 方法对象</a></li>
+<li class="chapter" data-level="9.6" data-path="OOP.html"><a href="OOP.html#类和实例变量"><i class="fa fa-check"></i><b>9.6</b> 类和实例变量</a></li>
+<li class="chapter" data-level="9.7" data-path="OOP.html"><a href="OOP.html#python内置类属性"><i class="fa fa-check"></i><b>9.7</b> Python内置类属性</a></li>
+<li class="chapter" data-level="9.8" data-path="OOP.html"><a href="OOP.html#补充说明"><i class="fa fa-check"></i><b>9.8</b> 补充说明</a></li>
+<li class="chapter" data-level="9.9" data-path="OOP.html"><a href="OOP.html#类的继承"><i class="fa fa-check"></i><b>9.9</b> 类的继承</a></li>
+<li class="chapter" data-level="9.10" data-path="OOP.html"><a href="OOP.html#私有变量"><i class="fa fa-check"></i><b>9.10</b> 私有变量</a></li>
+<li class="chapter" data-level="9.11" data-path="OOP.html"><a href="OOP.html#元类"><i class="fa fa-check"></i><b>9.11</b> 元类</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="functional.html"><a href="functional.html"><i class="fa fa-check"></i><b>10</b> 函数式编程</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
+<li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
+<li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
+<li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="specialized-data-types.html"><a href="specialized-data-types.html"><i class="fa fa-check"></i><b>11</b> 专门数据类型</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="specialized-data-types.html"><a href="specialized-data-types.html#日期和时间"><i class="fa fa-check"></i><b>11.1</b> 日期和时间</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>13.0.1</b> 文件和操作系统</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">我的Python笔记</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="build-env" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> 搭建Python运行环境</h1>
+<div id="安装anaconda" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> 安装Anaconda</h2>
+<p>推荐使用Anaconda安装Python运行环境，在国内推荐<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华大学开源软件镜像站</a>进行下载。安装时注意Anaconda的安装路径不要出现空格。Anaconda安装成功之后，我们需要修改其包管理镜像为国内源。打开Anaconda Prompt，输入：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="build-env.html#cb1-1" aria-hidden="true" tabindex="-1"></a>conda config <span class="op">--</span>add channels https:<span class="op">//</span>mirrors.tuna.tsinghua.edu.cn<span class="op">/</span>anaconda<span class="op">/</span>pkgs<span class="op">/</span>free<span class="op">/</span></span>
+<span id="cb1-2"><a href="build-env.html#cb1-2" aria-hidden="true" tabindex="-1"></a>conda config <span class="op">--</span><span class="bu">set</span> show_channel_urls yes</span></code></pre></div>
+</div>
+<div id="环境管理" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> 环境管理</h2>
+<p>Anaconda自带的<a href="https://conda.io/docs/user-guide/tasks/index.html">conda</a>是包和环境的管理工具，适用于Python，R，Ruby等语言；pip则是Python自带的Python包管理器。一般推荐使用conda进行包和环境的管理。在Anaconda中Python的不同版本可以共存，使用conda可以创建当前环境（base）以外的新环境，如：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="build-env.html#cb2-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="op">-</span>n py27 python<span class="op">=</span><span class="fl">2.7</span> </span>
+<span id="cb2-2"><a href="build-env.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#创建一个名字为py27，Python版本为2.7的新环境。Anaconda会自动下载安装相关的软件和包。</span></span></code></pre></div>
+<p>激活、退出和删除环境：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="build-env.html#cb3-1" aria-hidden="true" tabindex="-1"></a>activate py27 <span class="co">#激活环境</span></span>
+<span id="cb3-2"><a href="build-env.html#cb3-2" aria-hidden="true" tabindex="-1"></a>deactivate    <span class="co">#退出环境</span></span>
+<span id="cb3-3"><a href="build-env.html#cb3-3" aria-hidden="true" tabindex="-1"></a>conda remove <span class="op">--</span>name py27 <span class="op">--</span><span class="bu">all</span> <span class="co">#删除环境</span></span>
+<span id="cb3-4"><a href="build-env.html#cb3-4" aria-hidden="true" tabindex="-1"></a>conda env <span class="bu">list</span> <span class="co">#列出所有的环境。 </span></span></code></pre></div>
+</div>
+<div id="包的管理" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> 包的管理</h2>
+<p>Anaconda中包的管理主要通过<code>conda</code>进行，以下命令均在Anaconda Prompt中执行。参阅<a href="https://conda.io/docs/user-guide/tasks/manage-pkgs.html">官方文档</a>。</p>
+<div id="搜索包" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> 搜索包</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="build-env.html#cb4-1" aria-hidden="true" tabindex="-1"></a>conda search scipy</span>
+<span id="cb4-2"><a href="build-env.html#cb4-2" aria-hidden="true" tabindex="-1"></a>conda search <span class="op">--</span>override<span class="op">-</span>channels <span class="op">--</span>channel defaults scipy <span class="co">#在Anaconda.org搜索</span></span></code></pre></div>
+</div>
+<div id="安装包" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> 安装包</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="build-env.html#cb5-1" aria-hidden="true" tabindex="-1"></a>conda install <span class="op">-</span>n myenv mypackage <span class="co">#在指定环境中安装包</span></span>
+<span id="cb5-2"><a href="build-env.html#cb5-2" aria-hidden="true" tabindex="-1"></a>conda install mypackage <span class="co">#在当前环境中安装包</span></span>
+<span id="cb5-3"><a href="build-env.html#cb5-3" aria-hidden="true" tabindex="-1"></a>conda install scipy<span class="op">=</span><span class="fl">0.15.0</span> <span class="co">#安装指定版本的scipy包</span></span>
+<span id="cb5-4"><a href="build-env.html#cb5-4" aria-hidden="true" tabindex="-1"></a>conda install scipy curl <span class="co">#同时安装多个包</span></span>
+<span id="cb5-5"><a href="build-env.html#cb5-5" aria-hidden="true" tabindex="-1"></a>conda <span class="bu">list</span> <span class="co">#列出已安装的包</span></span></code></pre></div>
+<p>当然也可以在 Anaconda Prompt 中安装不在Anaconda上的包，但需要确保已在Anaconda中安装了pip包。如果没有安装可以通过<code>conda install pip</code>来安装。接着用pip安装需要的包即可：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="build-env.html#cb6-1" aria-hidden="true" tabindex="-1"></a>pip install mypackage <span class="co">#用pip安装包</span></span></code></pre></div>
+</div>
+<div id="更新包" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> 更新包</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="build-env.html#cb7-1" aria-hidden="true" tabindex="-1"></a>conda update mypackage <span class="co">#更新包</span></span>
+<span id="cb7-2"><a href="build-env.html#cb7-2" aria-hidden="true" tabindex="-1"></a>conda update python <span class="co">#更新python</span></span>
+<span id="cb7-3"><a href="build-env.html#cb7-3" aria-hidden="true" tabindex="-1"></a>conda update conda <span class="co">#更新conda</span></span>
+<span id="cb7-4"><a href="build-env.html#cb7-4" aria-hidden="true" tabindex="-1"></a>conda update anaconda <span class="co">#Update Anaconda metapackage(所有的包)</span></span></code></pre></div>
+</div>
+<div id="卸载包" class="section level3" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> 卸载包</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="build-env.html#cb8-1" aria-hidden="true" tabindex="-1"></a>conda remove mypackage <span class="co">#卸载包</span></span></code></pre></div>
+</div>
+</div>
+<div id="jupyter-notebook" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Jupyter Notebook</h2>
+<p>Jupyter Notebook是基于网页的用于交互计算的应用程序。Jupyter Notebook可以在网页中直接编写代码和运行代码，代码的运行结果也会直接在代码块下显示。Jupyter可以支持多种语言，它的名字就是三种编程语言的组合：JUlia, PYThon, R。在Jupyter Notebook中使用Python时，其实使用的是IPython内核，所以很多IPython的功能都能在里面使用。</p>
+<p>使用Jupyter Notebook之前，建议先更改Jupyter Notebook 打开的目录。右键点击Jupyter Notebook图标选择<strong>属性</strong>，将<strong>目标</strong>栏位从<code>...-notebook-script.py %USERPROFILE%</code>修改为<code>...-notebook-script.py D:\\MyPython\\Dir %USERPROFILE%</code>。其中<code>D:\\MyPython\\Dir</code>就是你希望打开的目录。</p>
+<div id="jupyter-notebook常用技巧" class="section level3" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Jupyter Notebook常用技巧</h3>
+<ol style="list-style-type: decimal">
+<li>支持同一代码块输出多个语句的执行结果：</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="build-env.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.core.interactiveshell <span class="im">import</span> InteractiveShell</span>
+<span id="cb9-2"><a href="build-env.html#cb9-2" aria-hidden="true" tabindex="-1"></a>InteractiveShell.ast_node_interactivity <span class="op">=</span> <span class="st">&quot;all&quot;</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>使用Matplotlib作图时，需要在代码块第一行加入<code>%matplotlib inline</code>。</p></li>
+<li><p>Jupyter Notebook中支持执行Shell命令，需要以<code>!</code>开头，比如：</p></li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="build-env.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>ls <span class="op">*</span>.ipynb</span>
+<span id="cb10-2"><a href="build-env.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install numpy</span>
+<span id="cb10-3"><a href="build-env.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span><span class="bu">dir</span></span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>可以使用Jupyter Notebook制作幻灯片，需要使用<a href="https://rise.readthedocs.io/en/stable/">RISE</a>插件。</li>
+</ol>
+</div>
+</div>
+<div id="ipython简介" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> IPython简介</h2>
+<p>IPython是一个Python的交互式shell，比原生的python shell好用得多，提供了更为强大的编辑和交互功能，内置了许多很有用的功能和函数。注意：这些命令都只能在IPython交互式命令行工具中使用，不能在Python代码中使用。</p>
+<div id="帮助" class="section level3" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> 帮助</h3>
+<p>可以搜索官方的最详细的<a href="https://docs.python.org/3/library/index.html">帮助文档</a>，可以点击Spyder工具栏中的<em>HELP</em>查看帮助文档，可以使用help函数查询帮助，比如<code>help(abs)</code> 。</p>
+</div>
+<div id="tab补全" class="section level3" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Tab补全</h3>
+<p>Tab补全功能可以搜索已输入变量（对象、函数等等）的命名空间，可以补全任何对象的方法和属性，可以补全文件路径，可以补全函数的关键词参数（包括等于号<code>=</code>） 。</p>
+</div>
+<div id="自省" class="section level3" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> 自省</h3>
+<p>在变量前后使用问号<code>?</code>，可以显示对象的信息：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="build-env.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>? <span class="co"># 或者 ?print</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="build-env.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(a, b):</span>
+<span id="cb12-2"><a href="build-env.html#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb12-3"><a href="build-env.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Add two numbers together</span></span>
+<span id="cb12-4"><a href="build-env.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="build-env.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb12-6"><a href="build-env.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb12-7"><a href="build-env.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">    the_sum : type of arguments</span></span>
+<span id="cb12-8"><a href="build-env.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb12-9"><a href="build-env.html#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre></div>
+<p>使用?符号就可以显示函数的文档字符串：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="build-env.html#cb13-1" aria-hidden="true" tabindex="-1"></a>add_numbers?</span></code></pre></div>
+<p>使用<code>??</code>会显示函数的源码：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="build-env.html#cb14-1" aria-hidden="true" tabindex="-1"></a>add_numbers??</span></code></pre></div>
+<p>使用<code>?</code>还可以搜索IPython的命名空间。字符与通配符结合可以匹配所有的名字。</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="build-env.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-2"><a href="build-env.html#cb15-2" aria-hidden="true" tabindex="-1"></a>np.<span class="op">*</span>load<span class="op">*</span>?</span></code></pre></div>
+</div>
+<div id="中断运行的代码" class="section level3" number="1.5.4">
+<h3><span class="header-section-number">1.5.4</span> 中断运行的代码</h3>
+<p>代码运行时按<code>Ctrl-C</code>，无论是%run或长时间运行命令，都会导致<code>KeyboardInterrupt</code>。这会导致几乎所有Python程序立即停止。</p>
+</div>
+<div id="魔术命令" class="section level3" number="1.5.5">
+<h3><span class="header-section-number">1.5.5</span> 魔术命令</h3>
+<p>IPython提供了许多方便易用的魔术命令。魔术命令都带有百分号前缀。详细介绍可参考<a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">官方文档</a>。常用的魔术命令有：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">魔术命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">%cd</td>
+<td align="left">Change the current working directory.</td>
+</tr>
+<tr class="even">
+<td align="left">%dirs</td>
+<td align="left">Return the current directory stack.</td>
+</tr>
+<tr class="odd">
+<td align="left">%pwd</td>
+<td align="left">Return the current working directory path.</td>
+</tr>
+<tr class="even">
+<td align="left">%load</td>
+<td align="left">Load code into the current frontend.</td>
+</tr>
+<tr class="odd">
+<td align="left">%run</td>
+<td align="left">Run the named file inside IPython as a program.</td>
+</tr>
+<tr class="even">
+<td align="left">%conda</td>
+<td align="left">Run the conda package manager within the current kernel.</td>
+</tr>
+<tr class="odd">
+<td align="left">%time</td>
+<td align="left">Time execution of a Python statement or expression.</td>
+</tr>
+<tr class="even">
+<td align="left">%timeit</td>
+<td align="left">Time execution of a Python statement or expression</td>
+</tr>
+<tr class="odd">
+<td align="left">%who</td>
+<td align="left">Print all interactive variables, with some minimal formatting.</td>
+</tr>
+<tr class="even">
+<td align="left">%who_ls</td>
+<td align="left">Return a sorted list of all interactive variables.</td>
+</tr>
+<tr class="odd">
+<td align="left">%reset</td>
+<td align="left">Resets the namespace by removing all names defined by the user.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="pycharm" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> PyCharm</h2>
+<p>集成化开发环境（IDE）将代码编辑、调试、运行、发布、环境配置、团队协作等各种功能集成在一个软件中，并且提供多种智能辅助开发手段，可以明显提高开发效率。<a href="https://www.jetbrains.com/pycharm/download/">PyCharm</a>是JetBrains公司专门针对Python语言推出的集成开发环境，分为专业版（Professional）和社区版（Community），后者免费且功能足够一般开发学习使用。</p>
+<p>PyCharm以“项目”形式组织Python源代码文件，应当先创建项目、再在其中新建Python文件。关于项目的基本理解要点如下：</p>
+<ul>
+<li>开发一个软件往往需要编写大量代码，一般做法是将这些代码分散保存到多个Python程序文件中，再通过相互调用的方式协同运行，以便于代码阅读和修改；</li>
+<li>这些属于同一软件的多个程序文件就被视作一个“项目”，一般保存在同一个文件夹中（可以在内部继续创建子文件夹）；</li>
+<li>所以在PyCharm中，一个项目对应一个文件夹，里面可以新建多个Python文件。</li>
+</ul>
+<p>PyCharm允许为每个项目分别指定不同的Python解释器（以及第三方模块库），具体可以在菜单 File -&gt; Settings -&gt; Project XXX -&gt; Project Interpreter 中添加和选择。事实上PyCharm相当于为每个项目都构建了一个“虚拟运行环境”，里面包含项目需要的所有工具和资源。</p>
+<p>可以在PyCharm的菜单 File -&gt; Settings 的 Appearance 和 Editor 中设置界面配色、字体等外观选项。同时在Editor选项的Code Style -&gt; Python 中可以指定TAB缩进行为。建议不勾选 “Tab Character” ，这样每次按下TAB键插入缩进时，Python会自动生成若干空格实现缩进，从而避免使用 “TAB” 字符、防止不同系统下对Python解读混乱。</p>
+<p>在PyCharm最左边找到“Structure”选项卡，点击后可以在小窗内显示Python程序的所有变量、函数等名称，便于快速定位。需要了解函数、变量等名称的详细含义时，可以按住CTRL键并将鼠标移动到该名称上。在PyCharm最下方可以找到Python交互式运行窗口和操作系统命令符窗口，以及运行和调试程序时的显示窗口等。调试程序时可以单击代码左侧灰色区域设置断点、使用F8（Step Over）和F7（Step Into）单步调试，同时在屏幕下方看到变量监视窗口。</p>
+<p>可以在Code、Edit等菜单中找到 Indent/Unindent（增加/减少缩进）、Comment（添加/删除注释符号）、Surround（用if等结构包含代码）等快速编辑选项。</p>
+</div>
+<div id="运行python程序" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> 运行Python程序</h2>
+<p>在交互式环境中输入代码按下回车就可以执行，或者将python代码保存在<code>.py</code>文件中，在IPython中执行<code>%run</code>命令，或者在IDE中编写代码后点击<code>RUN</code>按钮。</p>
+<p>注释是代码的重要组成部分，合理使用注释可以增强程序的可读性和可维护性。</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="build-env.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb16-2"><a href="build-env.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">第一个Python程序</span></span>
+<span id="cb16-3"><a href="build-env.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="build-env.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">Version: 0.1</span></span>
+<span id="cb16-5"><a href="build-env.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">Author: XJ</span></span>
+<span id="cb16-6"><a href="build-env.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<pre><code>## &#39;\n第一个Python程序\n\nVersion: 0.1\nAuthor: XJ\n&#39;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="build-env.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span>
+<span id="cb18-2"><a href="build-env.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print(&quot;你好, 世界！&quot;)</span></span></code></pre></div>
+<pre><code>## Hello, world!</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="control-flow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
