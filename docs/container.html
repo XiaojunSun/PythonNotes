@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 深入理解各种容器 | 我的Python笔记</title>
+  <title>Chapter 5 深入理解各种容器 | 我的Python笔记</title>
   <meta name="description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 深入理解各种容器 | 我的Python笔记" />
+  <meta property="og:title" content="Chapter 5 深入理解各种容器 | 我的Python笔记" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="XiaojunSun/PythonNotes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 深入理解各种容器 | 我的Python笔记" />
+  <meta name="twitter:title" content="Chapter 5 深入理解各种容器 | 我的Python笔记" />
   
   <meta name="twitter:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-30" />
+<meta name="date" content="2021-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="reg-expr.html"/>
-<link rel="next" href="module.html"/>
+<link rel="prev" href="built-in-type2.html"/>
+<link rel="next" href="function.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -205,10 +205,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
-<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#无穷大与nan"><i class="fa fa-check"></i><b>3.3.2</b> 无穷大与NaN</a></li>
+<li class="chapter" data-level="3.3.3" data-path="built-in-type.html"><a href="built-in-type.html#分数"><i class="fa fa-check"></i><b>3.3.3</b> 分数</a></li>
+<li class="chapter" data-level="3.3.4" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.4</b> 随机数</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
-<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#字节bytes"><i class="fa fa-check"></i><b>3.5</b> 字节（bytes）</a></li>
 <li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
 <ul>
 <li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
@@ -220,31 +222,65 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="built-in-type2.html"><a href="built-in-type2.html#索引和切片"><i class="fa fa-check"></i><b>4.1.1</b> 索引和切片</a></li>
+<li class="chapter" data-level="4.1.2" data-path="built-in-type2.html"><a href="built-in-type2.html#列表修改"><i class="fa fa-check"></i><b>4.1.2</b> 列表修改</a></li>
+<li class="chapter" data-level="4.1.3" data-path="built-in-type2.html"><a href="built-in-type2.html#列表排序"><i class="fa fa-check"></i><b>4.1.3</b> 列表排序</a></li>
+<li class="chapter" data-level="4.1.4" data-path="built-in-type2.html"><a href="built-in-type2.html#列表复制"><i class="fa fa-check"></i><b>4.1.4</b> 列表复制</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
-<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
-<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
-<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
-<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
-<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
-<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+<li class="chapter" data-level="4.3.1" data-path="built-in-type2.html"><a href="built-in-type2.html#字典操作"><i class="fa fa-check"></i><b>4.3.1</b> 字典操作</a></li>
+<li class="chapter" data-level="4.3.2" data-path="built-in-type2.html"><a href="built-in-type2.html#fromkeys"><i class="fa fa-check"></i><b>4.3.2</b> fromkeys()</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+<li class="chapter" data-level="4.4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#集合运算"><i class="fa fa-check"></i><b>4.4.1</b> 集合运算</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#数据类型判断"><i class="fa fa-check"></i><b>4.5</b> 数据类型判断</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
-<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+<li class="chapter" data-level="4.5.1" data-path="built-in-type2.html"><a href="built-in-type2.html#可变与不可变"><i class="fa fa-check"></i><b>4.5.1</b> 可变与不可变</a></li>
+<li class="chapter" data-level="4.5.2" data-path="built-in-type2.html"><a href="built-in-type2.html#hashable"><i class="fa fa-check"></i><b>4.5.2</b> hashable</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+</ul></li>
+<li class="chapter" data-level="5" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>5</b> 深入理解各种容器</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+<li class="chapter" data-level="5.1" data-path="container.html"><a href="container.html#序列函数"><i class="fa fa-check"></i><b>5.1</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="container.html"><a href="container.html#enumerate函数"><i class="fa fa-check"></i><b>5.1.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="5.1.2" data-path="container.html"><a href="container.html#zip函数"><i class="fa fa-check"></i><b>5.1.2</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="container.html"><a href="container.html#列表推导式"><i class="fa fa-check"></i><b>5.2</b> 列表推导式</a></li>
+<li class="chapter" data-level="5.3" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>5.3</b> 迭代器</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="container.html"><a href="container.html#创建一个迭代器"><i class="fa fa-check"></i><b>5.3.1</b> 创建一个迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="container.html"><a href="container.html#生成器"><i class="fa fa-check"></i><b>5.4</b> 生成器</a></li>
+<li class="chapter" data-level="5.5" data-path="container.html"><a href="container.html#解包"><i class="fa fa-check"></i><b>5.5</b> 解包</a></li>
+<li class="chapter" data-level="5.6" data-path="container.html"><a href="container.html#排序"><i class="fa fa-check"></i><b>5.6</b> 排序</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="container.html"><a href="container.html#多关键字排序"><i class="fa fa-check"></i><b>5.6.1</b> 多关键字排序</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="container.html"><a href="container.html#collections"><i class="fa fa-check"></i><b>5.7</b> collections</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="container.html"><a href="container.html#deque"><i class="fa fa-check"></i><b>5.7.1</b> deque</a></li>
+<li class="chapter" data-level="5.7.2" data-path="container.html"><a href="container.html#counter"><i class="fa fa-check"></i><b>5.7.2</b> Counter</a></li>
+<li class="chapter" data-level="5.7.3" data-path="container.html"><a href="container.html#heapq"><i class="fa fa-check"></i><b>5.7.3</b> heapq</a></li>
+<li class="chapter" data-level="5.7.4" data-path="container.html"><a href="container.html#ordereddict"><i class="fa fa-check"></i><b>5.7.4</b> OrderedDict</a></li>
+<li class="chapter" data-level="5.7.5" data-path="container.html"><a href="container.html#namedtuple"><i class="fa fa-check"></i><b>5.7.5</b> namedtuple</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="container.html"><a href="container.html#拷贝"><i class="fa fa-check"></i><b>5.8</b> 拷贝</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>6</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>6.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>7</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.1</b> one</a></li>
+<li class="chapter" data-level="7.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.2</b> two</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -269,7 +305,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
 <li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
 <li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
-<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器-1"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
 <li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
 <li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
 </ul></li>
@@ -306,29 +342,290 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="container" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> 深入理解各种容器</h1>
-<div id="迭代器" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> 迭代器</h2>
-<p>你可能注意到大多数容器对象都可以用 <a href="https://yiyibooks.cn/__trs__/xx/python_352/reference/compound_stmts.html#for"><code>for</code></a> 遍历：</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb175-1"><a href="container.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
-<span id="cb175-2"><a href="container.html#cb175-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
-<span id="cb175-3"><a href="container.html#cb175-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>):</span>
-<span id="cb175-4"><a href="container.html#cb175-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
-<span id="cb175-5"><a href="container.html#cb175-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> {<span class="st">&#39;one&#39;</span>:<span class="dv">1</span>, <span class="st">&#39;two&#39;</span>:<span class="dv">2</span>}:</span>
-<span id="cb175-6"><a href="container.html#cb175-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span>
-<span id="cb175-7"><a href="container.html#cb175-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">&quot;123&quot;</span>:</span>
-<span id="cb175-8"><a href="container.html#cb175-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(char)</span>
-<span id="cb175-9"><a href="container.html#cb175-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;myfile.txt&quot;</span>):</span>
-<span id="cb175-10"><a href="container.html#cb175-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line, end<span class="op">=</span><span class="st">&#39;&#39;</span>)</span></code></pre></div>
-<p>这种访问风格清晰、 简洁又方便。迭代器的用法在 Python 中普遍而且统一。在后台，for语句调用容器对象的<code>iter()</code>方法。该函数返回一个定义了<code>__next__()</code>方法的迭代器对象，它一次访问容器中的一个元素。没有后续的元素时，<code>__next__()</code> 会引发<code>StopIteration</code>异常，告诉 <code>for</code>循环停止迭代。你可以使用内建的 <code>next()</code>来调用<code>__next__()</code>，例子如下：</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="container.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
-<span id="cb176-2"><a href="container.html#cb176-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
-<span id="cb176-3"><a href="container.html#cb176-3" aria-hidden="true" tabindex="-1"></a>it <span class="op">=</span> <span class="bu">iter</span>(s)</span>
-<span id="cb176-4"><a href="container.html#cb176-4" aria-hidden="true" tabindex="-1"></a>it</span></code></pre></div>
-<pre><code>## &lt;str_iterator object at 0x0000000029EF7A90&gt;</code></pre>
-<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="container.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(it),<span class="bu">next</span>(it),<span class="bu">next</span>(it)</span></code></pre></div>
-<pre><code>## (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)</code></pre>
+<div id="container" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> 深入理解各种容器</h1>
+<div id="序列函数" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> 序列函数</h2>
+<div id="enumerate函数" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> enumerate函数</h3>
+<p><code>enumerate</code>函数可以返回<code>(i, value)</code>元组序列</p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb221-1"><a href="container.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, v <span class="kw">in</span> <span class="bu">enumerate</span>(some_list):</span>
+<span id="cb221-2"><a href="container.html#cb221-2" aria-hidden="true" tabindex="-1"></a>    mapping[v] <span class="op">=</span> i</span></code></pre></div>
+</div>
+<div id="zip函数" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> zip函数</h3>
+<p><code>zip()</code>函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象。在 Python 3 中，为了节省空间，zip()返回的是一个tuple的迭代器，调用list()可以强制转换成list。list(zip(a, b))生成了一个列表。在这个列表中，每个元素是一个tuple；对于第i个元组，它其中的内容是(a[i-1], b[i-1])。</p>
+<div class="sourceCode" id="cb222"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb222-1"><a href="container.html#cb222-1" aria-hidden="true" tabindex="-1"></a>seq1 <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;baz&#39;</span>]</span>
+<span id="cb222-2"><a href="container.html#cb222-2" aria-hidden="true" tabindex="-1"></a>seq2 <span class="op">=</span> [<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>, <span class="st">&#39;three&#39;</span>]</span>
+<span id="cb222-3"><a href="container.html#cb222-3" aria-hidden="true" tabindex="-1"></a>zipped <span class="op">=</span> <span class="bu">zip</span>(seq1, seq2)</span>
+<span id="cb222-4"><a href="container.html#cb222-4" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(zipped)</span></code></pre></div>
+<pre><code>## [(&#39;foo&#39;, &#39;one&#39;), (&#39;bar&#39;, &#39;two&#39;), (&#39;baz&#39;, &#39;three&#39;)]</code></pre>
+<div class="sourceCode" id="cb224"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb224-1"><a href="container.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">zip</span>(<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;World&quot;</span>))</span></code></pre></div>
+<pre><code>## [(&#39;H&#39;, &#39;W&#39;), (&#39;e&#39;, &#39;o&#39;), (&#39;l&#39;, &#39;r&#39;), (&#39;l&#39;, &#39;l&#39;), (&#39;o&#39;, &#39;d&#39;)]</code></pre>
+<p><code>zip()</code>可以处理任意多的序列，元素的个数取决于最短的序列。<code>zip</code>的常见用法之一是同时迭代多个序列，可能结合<code>enumerate</code>使用 。加上星号（<code>*</code>）,<code>input1, input2 = zip(*output)</code>能够实现<code>output = zip(input1, input2)</code>的逆向操作。利用这个技巧可以把行的列表转换为列的列表。</p>
+<div class="sourceCode" id="cb226"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb226-1"><a href="container.html#cb226-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> (<span class="st">&#39;Nolan&#39;</span>, <span class="st">&#39;Roger&#39;</span>, <span class="st">&#39;Schilling&#39;</span>)</span>
+<span id="cb226-2"><a href="container.html#cb226-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> (<span class="st">&#39;Ryan&#39;</span>, <span class="st">&#39;Clemens&#39;</span>, <span class="st">&#39;Curt&#39;</span>)</span>
+<span id="cb226-3"><a href="container.html#cb226-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(x1, x2))</span>
+<span id="cb226-4"><a href="container.html#cb226-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X)</span></code></pre></div>
+<pre><code>## [(&#39;Nolan&#39;, &#39;Ryan&#39;), (&#39;Roger&#39;, &#39;Clemens&#39;), (&#39;Schilling&#39;, &#39;Curt&#39;)]</code></pre>
+<div class="sourceCode" id="cb228"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb228-1"><a href="container.html#cb228-1" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">*</span>X))</span>
+<span id="cb228-2"><a href="container.html#cb228-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Y)</span></code></pre></div>
+<pre><code>## [(&#39;Nolan&#39;, &#39;Roger&#39;, &#39;Schilling&#39;), (&#39;Ryan&#39;, &#39;Clemens&#39;, &#39;Curt&#39;)]</code></pre>
+<div class="sourceCode" id="cb230"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb230-1"><a href="container.html#cb230-1" aria-hidden="true" tabindex="-1"></a>strs <span class="op">=</span> [<span class="st">&quot;flower&quot;</span>, <span class="st">&quot;flow&quot;</span>, <span class="st">&quot;flight&quot;</span>]</span>
+<span id="cb230-2"><a href="container.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">*</span>strs)))</span></code></pre></div>
+<pre><code>## [(&#39;f&#39;, &#39;f&#39;, &#39;f&#39;), (&#39;l&#39;, &#39;l&#39;, &#39;l&#39;), (&#39;o&#39;, &#39;o&#39;, &#39;i&#39;), (&#39;w&#39;, &#39;w&#39;, &#39;g&#39;)]</code></pre>
+</div>
+</div>
+<div id="列表推导式" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> 列表推导式</h2>
+<p>列表推导式(list comprehensions)是Python最受喜爱的特性之一。它允许用户方便的从一个集合过滤元素，形成列表，在传递参数的过程中还可以修改元素。</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb232-1"><a href="container.html#cb232-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 列表</span></span>
+<span id="cb232-2"><a href="container.html#cb232-2" aria-hidden="true" tabindex="-1"></a>[expr <span class="cf">for</span> val <span class="kw">in</span> collection <span class="cf">if</span> condition]</span>
+<span id="cb232-3"><a href="container.html#cb232-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 字典</span></span>
+<span id="cb232-4"><a href="container.html#cb232-4" aria-hidden="true" tabindex="-1"></a>dict_comp <span class="op">=</span> {key<span class="op">-</span>expr : value<span class="op">-</span>expr <span class="cf">for</span> value <span class="kw">in</span> collection <span class="cf">if</span> condition} </span>
+<span id="cb232-5"><a href="container.html#cb232-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 集合</span></span>
+<span id="cb232-6"><a href="container.html#cb232-6" aria-hidden="true" tabindex="-1"></a>set_comp <span class="op">=</span> {expr <span class="cf">for</span> value <span class="kw">in</span> collection <span class="cf">if</span> condition} </span></code></pre></div>
+<p>举例如下：</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb233-1"><a href="container.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([i<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>) <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="kw">is</span> <span class="dv">0</span>])</span></code></pre></div>
+<pre><code>## [0, 9, 36, 81, 144, 225, 324]</code></pre>
+<div class="sourceCode" id="cb235"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb235-1"><a href="container.html#cb235-1" aria-hidden="true" tabindex="-1"></a>mcase <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">10</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">34</span>}</span>
+<span id="cb235-2"><a href="container.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>({v: k <span class="cf">for</span> k, v <span class="kw">in</span> mcase.items()})</span></code></pre></div>
+<pre><code>## {10: &#39;a&#39;, 34: &#39;b&#39;}</code></pre>
+<div class="sourceCode" id="cb237"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb237-1"><a href="container.html#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>({x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>]})</span></code></pre></div>
+<pre><code>## {1, 4}</code></pre>
+<p>嵌套列表推导式，包含两层for循环：</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb239-1"><a href="container.html#cb239-1" aria-hidden="true" tabindex="-1"></a>some_tuples <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), (<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), (<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)]</span>
+<span id="cb239-2"><a href="container.html#cb239-2" aria-hidden="true" tabindex="-1"></a>flattened <span class="op">=</span> [x <span class="cf">for</span> tup <span class="kw">in</span> some_tuples <span class="cf">for</span> x <span class="kw">in</span> tup <span class="cf">if</span> x<span class="op">&gt;</span><span class="dv">5</span>]</span>
+<span id="cb239-3"><a href="container.html#cb239-3" aria-hidden="true" tabindex="-1"></a>flattened</span></code></pre></div>
+<pre><code>## [6, 7, 8, 9]</code></pre>
+<p>可以使用 b=[ [0]*8 for _ in range(4) ] 的形式创建4行8列的二维列表，其中每个元素都是 0 。</p>
+</div>
+<div id="迭代器" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> 迭代器</h2>
+<p>你可能注意到大多数容器对象都可以用 <code>for</code>遍历：</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb241-1"><a href="container.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
+<span id="cb241-2"><a href="container.html#cb241-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
+<span id="cb241-3"><a href="container.html#cb241-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>):</span>
+<span id="cb241-4"><a href="container.html#cb241-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span>
+<span id="cb241-5"><a href="container.html#cb241-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> {<span class="st">&#39;one&#39;</span>:<span class="dv">1</span>, <span class="st">&#39;two&#39;</span>:<span class="dv">2</span>}:</span>
+<span id="cb241-6"><a href="container.html#cb241-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span>
+<span id="cb241-7"><a href="container.html#cb241-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">&quot;123&quot;</span>:</span>
+<span id="cb241-8"><a href="container.html#cb241-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(char)</span>
+<span id="cb241-9"><a href="container.html#cb241-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;myfile.txt&quot;</span>):</span>
+<span id="cb241-10"><a href="container.html#cb241-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line, end<span class="op">=</span><span class="st">&#39;&#39;</span>)</span></code></pre></div>
+<p>其实背后是迭代器在起作用。迭代器有两个基本的方法：iter() 和 next()。在后台，for语句调用容器对象的<code>iter()</code>方法。该函数返回一个定义了<code>__next__()</code>方法的迭代器对象，它一次访问容器中的一个元素。没有后续的元素时，<code>__next__()</code> 会引发<code>StopIteration</code>异常，告诉 <code>for</code>循环停止迭代。你可以使用内建的 <code>next()</code>来调用<code>__next__()</code>，例如：</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb242-1"><a href="container.html#cb242-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
+<span id="cb242-2"><a href="container.html#cb242-2" aria-hidden="true" tabindex="-1"></a>it <span class="op">=</span> <span class="bu">iter</span>(s)</span>
+<span id="cb242-3"><a href="container.html#cb242-3" aria-hidden="true" tabindex="-1"></a>it</span></code></pre></div>
+<pre><code>## &lt;str_iterator object at 0x0000000026EDBEE0&gt;</code></pre>
+<div class="sourceCode" id="cb244"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb244-1"><a href="container.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(it), <span class="bu">next</span>(it)</span></code></pre></div>
+<pre><code>## (&#39;a&#39;, &#39;b&#39;)</code></pre>
+<div id="创建一个迭代器" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> 创建一个迭代器</h3>
+<div class="sourceCode" id="cb246"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb246-1"><a href="container.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyNumbers:</span>
+<span id="cb246-2"><a href="container.html#cb246-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> <span class="fu">__iter__</span>(<span class="va">self</span>):</span>
+<span id="cb246-3"><a href="container.html#cb246-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb246-4"><a href="container.html#cb246-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span></span>
+<span id="cb246-5"><a href="container.html#cb246-5" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb246-6"><a href="container.html#cb246-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> <span class="fu">__next__</span>(<span class="va">self</span>):</span>
+<span id="cb246-7"><a href="container.html#cb246-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">self</span>.a <span class="op">&lt;=</span> <span class="dv">20</span>:</span>
+<span id="cb246-8"><a href="container.html#cb246-8" aria-hidden="true" tabindex="-1"></a>      x <span class="op">=</span> <span class="va">self</span>.a</span>
+<span id="cb246-9"><a href="container.html#cb246-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">self</span>.a <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb246-10"><a href="container.html#cb246-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> x</span>
+<span id="cb246-11"><a href="container.html#cb246-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb246-12"><a href="container.html#cb246-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">raise</span> <span class="pp">StopIteration</span></span>
+<span id="cb246-13"><a href="container.html#cb246-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-14"><a href="container.html#cb246-14" aria-hidden="true" tabindex="-1"></a>myclass <span class="op">=</span> MyNumbers()</span>
+<span id="cb246-15"><a href="container.html#cb246-15" aria-hidden="true" tabindex="-1"></a>myiter <span class="op">=</span> <span class="bu">iter</span>(myclass)</span>
+<span id="cb246-16"><a href="container.html#cb246-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-17"><a href="container.html#cb246-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">next</span>(myiter))</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<div class="sourceCode" id="cb248"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb248-1"><a href="container.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">next</span>(myiter))</span></code></pre></div>
+<pre><code>## 2</code></pre>
+</div>
+</div>
+<div id="生成器" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> 生成器</h2>
+<p>在 Python 中，使用了 yield 的函数被称为生成器（generator）。跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。</p>
+<p>在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值, 并在下一次执行 next() 方法时从当前位置继续运行，从而节省内存。调用一个生成器函数，返回的是一个迭代器对象。</p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb250-1"><a href="container.html#cb250-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n): <span class="co"># 生成器函数 - 斐波那契</span></span>
+<span id="cb250-2"><a href="container.html#cb250-2" aria-hidden="true" tabindex="-1"></a>    a, b, counter <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span></span>
+<span id="cb250-3"><a href="container.html#cb250-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb250-4"><a href="container.html#cb250-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (counter <span class="op">&gt;</span> n): </span>
+<span id="cb250-5"><a href="container.html#cb250-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb250-6"><a href="container.html#cb250-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> a</span>
+<span id="cb250-7"><a href="container.html#cb250-7" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">+</span> b</span>
+<span id="cb250-8"><a href="container.html#cb250-8" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb250-9"><a href="container.html#cb250-9" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> fibonacci(<span class="dv">10</span>) <span class="co"># f 是一个迭代器，由生成器返回生成</span></span>
+<span id="cb250-10"><a href="container.html#cb250-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb250-11"><a href="container.html#cb250-11" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb250-12"><a href="container.html#cb250-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb250-13"><a href="container.html#cb250-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="bu">next</span>(f), end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb250-14"><a href="container.html#cb250-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">StopIteration</span>:</span>
+<span id="cb250-15"><a href="container.html#cb250-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code></pre></div>
+<pre><code>## 0 1 1 2 3 5 8 13 21 34 55</code></pre>
+</div>
+<div id="解包" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> 解包</h2>
+<p>任何的序列（或者是可迭代对象）可以通过一个简单的赋值操作来分解为单独的变量。 唯一的要求就是变量的总数和结构必须与序列相吻合。如果元素的数量不匹配，会得到一个错误提示。</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb252-1"><a href="container.html#cb252-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [ <span class="st">&#39;ACME&#39;</span>, <span class="dv">50</span>, <span class="fl">91.1</span>, (<span class="dv">2012</span>, <span class="dv">12</span>, <span class="dv">21</span>) ]</span>
+<span id="cb252-2"><a href="container.html#cb252-2" aria-hidden="true" tabindex="-1"></a>name, shares, price, date <span class="op">=</span> data</span>
+<span id="cb252-3"><a href="container.html#cb252-3" aria-hidden="true" tabindex="-1"></a>date</span></code></pre></div>
+<pre><code>## (2012, 12, 21)</code></pre>
+<p>星号解压语法是专门为解压不确定个数或任意个数元素的可迭代对象而设计的。</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb254-1"><a href="container.html#cb254-1" aria-hidden="true" tabindex="-1"></a>record <span class="op">=</span> (<span class="st">&#39;ACME&#39;</span>, <span class="dv">50</span>, <span class="fl">123.45</span>, (<span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">2012</span>))</span>
+<span id="cb254-2"><a href="container.html#cb254-2" aria-hidden="true" tabindex="-1"></a>name, <span class="op">*</span>_, (<span class="op">*</span>_, year) <span class="op">=</span> record</span>
+<span id="cb254-3"><a href="container.html#cb254-3" aria-hidden="true" tabindex="-1"></a>name<span class="op">;</span> year</span></code></pre></div>
+<pre><code>## &#39;ACME&#39;
+## 2012</code></pre>
+<div class="sourceCode" id="cb256"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb256-1"><a href="container.html#cb256-1" aria-hidden="true" tabindex="-1"></a>first, <span class="op">*</span>middle, last <span class="op">=</span> <span class="bu">range</span>(<span class="dv">10</span>)</span>
+<span id="cb256-2"><a href="container.html#cb256-2" aria-hidden="true" tabindex="-1"></a>first<span class="op">;</span> last</span></code></pre></div>
+<pre><code>## 0
+## 9</code></pre>
+</div>
+<div id="排序" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> 排序</h2>
+<p><code>sorted</code>函数可以从任意序列的元素返回一个新的排好序的列表，<code>sorted</code>函数可以接受和<code>sort</code>方法相同的参数。<code>sorted</code> 的使用语法是：<code>sorted(iterable, key=None, reverse=False)</code>。</p>
+<p>sort 与 sorted 区别：
+- sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
+- list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb258-1"><a href="container.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>([<span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## [0, 1, 2, 2, 3, 6, 7]</code></pre>
+<div class="sourceCode" id="cb260"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb260-1"><a href="container.html#cb260-1" aria-hidden="true" tabindex="-1"></a>example_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb260-2"><a href="container.html#cb260-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(example_list, key <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">*-</span><span class="dv">1</span>) <span class="co"># 倒序排序</span></span></code></pre></div>
+<pre><code>## [7, 6, 5, 4, 3, 2, 1, 0]</code></pre>
+<div class="sourceCode" id="cb262"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb262-1"><a href="container.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(example_list, reverse <span class="op">=</span> <span class="va">True</span>) <span class="co"># 倒序排序</span></span></code></pre></div>
+<pre><code>## [7, 6, 5, 4, 3, 2, 1, 0]</code></pre>
+<div class="sourceCode" id="cb264"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb264-1"><a href="container.html#cb264-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> [{<span class="st">&quot;age&quot;</span>:<span class="dv">20</span>,<span class="st">&quot;name&quot;</span>:<span class="st">&quot;a&quot;</span>},{<span class="st">&quot;age&quot;</span>:<span class="dv">25</span>,<span class="st">&quot;name&quot;</span>:<span class="st">&quot;b&quot;</span>},{<span class="st">&quot;age&quot;</span>:<span class="dv">10</span>,<span class="st">&quot;name&quot;</span>:<span class="st">&quot;c&quot;</span>}]</span>
+<span id="cb264-2"><a href="container.html#cb264-2" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> <span class="bu">sorted</span>(array, key <span class="op">=</span> <span class="kw">lambda</span> x:x[<span class="st">&quot;age&quot;</span>])</span>
+<span id="cb264-3"><a href="container.html#cb264-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array)</span></code></pre></div>
+<pre><code>## [{&#39;age&#39;: 10, &#39;name&#39;: &#39;c&#39;}, {&#39;age&#39;: 20, &#39;name&#39;: &#39;a&#39;}, {&#39;age&#39;: 25, &#39;name&#39;: &#39;b&#39;}]</code></pre>
+<div id="多关键字排序" class="section level3" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> 多关键字排序</h3>
+<p>使用<code>sort</code>方法和<code>sorted</code>函数时，<code>key</code>可以是多个字段。</p>
+<div class="sourceCode" id="cb266"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb266-1"><a href="container.html#cb266-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[<span class="st">&#39;delphi&#39;</span>, <span class="st">&#39;Delphi&#39;</span>, <span class="st">&#39;python&#39;</span>, <span class="st">&#39;Python&#39;</span>, <span class="st">&#39;c++&#39;</span>, <span class="st">&#39;C++&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;C&#39;</span>]</span>
+<span id="cb266-2"><a href="container.html#cb266-2" aria-hidden="true" tabindex="-1"></a><span class="co">#先按字符串长度升序排序，长度相同按字典序升序排序</span></span>
+<span id="cb266-3"><a href="container.html#cb266-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(a, key <span class="op">=</span> <span class="kw">lambda</span> x:(<span class="bu">len</span>(x), x))</span></code></pre></div>
+<pre><code>## [&#39;C&#39;, &#39;c&#39;, &#39;C++&#39;, &#39;c++&#39;, &#39;Delphi&#39;, &#39;Python&#39;, &#39;delphi&#39;, &#39;python&#39;]</code></pre>
+<div class="sourceCode" id="cb268"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb268-1"><a href="container.html#cb268-1" aria-hidden="true" tabindex="-1"></a><span class="co">#先按字符串长度降序排序，长度相同按字典序升序排序</span></span>
+<span id="cb268-2"><a href="container.html#cb268-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(a, key <span class="op">=</span> <span class="kw">lambda</span> x:(<span class="op">-</span><span class="bu">len</span>(x), x))</span></code></pre></div>
+<pre><code>## [&#39;Delphi&#39;, &#39;Python&#39;, &#39;delphi&#39;, &#39;python&#39;, &#39;C++&#39;, &#39;c++&#39;, &#39;C&#39;, &#39;c&#39;]</code></pre>
+<div class="sourceCode" id="cb270"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb270-1"><a href="container.html#cb270-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[[<span class="dv">1</span>,<span class="dv">3</span>],[<span class="dv">3</span>,<span class="dv">2</span>],[<span class="dv">2</span>,<span class="dv">4</span>],[<span class="dv">1</span>,<span class="dv">2</span>],[<span class="dv">1</span>,<span class="dv">5</span>],[<span class="dv">2</span>,<span class="dv">5</span>]]</span>
+<span id="cb270-2"><a href="container.html#cb270-2" aria-hidden="true" tabindex="-1"></a><span class="co">#先按第一个元素升序排序，第一个元素相同按第二个元素升序排序</span></span>
+<span id="cb270-3"><a href="container.html#cb270-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(a)</span>
+<span id="cb270-4"><a href="container.html#cb270-4" aria-hidden="true" tabindex="-1"></a><span class="co">#先按第一个元素升序排序，第一个元素相同则保持原来的顺序</span></span></code></pre></div>
+<pre><code>## [[1, 2], [1, 3], [1, 5], [2, 4], [2, 5], [3, 2]]</code></pre>
+<div class="sourceCode" id="cb272"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb272-1"><a href="container.html#cb272-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[[<span class="dv">1</span>,<span class="dv">3</span>],[<span class="dv">3</span>,<span class="dv">2</span>],[<span class="dv">2</span>,<span class="dv">4</span>],[<span class="dv">1</span>,<span class="dv">2</span>],[<span class="dv">1</span>,<span class="dv">5</span>],[<span class="dv">2</span>,<span class="dv">5</span>]]</span>
+<span id="cb272-2"><a href="container.html#cb272-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(a, key<span class="op">=</span><span class="kw">lambda</span> x:x[<span class="dv">0</span>]) <span class="co"># a.sort(key=lambda x:x[0])</span></span>
+<span id="cb272-3"><a href="container.html#cb272-3" aria-hidden="true" tabindex="-1"></a><span class="co">#先按第二个元素升序排序，第二个元素相同按第一个元素降序排序</span></span></code></pre></div>
+<pre><code>## [[1, 3], [1, 2], [1, 5], [2, 4], [2, 5], [3, 2]]</code></pre>
+<div class="sourceCode" id="cb274"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb274-1"><a href="container.html#cb274-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(a, key<span class="op">=</span><span class="kw">lambda</span> x:(x[<span class="dv">1</span>],<span class="op">-</span>x[<span class="dv">0</span>]))</span></code></pre></div>
+<pre><code>## [[3, 2], [1, 2], [1, 3], [2, 4], [2, 5], [1, 5]]</code></pre>
+<p>字符串比较大小时，是按每个相应的字符的Unicode编码进行比较。ord() 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值。</p>
+<div class="sourceCode" id="cb276"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb276-1"><a href="container.html#cb276-1" aria-hidden="true" tabindex="-1"></a>id_num <span class="op">=</span> <span class="bu">ord</span>(<span class="st">&#39;一&#39;</span>)</span>
+<span id="cb276-2"><a href="container.html#cb276-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb276-3"><a href="container.html#cb276-3" aria-hidden="true" tabindex="-1"></a>    ch <span class="op">=</span> <span class="bu">chr</span>(id_num<span class="op">+</span>i)</span>
+<span id="cb276-4"><a href="container.html#cb276-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ch, <span class="bu">ord</span>(ch))</span></code></pre></div>
+<pre><code>## 一 19968
+## 丁 19969
+## 丂 19970
+## 七 19971
+## 丄 19972</code></pre>
+</div>
+</div>
+<div id="collections" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> collections</h2>
+<p>collections 模块提供了一些功能更完善的容器类型和工具。参考容器数据类型<a href="https://docs.python.org/zh-cn/3/library/collections.html">官方文档</a>。</p>
+<div id="deque" class="section level3" number="5.7.1">
+<h3><span class="header-section-number">5.7.1</span> deque</h3>
+<p>使用 <code>deque(maxlen=N)</code> 构造函数会新建一个固定大小的队列。当新的元素加入并且这个队列已满的时候，最老的元素会自动被移除掉。</p>
+<div class="sourceCode" id="cb278"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb278-1"><a href="container.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> deque</span>
+<span id="cb278-2"><a href="container.html#cb278-2" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> deque([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>], maxlen<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb278-3"><a href="container.html#cb278-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(q)</span></code></pre></div>
+<pre><code>## deque([1, 2, 3, 4], maxlen=4)</code></pre>
+<div class="sourceCode" id="cb280"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb280-1"><a href="container.html#cb280-1" aria-hidden="true" tabindex="-1"></a>q.append(<span class="dv">5</span>)<span class="op">;</span> <span class="bu">print</span>(q)</span></code></pre></div>
+<pre><code>## deque([2, 3, 4, 5], maxlen=4)</code></pre>
+<div class="sourceCode" id="cb282"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb282-1"><a href="container.html#cb282-1" aria-hidden="true" tabindex="-1"></a>q.appendleft(<span class="dv">0</span>)<span class="op">;</span> <span class="bu">print</span>(q)</span></code></pre></div>
+<pre><code>## deque([0, 2, 3, 4], maxlen=4)</code></pre>
+<p><code>pop()</code>移去并且返回deque最右侧的一个元素，那一个。 <code>popleft()</code>移去并且返回deque最左侧的一个元素。<code>rotate(n=1)</code>向右循环移动 n 步，如果 n 是负数，就向左循环。</p>
+<div class="sourceCode" id="cb284"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb284-1"><a href="container.html#cb284-1" aria-hidden="true" tabindex="-1"></a>q.pop()<span class="op">;</span> <span class="bu">print</span>(q)</span></code></pre></div>
+<pre><code>## 4
+## deque([0, 2, 3], maxlen=4)</code></pre>
+<div class="sourceCode" id="cb286"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb286-1"><a href="container.html#cb286-1" aria-hidden="true" tabindex="-1"></a>q.rotate(<span class="dv">1</span>)<span class="op">;</span> <span class="bu">print</span>(q)</span></code></pre></div>
+<pre><code>## deque([3, 0, 2], maxlen=4)</code></pre>
+</div>
+<div id="counter" class="section level3" number="5.7.2">
+<h3><span class="header-section-number">5.7.2</span> Counter</h3>
+<p>Counter 对象是字典类型的一个子类（即一种特殊的字典类型），可以快速完成对可迭代对象的频次统计。</p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><a href="container.html#cb288-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> [</span>
+<span id="cb288-2"><a href="container.html#cb288-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;look&#39;</span>, <span class="st">&#39;into&#39;</span>, <span class="st">&#39;my&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&#39;look&#39;</span>, <span class="st">&#39;into&#39;</span>, <span class="st">&#39;my&#39;</span>, <span class="st">&#39;eyes&#39;</span>,</span>
+<span id="cb288-3"><a href="container.html#cb288-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;the&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&#39;the&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&#39;the&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&#39;not&#39;</span>, <span class="st">&#39;around&#39;</span>, <span class="st">&#39;the&#39;</span>,</span>
+<span id="cb288-4"><a href="container.html#cb288-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;eyes&#39;</span>, <span class="st">&quot;don&#39;t&quot;</span>, <span class="st">&#39;look&#39;</span>, <span class="st">&#39;around&#39;</span>, <span class="st">&#39;the&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&#39;look&#39;</span>, <span class="st">&#39;into&#39;</span>,</span>
+<span id="cb288-5"><a href="container.html#cb288-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;my&#39;</span>, <span class="st">&#39;eyes&#39;</span>, <span class="st">&quot;you&#39;re&quot;</span>, <span class="st">&#39;under&#39;</span></span>
+<span id="cb288-6"><a href="container.html#cb288-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb288-7"><a href="container.html#cb288-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb288-8"><a href="container.html#cb288-8" aria-hidden="true" tabindex="-1"></a>word_counts <span class="op">=</span> Counter(words)</span>
+<span id="cb288-9"><a href="container.html#cb288-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 出现频率最高的3个单词</span></span>
+<span id="cb288-10"><a href="container.html#cb288-10" aria-hidden="true" tabindex="-1"></a>top_three <span class="op">=</span> word_counts.most_common(<span class="dv">3</span>)</span>
+<span id="cb288-11"><a href="container.html#cb288-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(top_three)</span></code></pre></div>
+<pre><code>## [(&#39;eyes&#39;, 8), (&#39;the&#39;, 5), (&#39;look&#39;, 4)]</code></pre>
+<p>作为输入， Counter 对象可以接受任意的由可哈希（hashable）元素构成的序列对象。 在底层实现上，一个 Counter 对象就是一个字典，将元素映射到它出现的次数上。</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb290-1"><a href="container.html#cb290-1" aria-hidden="true" tabindex="-1"></a>word_counts[<span class="st">&#39;not&#39;</span>]</span></code></pre></div>
+<pre><code>## 1</code></pre>
+</div>
+<div id="heapq" class="section level3" number="5.7.3">
+<h3><span class="header-section-number">5.7.3</span> heapq</h3>
+<p>heapq 模块提供了堆队列算法的实现，也称为优先队列算法。堆最有趣的特性在于最小的元素总是在根结点：heap[0]。</p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb292-1"><a href="container.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 查找最大或最小的 N 个元素</span></span>
+<span id="cb292-2"><a href="container.html#cb292-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> heapq</span>
+<span id="cb292-3"><a href="container.html#cb292-3" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">23</span>, <span class="dv">7</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">18</span>, <span class="dv">23</span>, <span class="dv">42</span>, <span class="dv">37</span>, <span class="dv">2</span>]</span>
+<span id="cb292-4"><a href="container.html#cb292-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heapq.nlargest(<span class="dv">3</span>, nums)) </span></code></pre></div>
+<pre><code>## [42, 37, 23]</code></pre>
+<div class="sourceCode" id="cb294"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb294-1"><a href="container.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heapq.nsmallest(<span class="dv">3</span>, nums)) </span></code></pre></div>
+<pre><code>## [-4, 1, 2]</code></pre>
+<p>当要查找的元素个数相对整体比较小的时候，函数 nlargest() 和 nsmallest() 是很合适的。如果你仅仅想查找唯一的最小或最大（N=1）的元素的话，那么使用 min() 和 max() 函数会更快些。类似的，如果 N 的大小和集合大小接近的时候，通常先排序这个集合然后再使用切片操作会更快点（sorted(items)[:N] 或者是 sorted(items)[-N:]）。</p>
+</div>
+<div id="ordereddict" class="section level3" number="5.7.4">
+<h3><span class="header-section-number">5.7.4</span> OrderedDict</h3>
+<p>为了能控制一个字典中元素的顺序，你可以使用 OrderedDict 类。 在迭代操作的时候它会保持元素被插入时的顺序：</p>
+<div class="sourceCode" id="cb296"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb296-1"><a href="container.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> OrderedDict</span>
+<span id="cb296-2"><a href="container.html#cb296-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb296-3"><a href="container.html#cb296-3" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> OrderedDict()</span>
+<span id="cb296-4"><a href="container.html#cb296-4" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&#39;foo&#39;</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb296-5"><a href="container.html#cb296-5" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&#39;bar&#39;</span>] <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb296-6"><a href="container.html#cb296-6" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&#39;spam&#39;</span>] <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb296-7"><a href="container.html#cb296-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> d:</span>
+<span id="cb296-8"><a href="container.html#cb296-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, d[key])</span></code></pre></div>
+<pre><code>## foo 1
+## bar 2
+## spam 3</code></pre>
+</div>
+<div id="namedtuple" class="section level3" number="5.7.5">
+<h3><span class="header-section-number">5.7.5</span> namedtuple</h3>
+<p><a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">namedtuple</a> 为元组中的每个位置赋予一个含义，相比于元组它增加了按名称索引访问字段的能力。构造方法为：<code>namedtuple(typename, field_names, *, rename=False, defaults=None, module=None)</code>。
+其中field_names由字母，数字，下划线组成，但首字母不能是数字或下划线。</p>
+<div class="sourceCode" id="cb298"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb298-1"><a href="container.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> namedtuple</span>
+<span id="cb298-2"><a href="container.html#cb298-2" aria-hidden="true" tabindex="-1"></a>Point <span class="op">=</span> namedtuple(<span class="st">&#39;Point&#39;</span>, [<span class="st">&#39;x&#39;</span>, <span class="st">&#39;y&#39;</span>])</span>
+<span id="cb298-3"><a href="container.html#cb298-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Point(<span class="dv">11</span>, y<span class="op">=</span><span class="dv">22</span>)     <span class="co"># instantiate with positional or keyword arguments</span></span>
+<span id="cb298-4"><a href="container.html#cb298-4" aria-hidden="true" tabindex="-1"></a>p[<span class="dv">0</span>] <span class="op">+</span> p[<span class="dv">1</span>] <span class="co"># indexable like the plain tuple</span></span></code></pre></div>
+<pre><code>## 33</code></pre>
+<div class="sourceCode" id="cb300"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb300-1"><a href="container.html#cb300-1" aria-hidden="true" tabindex="-1"></a>p.x <span class="op">+</span> p.y <span class="co"># fields also accessible by name</span></span></code></pre></div>
+<pre><code>## 33</code></pre>
+<div class="sourceCode" id="cb302"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb302-1"><a href="container.html#cb302-1" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<pre><code>## Point(x=11, y=22)</code></pre>
+<div class="sourceCode" id="cb304"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb304-1"><a href="container.html#cb304-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> [<span class="dv">11</span>, <span class="dv">22</span>]</span>
+<span id="cb304-2"><a href="container.html#cb304-2" aria-hidden="true" tabindex="-1"></a>Point._make(t) <span class="co"># 从存在的序列或迭代实例创建一个新实例</span></span></code></pre></div>
+<pre><code>## Point(x=11, y=22)</code></pre>
+<div class="sourceCode" id="cb306"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb306-1"><a href="container.html#cb306-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Point(x<span class="op">=</span><span class="dv">11</span>, y<span class="op">=</span><span class="dv">22</span>)</span>
+<span id="cb306-2"><a href="container.html#cb306-2" aria-hidden="true" tabindex="-1"></a>p._asdict() <span class="co"># 生成一个字典 ，将字段名称映射到它们对应的值</span></span></code></pre></div>
+<pre><code>## {&#39;x&#39;: 11, &#39;y&#39;: 22}</code></pre>
+</div>
+</div>
+<div id="拷贝" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> 拷贝</h2>
+<p>如果为自定义函数的参数指定默认值，那么该默认值最好不要使用可变类型对象（列表、字典、集合等）。如果使用了可变类型，每次调用该函数时，使用的默认值都是内存中的同一地址的同一个对象。这就意味着：每次调用函数时如果修改了这个默认值参数，则该修改将一直保留在内存中，下一次调用该函数时会继续受到影响。</p>
+<p>列表、字典等容器对象的 copy() 方法属于浅拷贝，如果该容器中的某些元素也是容器（即子容器），则这些子容器不会被复制，而只是将其地址复制过来。copy 模块中的 deepcopy() 方法属于深拷贝，比如 b=deepcopy(a) 可以将 a 容器乃至其内部各层子容器都复制一份，并赋值给 b 。</p>
+<p>如果列表 a 内包含子列表 b，那么对 a 执行列表乘法比如 a*3 后，只是将子列表 b 的地址重复3份、作为新列表的3个元素。但这三个元素其实指向的仍然是子列表 b ，只要修改其中任何一个，所有元素都会受到影响。</p>
 
 </div>
 </div>
@@ -337,8 +634,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="reg-expr.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="module.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="built-in-type2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

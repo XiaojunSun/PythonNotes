@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-30" />
+<meta name="date" content="2021-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -205,10 +205,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
-<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#无穷大与nan"><i class="fa fa-check"></i><b>3.3.2</b> 无穷大与NaN</a></li>
+<li class="chapter" data-level="3.3.3" data-path="built-in-type.html"><a href="built-in-type.html#分数"><i class="fa fa-check"></i><b>3.3.3</b> 分数</a></li>
+<li class="chapter" data-level="3.3.4" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.4</b> 随机数</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
-<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#字节bytes"><i class="fa fa-check"></i><b>3.5</b> 字节（bytes）</a></li>
 <li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
 <ul>
 <li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
@@ -220,31 +222,65 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="built-in-type2.html"><a href="built-in-type2.html#索引和切片"><i class="fa fa-check"></i><b>4.1.1</b> 索引和切片</a></li>
+<li class="chapter" data-level="4.1.2" data-path="built-in-type2.html"><a href="built-in-type2.html#列表修改"><i class="fa fa-check"></i><b>4.1.2</b> 列表修改</a></li>
+<li class="chapter" data-level="4.1.3" data-path="built-in-type2.html"><a href="built-in-type2.html#列表排序"><i class="fa fa-check"></i><b>4.1.3</b> 列表排序</a></li>
+<li class="chapter" data-level="4.1.4" data-path="built-in-type2.html"><a href="built-in-type2.html#列表复制"><i class="fa fa-check"></i><b>4.1.4</b> 列表复制</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
-<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
-<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
-<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
-<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
-<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
-<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+<li class="chapter" data-level="4.3.1" data-path="built-in-type2.html"><a href="built-in-type2.html#字典操作"><i class="fa fa-check"></i><b>4.3.1</b> 字典操作</a></li>
+<li class="chapter" data-level="4.3.2" data-path="built-in-type2.html"><a href="built-in-type2.html#fromkeys"><i class="fa fa-check"></i><b>4.3.2</b> fromkeys()</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+<li class="chapter" data-level="4.4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#集合运算"><i class="fa fa-check"></i><b>4.4.1</b> 集合运算</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#数据类型判断"><i class="fa fa-check"></i><b>4.5</b> 数据类型判断</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
-<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+<li class="chapter" data-level="4.5.1" data-path="built-in-type2.html"><a href="built-in-type2.html#可变与不可变"><i class="fa fa-check"></i><b>4.5.1</b> 可变与不可变</a></li>
+<li class="chapter" data-level="4.5.2" data-path="built-in-type2.html"><a href="built-in-type2.html#hashable"><i class="fa fa-check"></i><b>4.5.2</b> hashable</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+</ul></li>
+<li class="chapter" data-level="5" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>5</b> 深入理解各种容器</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+<li class="chapter" data-level="5.1" data-path="container.html"><a href="container.html#序列函数"><i class="fa fa-check"></i><b>5.1</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="container.html"><a href="container.html#enumerate函数"><i class="fa fa-check"></i><b>5.1.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="5.1.2" data-path="container.html"><a href="container.html#zip函数"><i class="fa fa-check"></i><b>5.1.2</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="container.html"><a href="container.html#列表推导式"><i class="fa fa-check"></i><b>5.2</b> 列表推导式</a></li>
+<li class="chapter" data-level="5.3" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>5.3</b> 迭代器</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="container.html"><a href="container.html#创建一个迭代器"><i class="fa fa-check"></i><b>5.3.1</b> 创建一个迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="container.html"><a href="container.html#生成器"><i class="fa fa-check"></i><b>5.4</b> 生成器</a></li>
+<li class="chapter" data-level="5.5" data-path="container.html"><a href="container.html#解包"><i class="fa fa-check"></i><b>5.5</b> 解包</a></li>
+<li class="chapter" data-level="5.6" data-path="container.html"><a href="container.html#排序"><i class="fa fa-check"></i><b>5.6</b> 排序</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="container.html"><a href="container.html#多关键字排序"><i class="fa fa-check"></i><b>5.6.1</b> 多关键字排序</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="container.html"><a href="container.html#collections"><i class="fa fa-check"></i><b>5.7</b> collections</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="container.html"><a href="container.html#deque"><i class="fa fa-check"></i><b>5.7.1</b> deque</a></li>
+<li class="chapter" data-level="5.7.2" data-path="container.html"><a href="container.html#counter"><i class="fa fa-check"></i><b>5.7.2</b> Counter</a></li>
+<li class="chapter" data-level="5.7.3" data-path="container.html"><a href="container.html#heapq"><i class="fa fa-check"></i><b>5.7.3</b> heapq</a></li>
+<li class="chapter" data-level="5.7.4" data-path="container.html"><a href="container.html#ordereddict"><i class="fa fa-check"></i><b>5.7.4</b> OrderedDict</a></li>
+<li class="chapter" data-level="5.7.5" data-path="container.html"><a href="container.html#namedtuple"><i class="fa fa-check"></i><b>5.7.5</b> namedtuple</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="container.html"><a href="container.html#拷贝"><i class="fa fa-check"></i><b>5.8</b> 拷贝</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>6</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>6.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>7</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.1</b> one</a></li>
+<li class="chapter" data-level="7.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.2</b> two</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -269,7 +305,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
 <li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
 <li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
-<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器-1"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
 <li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
 <li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
 </ul></li>

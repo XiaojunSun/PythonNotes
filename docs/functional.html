@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-11-30" />
+<meta name="date" content="2021-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -205,10 +205,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="built-in-type.html"><a href="built-in-type.html#浮点数"><i class="fa fa-check"></i><b>3.3.1</b> 浮点数</a></li>
-<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.2</b> 随机数</a></li>
+<li class="chapter" data-level="3.3.2" data-path="built-in-type.html"><a href="built-in-type.html#无穷大与nan"><i class="fa fa-check"></i><b>3.3.2</b> 无穷大与NaN</a></li>
+<li class="chapter" data-level="3.3.3" data-path="built-in-type.html"><a href="built-in-type.html#分数"><i class="fa fa-check"></i><b>3.3.3</b> 分数</a></li>
+<li class="chapter" data-level="3.3.4" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.4</b> 随机数</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
-<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#bytes"><i class="fa fa-check"></i><b>3.5</b> bytes</a></li>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#字节bytes"><i class="fa fa-check"></i><b>3.5</b> 字节（bytes）</a></li>
 <li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
 <ul>
 <li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
@@ -220,31 +222,65 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a></li>
+<li class="chapter" data-level="4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#列表list"><i class="fa fa-check"></i><b>4.1</b> 列表list</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="built-in-type2.html"><a href="built-in-type2.html#索引和切片"><i class="fa fa-check"></i><b>4.1.1</b> 索引和切片</a></li>
+<li class="chapter" data-level="4.1.2" data-path="built-in-type2.html"><a href="built-in-type2.html#列表修改"><i class="fa fa-check"></i><b>4.1.2</b> 列表修改</a></li>
+<li class="chapter" data-level="4.1.3" data-path="built-in-type2.html"><a href="built-in-type2.html#列表排序"><i class="fa fa-check"></i><b>4.1.3</b> 列表排序</a></li>
+<li class="chapter" data-level="4.1.4" data-path="built-in-type2.html"><a href="built-in-type2.html#列表复制"><i class="fa fa-check"></i><b>4.1.4</b> 列表复制</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
-<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a></li>
-<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a></li>
-<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#不可变对象"><i class="fa fa-check"></i><b>4.5</b> 不可变对象</a></li>
-<li class="chapter" data-level="4.6" data-path="built-in-type2.html"><a href="built-in-type2.html#序列函数"><i class="fa fa-check"></i><b>4.6</b> 序列函数</a>
+<li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="built-in-type2.html"><a href="built-in-type2.html#enumerate函数"><i class="fa fa-check"></i><b>4.6.1</b> enumerate函数</a></li>
-<li class="chapter" data-level="4.6.2" data-path="built-in-type2.html"><a href="built-in-type2.html#sorted函数"><i class="fa fa-check"></i><b>4.6.2</b> sorted函数</a></li>
-<li class="chapter" data-level="4.6.3" data-path="built-in-type2.html"><a href="built-in-type2.html#zip函数"><i class="fa fa-check"></i><b>4.6.3</b> zip函数</a></li>
+<li class="chapter" data-level="4.3.1" data-path="built-in-type2.html"><a href="built-in-type2.html#字典操作"><i class="fa fa-check"></i><b>4.3.1</b> 字典操作</a></li>
+<li class="chapter" data-level="4.3.2" data-path="built-in-type2.html"><a href="built-in-type2.html#fromkeys"><i class="fa fa-check"></i><b>4.3.2</b> fromkeys()</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="built-in-type2.html"><a href="built-in-type2.html#列表推导式"><i class="fa fa-check"></i><b>4.7</b> 列表推导式</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>5</b> Python函数</a>
+<li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>5.0.1</b> 返回多个值</a></li>
+<li class="chapter" data-level="4.4.1" data-path="built-in-type2.html"><a href="built-in-type2.html#集合运算"><i class="fa fa-check"></i><b>4.4.1</b> 集合运算</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>6</b> 字符串与正则表达式</a>
+<li class="chapter" data-level="4.5" data-path="built-in-type2.html"><a href="built-in-type2.html#数据类型判断"><i class="fa fa-check"></i><b>4.5</b> 数据类型判断</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>6.1</b> one</a></li>
-<li class="chapter" data-level="6.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>6.2</b> two</a></li>
+<li class="chapter" data-level="4.5.1" data-path="built-in-type2.html"><a href="built-in-type2.html#可变与不可变"><i class="fa fa-check"></i><b>4.5.1</b> 可变与不可变</a></li>
+<li class="chapter" data-level="4.5.2" data-path="built-in-type2.html"><a href="built-in-type2.html#hashable"><i class="fa fa-check"></i><b>4.5.2</b> hashable</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>7</b> 深入理解各种容器</a>
+</ul></li>
+<li class="chapter" data-level="5" data-path="container.html"><a href="container.html"><i class="fa fa-check"></i><b>5</b> 深入理解各种容器</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>7.1</b> 迭代器</a></li>
+<li class="chapter" data-level="5.1" data-path="container.html"><a href="container.html#序列函数"><i class="fa fa-check"></i><b>5.1</b> 序列函数</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="container.html"><a href="container.html#enumerate函数"><i class="fa fa-check"></i><b>5.1.1</b> enumerate函数</a></li>
+<li class="chapter" data-level="5.1.2" data-path="container.html"><a href="container.html#zip函数"><i class="fa fa-check"></i><b>5.1.2</b> zip函数</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="container.html"><a href="container.html#列表推导式"><i class="fa fa-check"></i><b>5.2</b> 列表推导式</a></li>
+<li class="chapter" data-level="5.3" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>5.3</b> 迭代器</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="container.html"><a href="container.html#创建一个迭代器"><i class="fa fa-check"></i><b>5.3.1</b> 创建一个迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="container.html"><a href="container.html#生成器"><i class="fa fa-check"></i><b>5.4</b> 生成器</a></li>
+<li class="chapter" data-level="5.5" data-path="container.html"><a href="container.html#解包"><i class="fa fa-check"></i><b>5.5</b> 解包</a></li>
+<li class="chapter" data-level="5.6" data-path="container.html"><a href="container.html#排序"><i class="fa fa-check"></i><b>5.6</b> 排序</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="container.html"><a href="container.html#多关键字排序"><i class="fa fa-check"></i><b>5.6.1</b> 多关键字排序</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="container.html"><a href="container.html#collections"><i class="fa fa-check"></i><b>5.7</b> collections</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="container.html"><a href="container.html#deque"><i class="fa fa-check"></i><b>5.7.1</b> deque</a></li>
+<li class="chapter" data-level="5.7.2" data-path="container.html"><a href="container.html#counter"><i class="fa fa-check"></i><b>5.7.2</b> Counter</a></li>
+<li class="chapter" data-level="5.7.3" data-path="container.html"><a href="container.html#heapq"><i class="fa fa-check"></i><b>5.7.3</b> heapq</a></li>
+<li class="chapter" data-level="5.7.4" data-path="container.html"><a href="container.html#ordereddict"><i class="fa fa-check"></i><b>5.7.4</b> OrderedDict</a></li>
+<li class="chapter" data-level="5.7.5" data-path="container.html"><a href="container.html#namedtuple"><i class="fa fa-check"></i><b>5.7.5</b> namedtuple</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="container.html"><a href="container.html#拷贝"><i class="fa fa-check"></i><b>5.8</b> 拷贝</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>6</b> Python函数</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>6.0.1</b> 返回多个值</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>7</b> 字符串与正则表达式</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.1</b> one</a></li>
+<li class="chapter" data-level="7.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.2</b> two</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -269,7 +305,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
 <li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
 <li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
-<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
+<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器-1"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
 <li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
 <li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
 </ul></li>
@@ -311,40 +347,40 @@ div.csl-indent {
 <div id="函数也是对象" class="section level3" number="10.0.1">
 <h3><span class="header-section-number">10.0.1</span> 函数也是对象</h3>
 <p>由于Python函数都是对象，因此，在其他语言中较难表达的一些设计思想在Python中就要简单很多了。假设我们有下面这样一个字符串数组，希望对其进行一些数据清理工作并执行一堆转换：</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb285-1"><a href="functional.html#cb285-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> [<span class="st">&#39;   Alabama &#39;</span>, <span class="st">&#39;Georgia!&#39;</span>, <span class="st">&#39;Georgia&#39;</span>, <span class="st">&#39;georgia&#39;</span>, <span class="st">&#39;FlOrIda&#39;</span>, <span class="st">&#39;south   carolina##&#39;</span>, <span class="st">&#39;West virginia?&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb430"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb430-1"><a href="functional.html#cb430-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> [<span class="st">&#39;   Alabama &#39;</span>, <span class="st">&#39;Georgia!&#39;</span>, <span class="st">&#39;Georgia&#39;</span>, <span class="st">&#39;georgia&#39;</span>, <span class="st">&#39;FlOrIda&#39;</span>, <span class="st">&#39;south   carolina##&#39;</span>, <span class="st">&#39;West virginia?&#39;</span>]</span></code></pre></div>
 <p>不管是谁，只要处理过由用户提交的调查数据，就能明白这种乱七八糟的数据是怎么一回事。为了得到一组能用于分析工作的格式统一的字符串，需要做很多事情：去除空白符、删除各种标点符号、正确的大写格式等。做法之一是使用内建的字符串方法和正则表达式<code>re</code>模块：</p>
-<div class="sourceCode" id="cb286"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb286-1"><a href="functional.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb286-2"><a href="functional.html#cb286-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings):</span>
-<span id="cb286-3"><a href="functional.html#cb286-3" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb286-4"><a href="functional.html#cb286-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
-<span id="cb286-5"><a href="functional.html#cb286-5" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.strip()</span>
-<span id="cb286-6"><a href="functional.html#cb286-6" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
-<span id="cb286-7"><a href="functional.html#cb286-7" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.title()</span>
-<span id="cb286-8"><a href="functional.html#cb286-8" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
-<span id="cb286-9"><a href="functional.html#cb286-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb431"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb431-1"><a href="functional.html#cb431-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb431-2"><a href="functional.html#cb431-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings):</span>
+<span id="cb431-3"><a href="functional.html#cb431-3" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb431-4"><a href="functional.html#cb431-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
+<span id="cb431-5"><a href="functional.html#cb431-5" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.strip()</span>
+<span id="cb431-6"><a href="functional.html#cb431-6" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
+<span id="cb431-7"><a href="functional.html#cb431-7" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.title()</span>
+<span id="cb431-8"><a href="functional.html#cb431-8" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
+<span id="cb431-9"><a href="functional.html#cb431-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>结果如下所示：</p>
-<div class="sourceCode" id="cb287"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb287-1"><a href="functional.html#cb287-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states)</span></code></pre></div>
+<div class="sourceCode" id="cb432"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb432-1"><a href="functional.html#cb432-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states)</span></code></pre></div>
 <pre><code>## [&#39;Alabama&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Florida&#39;, &#39;South   Carolina&#39;, &#39;West Virginia&#39;]</code></pre>
 <p>其实还有另外一种不错的办法：将需要在一组给定字符串上执行的所有运算做成一个列表：</p>
-<div class="sourceCode" id="cb289"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb289-1"><a href="functional.html#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_punctuation(value):</span>
-<span id="cb289-2"><a href="functional.html#cb289-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
-<span id="cb289-3"><a href="functional.html#cb289-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb289-4"><a href="functional.html#cb289-4" aria-hidden="true" tabindex="-1"></a>clean_ops <span class="op">=</span> [<span class="bu">str</span>.strip, remove_punctuation, <span class="bu">str</span>.title]</span>
-<span id="cb289-5"><a href="functional.html#cb289-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb289-6"><a href="functional.html#cb289-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings, ops):</span>
-<span id="cb289-7"><a href="functional.html#cb289-7" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb289-8"><a href="functional.html#cb289-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
-<span id="cb289-9"><a href="functional.html#cb289-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> function <span class="kw">in</span> ops:</span>
-<span id="cb289-10"><a href="functional.html#cb289-10" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> function(value)</span>
-<span id="cb289-11"><a href="functional.html#cb289-11" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
-<span id="cb289-12"><a href="functional.html#cb289-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb434-1"><a href="functional.html#cb434-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_punctuation(value):</span>
+<span id="cb434-2"><a href="functional.html#cb434-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
+<span id="cb434-3"><a href="functional.html#cb434-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb434-4"><a href="functional.html#cb434-4" aria-hidden="true" tabindex="-1"></a>clean_ops <span class="op">=</span> [<span class="bu">str</span>.strip, remove_punctuation, <span class="bu">str</span>.title]</span>
+<span id="cb434-5"><a href="functional.html#cb434-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb434-6"><a href="functional.html#cb434-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings, ops):</span>
+<span id="cb434-7"><a href="functional.html#cb434-7" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb434-8"><a href="functional.html#cb434-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
+<span id="cb434-9"><a href="functional.html#cb434-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> function <span class="kw">in</span> ops:</span>
+<span id="cb434-10"><a href="functional.html#cb434-10" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> function(value)</span>
+<span id="cb434-11"><a href="functional.html#cb434-11" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
+<span id="cb434-12"><a href="functional.html#cb434-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>然后我们就有了：</p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb290-1"><a href="functional.html#cb290-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states, clean_ops)</span></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb435-1"><a href="functional.html#cb435-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states, clean_ops)</span></code></pre></div>
 <pre><code>## [&#39;Alabama&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Florida&#39;, &#39;South   Carolina&#39;, &#39;West Virginia&#39;]</code></pre>
 <p>这种多函数模式使你能在很高的层次上轻松修改字符串的转换方式。此时的clean_strings也更具<em>可复用性</em>！</p>
 <p>还可以将函数用作其他函数的参数，比如内置的map函数，它用于在一组数据上应用一个函数：</p>
-<div class="sourceCode" id="cb292"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb292-1"><a href="functional.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">map</span>(remove_punctuation, states):</span>
-<span id="cb292-2"><a href="functional.html#cb292-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb437"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb437-1"><a href="functional.html#cb437-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">map</span>(remove_punctuation, states):</span>
+<span id="cb437-2"><a href="functional.html#cb437-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>##    Alabama 
 ## Georgia
 ## Georgia
@@ -356,22 +392,22 @@ div.csl-indent {
 <div id="匿名lambda函数" class="section level3" number="10.0.2">
 <h3><span class="header-section-number">10.0.2</span> 匿名（lambda）函数</h3>
 <p>Python支持一种被称为匿名的或lambda函数。它仅由单条语句组成，该语句的结果就是返回值。它是通过lambda关键字定义的，这个关键字没有别的含义，仅仅是说“我们正在声明的是一个匿名函数”。</p>
-<div class="sourceCode" id="cb294"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb294-1"><a href="functional.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> short_function(x):</span>
-<span id="cb294-2"><a href="functional.html#cb294-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb294-3"><a href="functional.html#cb294-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb294-4"><a href="functional.html#cb294-4" aria-hidden="true" tabindex="-1"></a>equiv_anon <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb439"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb439-1"><a href="functional.html#cb439-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> short_function(x):</span>
+<span id="cb439-2"><a href="functional.html#cb439-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb439-3"><a href="functional.html#cb439-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb439-4"><a href="functional.html#cb439-4" aria-hidden="true" tabindex="-1"></a>equiv_anon <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <p>本书其余部分一般将其称为lambda函数。它们在数据分析工作中非常方便，因为你会发现很多数据转换函数都以函数作为参数的。直接传入lambda函数比编写完整函数声明要少输入很多字（也更清晰），甚至比将lambda函数赋值给一个变量还要少输入很多字。看看下面这个简单得有些傻的例子：</p>
-<div class="sourceCode" id="cb295"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb295-1"><a href="functional.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> apply_to_list(some_list, f):</span>
-<span id="cb295-2"><a href="functional.html#cb295-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> some_list]</span>
-<span id="cb295-3"><a href="functional.html#cb295-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb295-4"><a href="functional.html#cb295-4" aria-hidden="true" tabindex="-1"></a>ints <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb295-5"><a href="functional.html#cb295-5" aria-hidden="true" tabindex="-1"></a>apply_to_list(ints, <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb440-1"><a href="functional.html#cb440-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> apply_to_list(some_list, f):</span>
+<span id="cb440-2"><a href="functional.html#cb440-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> some_list]</span>
+<span id="cb440-3"><a href="functional.html#cb440-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb440-4"><a href="functional.html#cb440-4" aria-hidden="true" tabindex="-1"></a>ints <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb440-5"><a href="functional.html#cb440-5" aria-hidden="true" tabindex="-1"></a>apply_to_list(ints, <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [8, 0, 2, 10, 12]</code></pre>
 <p>虽然你可以直接编写<code>[x *2 for x in ints]</code>，但是这里我们可以非常轻松地传入一个自定义函数给apply_to_list函数。</p>
 <p>再来看另外一个例子。假设有一组字符串，你想要根据各字符串不同字母的数量对其进行排序：</p>
-<div class="sourceCode" id="cb297"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb297-1"><a href="functional.html#cb297-1" aria-hidden="true" tabindex="-1"></a>strings <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;card&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;aaaa&#39;</span>, <span class="st">&#39;abab&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb442"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb442-1"><a href="functional.html#cb442-1" aria-hidden="true" tabindex="-1"></a>strings <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;card&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;aaaa&#39;</span>, <span class="st">&#39;abab&#39;</span>]</span></code></pre></div>
 <p>这里，我们可以传入一个lambda函数到列表的sort方法：</p>
-<div class="sourceCode" id="cb298"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb298-1"><a href="functional.html#cb298-1" aria-hidden="true" tabindex="-1"></a>strings.sort(key<span class="op">=</span><span class="kw">lambda</span> x: <span class="bu">len</span>(<span class="bu">set</span>(<span class="bu">list</span>(x))))</span></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb443-1"><a href="functional.html#cb443-1" aria-hidden="true" tabindex="-1"></a>strings.sort(key<span class="op">=</span><span class="kw">lambda</span> x: <span class="bu">len</span>(<span class="bu">set</span>(<span class="bu">list</span>(x))))</span></code></pre></div>
 <blockquote>
 <p>笔记：lambda函数之所以会被称为匿名函数，与def声明的函数不同，原因之一就是这种函数对象本身是没有提供名称<strong>name</strong>属性。</p>
 </blockquote>
@@ -379,54 +415,54 @@ div.csl-indent {
 <div id="柯里化部分参数应用" class="section level3" number="10.0.3">
 <h3><span class="header-section-number">10.0.3</span> 柯里化：部分参数应用</h3>
 <p>柯里化（currying）是一个有趣的计算机科学术语，它指的是通过“部分参数应用”（partial argument application）从现有函数派生出新函数的技术。例如，假设我们有一个执行两数相加的简单函数：</p>
-<div class="sourceCode" id="cb299"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb299-1"><a href="functional.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
-<span id="cb299-2"><a href="functional.html#cb299-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre></div>
+<div class="sourceCode" id="cb444"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb444-1"><a href="functional.html#cb444-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
+<span id="cb444-2"><a href="functional.html#cb444-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre></div>
 <p>通过这个函数，我们可以派生出一个新的只有一个参数的函数——add_five，它用于对其参数加5：</p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb300-1"><a href="functional.html#cb300-1" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> <span class="kw">lambda</span> y: add_numbers(<span class="dv">5</span>, y)</span></code></pre></div>
+<div class="sourceCode" id="cb445"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb445-1"><a href="functional.html#cb445-1" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> <span class="kw">lambda</span> y: add_numbers(<span class="dv">5</span>, y)</span></code></pre></div>
 <p>add_numbers的第二个参数称为“柯里化的”（curried）。这里没什么特别花哨的东西，因为我们其实就只是定义了一个可以调用现有函数的新函数而已。内置的<code>functools</code>模块可以用<code>partial</code>函数将此过程简化：</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb301-1"><a href="functional.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
-<span id="cb301-2"><a href="functional.html#cb301-2" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> partial(add_numbers, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb446"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb446-1"><a href="functional.html#cb446-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
+<span id="cb446-2"><a href="functional.html#cb446-2" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> partial(add_numbers, <span class="dv">5</span>)</span></code></pre></div>
 </div>
-<div id="生成器" class="section level3" number="10.0.4">
+<div id="生成器-1" class="section level3" number="10.0.4">
 <h3><span class="header-section-number">10.0.4</span> 生成器</h3>
 <p>能以一种一致的方式对序列进行迭代是Python的一个重要特点。这是通过一种叫做迭代器协议（iterator protocol，它是一种使对象可迭代的通用方式）的方式实现的。迭代器是一种特殊对象，它可以在诸如for循环之类的上下文中向Python解释器输送对象。大部分能接受列表之类的对象的方法也都可以接受任何可迭代对象。比如min、max、sum等内置方法以及list、tuple等类型构造器。</p>
 <p>生成器（generator）是构造新的可迭代对象的一种简单方式。一般的函数执行之后只会返回单个值，而生成器则是以延迟的方式返回一个值序列，即每返回一个值之后暂停，直到下一个值被请求时再继续。要创建一个生成器，只需将函数中的return替换为<code>yeild</code>即可：</p>
-<div class="sourceCode" id="cb302"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb302-1"><a href="functional.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> squares(n<span class="op">=</span><span class="dv">10</span>):</span>
-<span id="cb302-2"><a href="functional.html#cb302-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Generating squares from 1 to </span><span class="sc">{0}</span><span class="st">&#39;</span>.<span class="bu">format</span>(n <span class="op">**</span> <span class="dv">2</span>))</span>
-<span id="cb302-3"><a href="functional.html#cb302-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb302-4"><a href="functional.html#cb302-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> i <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb447"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb447-1"><a href="functional.html#cb447-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> squares(n<span class="op">=</span><span class="dv">10</span>):</span>
+<span id="cb447-2"><a href="functional.html#cb447-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Generating squares from 1 to </span><span class="sc">{0}</span><span class="st">&#39;</span>.<span class="bu">format</span>(n <span class="op">**</span> <span class="dv">2</span>))</span>
+<span id="cb447-3"><a href="functional.html#cb447-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb447-4"><a href="functional.html#cb447-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> i <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <p>调用该生成器时，没有任何代码会被立即执行：</p>
-<div class="sourceCode" id="cb303"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb303-1"><a href="functional.html#cb303-1" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> squares()</span>
-<span id="cb303-2"><a href="functional.html#cb303-2" aria-hidden="true" tabindex="-1"></a>gen</span></code></pre></div>
-<pre><code>## &lt;generator object squares at 0x0000000012807350&gt;</code></pre>
+<div class="sourceCode" id="cb448"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb448-1"><a href="functional.html#cb448-1" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> squares()</span>
+<span id="cb448-2"><a href="functional.html#cb448-2" aria-hidden="true" tabindex="-1"></a>gen</span></code></pre></div>
+<pre><code>## &lt;generator object squares at 0x0000000026E83190&gt;</code></pre>
 <p>直到你从该生成器中请求元素时，它才会开始执行其代码：</p>
-<div class="sourceCode" id="cb305"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb305-1"><a href="functional.html#cb305-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> gen:</span>
-<span id="cb305-2"><a href="functional.html#cb305-2" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(x, end<span class="op">=</span><span class="st">&#39; &#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="functional.html#cb450-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> gen:</span>
+<span id="cb450-2"><a href="functional.html#cb450-2" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(x, end<span class="op">=</span><span class="st">&#39; &#39;</span>)</span></code></pre></div>
 <pre><code>## Generating squares from 1 to 100
 ## 1 4 9 16 25 36 49 64 81 100</code></pre>
 <p>另一种更简洁的构造生成器的方法是使用生成器表达式（generator expression）。这是一种类似于列表、字典、集合推导式的生成器，其创建方式为，把列表推导式两端的方括号改成圆括号：</p>
-<div class="sourceCode" id="cb307"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb307-1"><a href="functional.html#cb307-1" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> (x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>))</span>
-<span id="cb307-2"><a href="functional.html#cb307-2" aria-hidden="true" tabindex="-1"></a>gen</span></code></pre></div>
-<pre><code>## &lt;generator object &lt;genexpr&gt; at 0x0000000012807580&gt;</code></pre>
+<div class="sourceCode" id="cb452"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb452-1"><a href="functional.html#cb452-1" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> (x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>))</span>
+<span id="cb452-2"><a href="functional.html#cb452-2" aria-hidden="true" tabindex="-1"></a>gen</span></code></pre></div>
+<pre><code>## &lt;generator object &lt;genexpr&gt; at 0x0000000026E83DD0&gt;</code></pre>
 <p>它跟下面这个冗长得多的生成器是完全等价的：</p>
-<div class="sourceCode" id="cb309"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb309-1"><a href="functional.html#cb309-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _make_gen():</span>
-<span id="cb309-2"><a href="functional.html#cb309-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
-<span id="cb309-3"><a href="functional.html#cb309-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> x <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb309-4"><a href="functional.html#cb309-4" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> _make_gen()</span></code></pre></div>
+<div class="sourceCode" id="cb454"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb454-1"><a href="functional.html#cb454-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _make_gen():</span>
+<span id="cb454-2"><a href="functional.html#cb454-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb454-3"><a href="functional.html#cb454-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> x <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb454-4"><a href="functional.html#cb454-4" aria-hidden="true" tabindex="-1"></a>gen <span class="op">=</span> _make_gen()</span></code></pre></div>
 <p>生成器表达式也可以取代列表推导式，作为函数参数：</p>
-<div class="sourceCode" id="cb310"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb310-1"><a href="functional.html#cb310-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="functional.html#cb455-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>))</span></code></pre></div>
 <pre><code>## 328350</code></pre>
-<div class="sourceCode" id="cb312"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb312-1"><a href="functional.html#cb312-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>((i, i <span class="op">**</span><span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="functional.html#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>((i, i <span class="op">**</span><span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>))</span></code></pre></div>
 <pre><code>## {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}</code></pre>
 </div>
 <div id="itertools模块" class="section level3" number="10.0.5">
 <h3><span class="header-section-number">10.0.5</span> itertools模块</h3>
 <p>标准库itertools模块中有一组用于许多常见数据算法的生成器。例如，groupby可以接受任何序列和一个函数。它根据函数的返回值对序列中的连续元素进行分组。下面是一个例子：</p>
-<div class="sourceCode" id="cb314"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb314-1"><a href="functional.html#cb314-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
-<span id="cb314-2"><a href="functional.html#cb314-2" aria-hidden="true" tabindex="-1"></a>first_letter <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="dv">0</span>]</span>
-<span id="cb314-3"><a href="functional.html#cb314-3" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;Alan&#39;</span>, <span class="st">&#39;Adam&#39;</span>, <span class="st">&#39;Wes&#39;</span>, <span class="st">&#39;Will&#39;</span>, <span class="st">&#39;Albert&#39;</span>, <span class="st">&#39;Steven&#39;</span>]</span>
-<span id="cb314-4"><a href="functional.html#cb314-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter, names <span class="kw">in</span> itertools.groupby(names, first_letter):</span>
-<span id="cb314-5"><a href="functional.html#cb314-5" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(letter, <span class="bu">list</span>(names)) <span class="co"># names is a generator</span></span></code></pre></div>
+<div class="sourceCode" id="cb459"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb459-1"><a href="functional.html#cb459-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
+<span id="cb459-2"><a href="functional.html#cb459-2" aria-hidden="true" tabindex="-1"></a>first_letter <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="dv">0</span>]</span>
+<span id="cb459-3"><a href="functional.html#cb459-3" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;Alan&#39;</span>, <span class="st">&#39;Adam&#39;</span>, <span class="st">&#39;Wes&#39;</span>, <span class="st">&#39;Will&#39;</span>, <span class="st">&#39;Albert&#39;</span>, <span class="st">&#39;Steven&#39;</span>]</span>
+<span id="cb459-4"><a href="functional.html#cb459-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter, names <span class="kw">in</span> itertools.groupby(names, first_letter):</span>
+<span id="cb459-5"><a href="functional.html#cb459-5" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(letter, <span class="bu">list</span>(names)) <span class="co"># names is a generator</span></span></code></pre></div>
 <pre><code>## A [&#39;Alan&#39;, &#39;Adam&#39;]
 ## W [&#39;Wes&#39;, &#39;Will&#39;]
 ## A [&#39;Albert&#39;]
@@ -435,38 +471,38 @@ div.csl-indent {
 <div id="错误和异常处理" class="section level3" number="10.0.6">
 <h3><span class="header-section-number">10.0.6</span> 错误和异常处理</h3>
 <p>优雅地处理Python的错误和异常是构建健壮程序的重要部分。在数据分析中，许多函数函数只用于部分输入。例如，Python的float函数可以将字符串转换成浮点数，但输入有误时，有<code>ValueError</code>错误。假如想优雅地处理float的错误，让它返回输入值。我们可以写一个函数，在try/except中调用float：</p>
-<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="functional.html#cb316-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
-<span id="cb316-2"><a href="functional.html#cb316-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb316-3"><a href="functional.html#cb316-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
-<span id="cb316-4"><a href="functional.html#cb316-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
-<span id="cb316-5"><a href="functional.html#cb316-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
-<span id="cb316-6"><a href="functional.html#cb316-6" aria-hidden="true" tabindex="-1"></a>attempt_float((<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb461-1"><a href="functional.html#cb461-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb461-2"><a href="functional.html#cb461-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb461-3"><a href="functional.html#cb461-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb461-4"><a href="functional.html#cb461-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb461-5"><a href="functional.html#cb461-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb461-6"><a href="functional.html#cb461-6" aria-hidden="true" tabindex="-1"></a>attempt_float((<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## (1, 2)</code></pre>
 <p>当float(x)抛出异常时，才会执行except的部分。你可能注意到float抛出的异常不仅是ValueError：</p>
-<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="functional.html#cb318-1" aria-hidden="true" tabindex="-1"></a>In [<span class="dv">202</span>]: <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb318-2"><a href="functional.html#cb318-2" aria-hidden="true" tabindex="-1"></a><span class="op">---------------------------------------------------------------------------</span></span>
-<span id="cb318-3"><a href="functional.html#cb318-3" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>                                 Traceback (most recent call last)</span>
-<span id="cb318-4"><a href="functional.html#cb318-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">202</span><span class="op">-</span><span class="dv">842079</span>ebb635<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
-<span id="cb318-5"><a href="functional.html#cb318-5" aria-hidden="true" tabindex="-1"></a><span class="op">----&gt;</span> <span class="dv">1</span> <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb318-6"><a href="functional.html#cb318-6" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>: <span class="bu">float</span>() argument must be a string <span class="kw">or</span> a number, <span class="kw">not</span> <span class="st">&#39;tuple&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb463-1"><a href="functional.html#cb463-1" aria-hidden="true" tabindex="-1"></a>In [<span class="dv">202</span>]: <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb463-2"><a href="functional.html#cb463-2" aria-hidden="true" tabindex="-1"></a><span class="op">---------------------------------------------------------------------------</span></span>
+<span id="cb463-3"><a href="functional.html#cb463-3" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>                                 Traceback (most recent call last)</span>
+<span id="cb463-4"><a href="functional.html#cb463-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">202</span><span class="op">-</span><span class="dv">842079</span>ebb635<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb463-5"><a href="functional.html#cb463-5" aria-hidden="true" tabindex="-1"></a><span class="op">----&gt;</span> <span class="dv">1</span> <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb463-6"><a href="functional.html#cb463-6" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>: <span class="bu">float</span>() argument must be a string <span class="kw">or</span> a number, <span class="kw">not</span> <span class="st">&#39;tuple&#39;</span></span></code></pre></div>
 <p>你可能只想处理ValueError，TypeError错误（输入不是字符串或数值）可能是合理的bug。可以写一个异常类型：</p>
-<div class="sourceCode" id="cb319"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb319-1"><a href="functional.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
-<span id="cb319-2"><a href="functional.html#cb319-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb319-3"><a href="functional.html#cb319-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
-<span id="cb319-4"><a href="functional.html#cb319-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
-<span id="cb319-5"><a href="functional.html#cb319-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
+<div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="functional.html#cb464-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb464-2"><a href="functional.html#cb464-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb464-3"><a href="functional.html#cb464-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb464-4"><a href="functional.html#cb464-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb464-5"><a href="functional.html#cb464-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
 <p>可以用元组包含多个异常：</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb320-1"><a href="functional.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
-<span id="cb320-2"><a href="functional.html#cb320-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb320-3"><a href="functional.html#cb320-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
-<span id="cb320-4"><a href="functional.html#cb320-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> (<span class="pp">TypeError</span>, <span class="pp">ValueError</span>):</span>
-<span id="cb320-5"><a href="functional.html#cb320-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
+<div class="sourceCode" id="cb465"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb465-1"><a href="functional.html#cb465-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb465-2"><a href="functional.html#cb465-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb465-3"><a href="functional.html#cb465-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb465-4"><a href="functional.html#cb465-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> (<span class="pp">TypeError</span>, <span class="pp">ValueError</span>):</span>
+<span id="cb465-5"><a href="functional.html#cb465-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
 <p>某些情况下，你可能不想抑制异常，你想无论try部分的代码是否成功，都执行一段代码。可以使用finally：</p>
-<div class="sourceCode" id="cb321"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb321-1"><a href="functional.html#cb321-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(path, <span class="st">&#39;w&#39;</span>)</span>
-<span id="cb321-2"><a href="functional.html#cb321-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb321-3"><a href="functional.html#cb321-3" aria-hidden="true" tabindex="-1"></a>    write_to_file(f)</span>
-<span id="cb321-4"><a href="functional.html#cb321-4" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
-<span id="cb321-5"><a href="functional.html#cb321-5" aria-hidden="true" tabindex="-1"></a>    f.close()</span></code></pre></div>
+<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="functional.html#cb466-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(path, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb466-2"><a href="functional.html#cb466-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb466-3"><a href="functional.html#cb466-3" aria-hidden="true" tabindex="-1"></a>    write_to_file(f)</span>
+<span id="cb466-4"><a href="functional.html#cb466-4" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
+<span id="cb466-5"><a href="functional.html#cb466-5" aria-hidden="true" tabindex="-1"></a>    f.close()</span></code></pre></div>
 
 </div>
 </div>
