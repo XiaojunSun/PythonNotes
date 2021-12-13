@@ -15,4 +15,5 @@ PythonNotes.Rproj
 *.md
 *.bib
 *.rds
+*.txt
 snack.py

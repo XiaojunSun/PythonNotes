@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Python函数 | 我的Python笔记</title>
+  <title>Chapter 6 函数 | 我的Python笔记</title>
   <meta name="description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Python函数 | 我的Python笔记" />
+  <meta property="og:title" content="Chapter 6 函数 | 我的Python笔记" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="XiaojunSun/PythonNotes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Python函数 | 我的Python笔记" />
+  <meta name="twitter:title" content="Chapter 6 函数 | 我的Python笔记" />
   
   <meta name="twitter:description" content="This is my personal notebook on Python. The output format is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-12-05" />
+<meta name="date" content="2021-12-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,13 @@ div.csl-indent {
 <li class="chapter" data-level="1.5.5" data-path="build-env.html"><a href="build-env.html#魔术命令"><i class="fa fa-check"></i><b>1.5.5</b> 魔术命令</a></li>
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="build-env.html"><a href="build-env.html#pycharm"><i class="fa fa-check"></i><b>1.6</b> PyCharm</a></li>
-<li class="chapter" data-level="1.7" data-path="build-env.html"><a href="build-env.html#运行python程序"><i class="fa fa-check"></i><b>1.7</b> 运行Python程序</a></li>
+<li class="chapter" data-level="1.7" data-path="build-env.html"><a href="build-env.html#语法基础"><i class="fa fa-check"></i><b>1.7</b> 语法基础</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="build-env.html"><a href="build-env.html#print"><i class="fa fa-check"></i><b>1.7.1</b> print</a></li>
+<li class="chapter" data-level="1.7.2" data-path="build-env.html"><a href="build-env.html#注释"><i class="fa fa-check"></i><b>1.7.2</b> 注释</a></li>
+<li class="chapter" data-level="1.7.3" data-path="build-env.html"><a href="build-env.html#变量"><i class="fa fa-check"></i><b>1.7.3</b> 变量</a></li>
+<li class="chapter" data-level="1.7.4" data-path="build-env.html"><a href="build-env.html#运行python程序"><i class="fa fa-check"></i><b>1.7.4</b> 运行Python程序</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2</b> 程序控制流程</a>
 <ul>
@@ -210,14 +216,13 @@ div.csl-indent {
 <li class="chapter" data-level="3.3.4" data-path="built-in-type.html"><a href="built-in-type.html#随机数"><i class="fa fa-check"></i><b>3.3.4</b> 随机数</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="built-in-type.html"><a href="built-in-type.html#布尔值"><i class="fa fa-check"></i><b>3.4</b> 布尔值</a></li>
-<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#字节bytes"><i class="fa fa-check"></i><b>3.5</b> 字节（bytes）</a></li>
-<li class="chapter" data-level="3.6" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.6</b> Python运算符</a>
+<li class="chapter" data-level="3.5" data-path="built-in-type.html"><a href="built-in-type.html#python运算符"><i class="fa fa-check"></i><b>3.5</b> Python运算符</a>
 <ul>
-<li class="chapter" data-level="3.6.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.6.1</b> 算术运算符</a></li>
-<li class="chapter" data-level="3.6.2" data-path="built-in-type.html"><a href="built-in-type.html#比较运算符"><i class="fa fa-check"></i><b>3.6.2</b> 比较运算符</a></li>
-<li class="chapter" data-level="3.6.3" data-path="built-in-type.html"><a href="built-in-type.html#逻辑运算符"><i class="fa fa-check"></i><b>3.6.3</b> 逻辑运算符</a></li>
-<li class="chapter" data-level="3.6.4" data-path="built-in-type.html"><a href="built-in-type.html#成员运算符"><i class="fa fa-check"></i><b>3.6.4</b> 成员运算符</a></li>
-<li class="chapter" data-level="3.6.5" data-path="built-in-type.html"><a href="built-in-type.html#身份运算符"><i class="fa fa-check"></i><b>3.6.5</b> 身份运算符</a></li>
+<li class="chapter" data-level="3.5.1" data-path="built-in-type.html"><a href="built-in-type.html#算术运算符"><i class="fa fa-check"></i><b>3.5.1</b> 算术运算符</a></li>
+<li class="chapter" data-level="3.5.2" data-path="built-in-type.html"><a href="built-in-type.html#比较运算符"><i class="fa fa-check"></i><b>3.5.2</b> 比较运算符</a></li>
+<li class="chapter" data-level="3.5.3" data-path="built-in-type.html"><a href="built-in-type.html#逻辑运算符"><i class="fa fa-check"></i><b>3.5.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="3.5.4" data-path="built-in-type.html"><a href="built-in-type.html#成员运算符"><i class="fa fa-check"></i><b>3.5.4</b> 成员运算符</a></li>
+<li class="chapter" data-level="3.5.5" data-path="built-in-type.html"><a href="built-in-type.html#身份运算符"><i class="fa fa-check"></i><b>3.5.5</b> 身份运算符</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="built-in-type2.html"><a href="built-in-type2.html"><i class="fa fa-check"></i><b>4</b> 内置数据类型（二）</a>
@@ -229,11 +234,15 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.3" data-path="built-in-type2.html"><a href="built-in-type2.html#列表排序"><i class="fa fa-check"></i><b>4.1.3</b> 列表排序</a></li>
 <li class="chapter" data-level="4.1.4" data-path="built-in-type2.html"><a href="built-in-type2.html#列表复制"><i class="fa fa-check"></i><b>4.1.4</b> 列表复制</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a></li>
+<li class="chapter" data-level="4.2" data-path="built-in-type2.html"><a href="built-in-type2.html#元组tuple"><i class="fa fa-check"></i><b>4.2</b> 元组tuple</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="built-in-type2.html"><a href="built-in-type2.html#元组运算符"><i class="fa fa-check"></i><b>4.2.1</b> 元组运算符</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="built-in-type2.html"><a href="built-in-type2.html#字典dict"><i class="fa fa-check"></i><b>4.3</b> 字典dict</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="built-in-type2.html"><a href="built-in-type2.html#字典操作"><i class="fa fa-check"></i><b>4.3.1</b> 字典操作</a></li>
-<li class="chapter" data-level="4.3.2" data-path="built-in-type2.html"><a href="built-in-type2.html#fromkeys"><i class="fa fa-check"></i><b>4.3.2</b> fromkeys()</a></li>
+<li class="chapter" data-level="4.3.2" data-path="built-in-type2.html"><a href="built-in-type2.html#字典合并"><i class="fa fa-check"></i><b>4.3.2</b> 字典合并</a></li>
+<li class="chapter" data-level="4.3.3" data-path="built-in-type2.html"><a href="built-in-type2.html#fromkeys"><i class="fa fa-check"></i><b>4.3.3</b> fromkeys()</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="built-in-type2.html"><a href="built-in-type2.html#集合set"><i class="fa fa-check"></i><b>4.4</b> 集合set</a>
 <ul>
@@ -252,12 +261,20 @@ div.csl-indent {
 <li class="chapter" data-level="5.1.1" data-path="container.html"><a href="container.html#enumerate函数"><i class="fa fa-check"></i><b>5.1.1</b> enumerate函数</a></li>
 <li class="chapter" data-level="5.1.2" data-path="container.html"><a href="container.html#zip函数"><i class="fa fa-check"></i><b>5.1.2</b> zip函数</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="container.html"><a href="container.html#列表推导式"><i class="fa fa-check"></i><b>5.2</b> 列表推导式</a></li>
+<li class="chapter" data-level="5.2" data-path="container.html"><a href="container.html#列表推导式"><i class="fa fa-check"></i><b>5.2</b> 列表推导式</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="container.html"><a href="container.html#if-else模式"><i class="fa fa-check"></i><b>5.2.1</b> if-else模式</a></li>
+<li class="chapter" data-level="5.2.2" data-path="container.html"><a href="container.html#嵌套推导式"><i class="fa fa-check"></i><b>5.2.2</b> 嵌套推导式</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="container.html"><a href="container.html#迭代器"><i class="fa fa-check"></i><b>5.3</b> 迭代器</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="container.html"><a href="container.html#创建一个迭代器"><i class="fa fa-check"></i><b>5.3.1</b> 创建一个迭代器</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="container.html"><a href="container.html#生成器"><i class="fa fa-check"></i><b>5.4</b> 生成器</a></li>
+<li class="chapter" data-level="5.4" data-path="container.html"><a href="container.html#生成器"><i class="fa fa-check"></i><b>5.4</b> 生成器</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="container.html"><a href="container.html#生成器推导式"><i class="fa fa-check"></i><b>5.4.1</b> 生成器推导式</a></li>
+<li class="chapter" data-level="5.4.2" data-path="container.html"><a href="container.html#yield关键字"><i class="fa fa-check"></i><b>5.4.2</b> yield关键字</a></li>
+</ul></li>
 <li class="chapter" data-level="5.5" data-path="container.html"><a href="container.html#解包"><i class="fa fa-check"></i><b>5.5</b> 解包</a></li>
 <li class="chapter" data-level="5.6" data-path="container.html"><a href="container.html#排序"><i class="fa fa-check"></i><b>5.6</b> 排序</a>
 <ul>
@@ -273,18 +290,40 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.8" data-path="container.html"><a href="container.html#拷贝"><i class="fa fa-check"></i><b>5.8</b> 拷贝</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>6</b> Python函数</a>
+<li class="chapter" data-level="6" data-path="function.html"><a href="function.html"><i class="fa fa-check"></i><b>6</b> 函数</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>6.0.1</b> 返回多个值</a></li>
+<li class="chapter" data-level="6.1" data-path="function.html"><a href="function.html#函数参数"><i class="fa fa-check"></i><b>6.1</b> 函数参数</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="function.html"><a href="function.html#强制位置参数和强制关键字参数"><i class="fa fa-check"></i><b>6.1.1</b> 强制位置参数和强制关键字参数</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="function.html"><a href="function.html#默认值"><i class="fa fa-check"></i><b>6.2</b> 默认值</a></li>
+<li class="chapter" data-level="6.3" data-path="function.html"><a href="function.html#函数注解"><i class="fa fa-check"></i><b>6.3</b> 函数注解</a></li>
+<li class="chapter" data-level="6.4" data-path="function.html"><a href="function.html#返回多个值"><i class="fa fa-check"></i><b>6.4</b> 返回多个值</a></li>
+<li class="chapter" data-level="6.5" data-path="function.html"><a href="function.html#错误和异常处理"><i class="fa fa-check"></i><b>6.5</b> 错误和异常处理</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reg-expr.html"><a href="reg-expr.html"><i class="fa fa-check"></i><b>7</b> 字符串与正则表达式</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.1</b> one</a></li>
-<li class="chapter" data-level="7.2" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.2</b> two</a></li>
+<li class="chapter" data-level="7.1" data-path="reg-expr.html"><a href="reg-expr.html#字符串编码方案"><i class="fa fa-check"></i><b>7.1</b> 字符串编码方案</a></li>
+<li class="chapter" data-level="7.2" data-path="reg-expr.html"><a href="reg-expr.html#字符编码检测"><i class="fa fa-check"></i><b>7.2</b> 字符编码检测</a></li>
+<li class="chapter" data-level="7.3" data-path="reg-expr.html"><a href="reg-expr.html#字节"><i class="fa fa-check"></i><b>7.3</b> 字节</a></li>
+<li class="chapter" data-level="7.4" data-path="reg-expr.html"><a href="reg-expr.html#正则表达式"><i class="fa fa-check"></i><b>7.4</b> 正则表达式</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.4.1</b> one</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#example"><i class="fa fa-check"></i><b>7.4.2</b> example</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.5</b> two</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="module.html"><a href="module.html#命名空间和作用域"><i class="fa fa-check"></i><b>8.0.1</b> <span>命名空间和作用域</span></a></li>
+<li class="chapter" data-level="8.1" data-path="module.html"><a href="module.html#模块定义和使用"><i class="fa fa-check"></i><b>8.1</b> 模块定义和使用</a></li>
+<li class="chapter" data-level="8.2" data-path="module.html"><a href="module.html#以脚本的方式执行模块"><i class="fa fa-check"></i><b>8.2</b> 以脚本的方式执行模块</a></li>
+<li class="chapter" data-level="8.3" data-path="module.html"><a href="module.html#编译好的模块"><i class="fa fa-check"></i><b>8.3</b> 编译好的模块</a></li>
+<li class="chapter" data-level="8.4" data-path="module.html"><a href="module.html#标准模块"><i class="fa fa-check"></i><b>8.4</b> 标准模块</a></li>
+<li class="chapter" data-level="8.5" data-path="module.html"><a href="module.html#dir函数"><i class="fa fa-check"></i><b>8.5</b> dir()函数</a></li>
+<li class="chapter" data-level="8.6" data-path="module.html"><a href="module.html#包"><i class="fa fa-check"></i><b>8.6</b> 包</a></li>
+<li class="chapter" data-level="8.7" data-path="module.html"><a href="module.html#从包中导入"><i class="fa fa-check"></i><b>8.7</b> 从包中导入 *</a></li>
+<li class="chapter" data-level="8.8" data-path="module.html"><a href="module.html#命名空间和作用域"><i class="fa fa-check"></i><b>8.8</b> <span>命名空间和作用域</span></a></li>
+<li class="chapter" data-level="8.9" data-path="module.html"><a href="module.html#闭包"><i class="fa fa-check"></i><b>8.9</b> 闭包</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="OOP.html"><a href="OOP.html"><i class="fa fa-check"></i><b>9</b> Python 面向对象</a>
 <ul>
@@ -302,12 +341,18 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10" data-path="functional.html"><a href="functional.html"><i class="fa fa-check"></i><b>10</b> 函数式编程</a>
 <ul>
-<li class="chapter" data-level="10.0.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.0.1</b> 函数也是对象</a></li>
-<li class="chapter" data-level="10.0.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.0.2</b> 匿名（lambda）函数</a></li>
-<li class="chapter" data-level="10.0.3" data-path="functional.html"><a href="functional.html#柯里化部分参数应用"><i class="fa fa-check"></i><b>10.0.3</b> 柯里化：部分参数应用</a></li>
-<li class="chapter" data-level="10.0.4" data-path="functional.html"><a href="functional.html#生成器-1"><i class="fa fa-check"></i><b>10.0.4</b> 生成器</a></li>
-<li class="chapter" data-level="10.0.5" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.0.5</b> itertools模块</a></li>
-<li class="chapter" data-level="10.0.6" data-path="functional.html"><a href="functional.html#错误和异常处理"><i class="fa fa-check"></i><b>10.0.6</b> 错误和异常处理</a></li>
+<li class="chapter" data-level="10.1" data-path="functional.html"><a href="functional.html#函数也是对象"><i class="fa fa-check"></i><b>10.1</b> 函数也是对象</a></li>
+<li class="chapter" data-level="10.2" data-path="functional.html"><a href="functional.html#匿名lambda函数"><i class="fa fa-check"></i><b>10.2</b> 匿名（lambda）函数</a></li>
+<li class="chapter" data-level="10.3" data-path="functional.html"><a href="functional.html#柯里化"><i class="fa fa-check"></i><b>10.3</b> 柯里化</a></li>
+<li class="chapter" data-level="10.4" data-path="functional.html"><a href="functional.html#itertools模块"><i class="fa fa-check"></i><b>10.4</b> itertools模块</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="functional.html"><a href="functional.html#无穷迭代器"><i class="fa fa-check"></i><b>10.4.1</b> 无穷迭代器</a></li>
+<li class="chapter" data-level="10.4.2" data-path="functional.html"><a href="functional.html#根据最短输入序列长度停止的迭代器"><i class="fa fa-check"></i><b>10.4.2</b> 根据最短输入序列长度停止的迭代器</a></li>
+<li class="chapter" data-level="10.4.3" data-path="functional.html"><a href="functional.html#排列组合迭代器"><i class="fa fa-check"></i><b>10.4.3</b> 排列组合迭代器</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="functional.html"><a href="functional.html#map"><i class="fa fa-check"></i><b>10.5</b> map</a></li>
+<li class="chapter" data-level="10.6" data-path="functional.html"><a href="functional.html#filter"><i class="fa fa-check"></i><b>10.6</b> filter</a></li>
+<li class="chapter" data-level="10.7" data-path="functional.html"><a href="functional.html#reduce"><i class="fa fa-check"></i><b>10.7</b> reduce</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="specialized-data-types.html"><a href="specialized-data-types.html"><i class="fa fa-check"></i><b>11</b> 专门数据类型</a>
 <ul>
@@ -320,6 +365,8 @@ div.csl-indent {
 <li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
 <ul>
 <li class="chapter" data-level="13.0.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>13.0.1</b> 文件和操作系统</a></li>
+<li class="chapter" data-level="13.1" data-path="applied-skills.html"><a href="applied-skills.html#爬虫"><i class="fa fa-check"></i><b>13.1</b> 爬虫</a></li>
+<li class="chapter" data-level="13.2" data-path="applied-skills.html"><a href="applied-skills.html#中文分词"><i class="fa fa-check"></i><b>13.2</b> 中文分词</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -343,65 +390,142 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="function" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Python函数</h1>
-<p>函数是Python中最主要也是最重要的代码组织和复用手段。作为最重要的原则，如果你要重复使用相同或非常类似的代码，就需要写一个函数。</p>
-<p>函数使用<code>def</code>关键字声明，用<code>return</code>关键字返回值：</p>
-<div class="sourceCode" id="cb308"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb308-1"><a href="function.html#cb308-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, y, z<span class="op">=</span><span class="fl">1.5</span>):</span>
-<span id="cb308-2"><a href="function.html#cb308-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> z <span class="op">&gt;</span> <span class="dv">1</span>:</span>
-<span id="cb308-3"><a href="function.html#cb308-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> z <span class="op">*</span> (x <span class="op">+</span> y)</span>
-<span id="cb308-4"><a href="function.html#cb308-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb308-5"><a href="function.html#cb308-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> z <span class="op">/</span> (x <span class="op">+</span> y)</span></code></pre></div>
-<p>同时拥有多条return语句也是可以的。如果到达函数末尾时没有遇到任何一条return语句，则返回None。</p>
+<h1><span class="header-section-number">Chapter 6</span> 函数</h1>
+<p>函数是Python中最主要也是最重要的代码组织和复用手段。作为最重要的原则，如果你要重复使用相同或非常类似的代码，就需要写一个函数。函数代码块以 <code>def</code> 关键字声明，后接函数标识符名称和圆括号 ()。任何传入参数<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>和自变量必须放在圆括号中间。函数的第一行语句可以选择性地使用文档字符串——用于存放函数说明。<code>return</code>关键字返回结果结束函数。同时拥有多条<code>return</code>语句也是可以的。如果到达函数末尾时没有遇到任何一条<code>return</code>语句，则返回<code>None</code>。</p>
+<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="function.html#cb344-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, y, z<span class="op">=</span><span class="fl">1.5</span>):</span>
+<span id="cb344-2"><a href="function.html#cb344-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;something about the function&quot;</span></span>
+<span id="cb344-3"><a href="function.html#cb344-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> z <span class="op">&gt;</span> <span class="dv">1</span>:</span>
+<span id="cb344-4"><a href="function.html#cb344-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> z <span class="op">*</span> (x <span class="op">+</span> y)</span>
+<span id="cb344-5"><a href="function.html#cb344-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb344-6"><a href="function.html#cb344-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> z <span class="op">/</span> (x <span class="op">+</span> y)</span></code></pre></div>
+<div id="函数参数" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> 函数参数</h2>
 <p>函数可以有一些位置参数（positional）和一些关键字参数（keyword）。关键字参数通常用于指定默认值或可选参数。在上面的函数中，x和y是位置参数，而z则是关键字参数。也就是说，该函数可以下面这两种方式进行调用：</p>
-<div class="sourceCode" id="cb309"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb309-1"><a href="function.html#cb309-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="dv">5</span>, <span class="dv">6</span>, z<span class="op">=</span><span class="fl">0.7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb345-1"><a href="function.html#cb345-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="dv">5</span>, <span class="dv">6</span>, z<span class="op">=</span><span class="fl">0.7</span>)</span></code></pre></div>
 <pre><code>## 0.06363636363636363</code></pre>
-<div class="sourceCode" id="cb311"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb311-1"><a href="function.html#cb311-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="fl">3.14</span>, <span class="dv">7</span>, <span class="fl">3.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb347-1"><a href="function.html#cb347-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="fl">3.14</span>, <span class="dv">7</span>, <span class="fl">3.5</span>)</span></code></pre></div>
 <pre><code>## 35.49</code></pre>
-<div class="sourceCode" id="cb313"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb313-1"><a href="function.html#cb313-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="dv">10</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb349"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb349-1"><a href="function.html#cb349-1" aria-hidden="true" tabindex="-1"></a>my_function(<span class="dv">10</span>, <span class="dv">20</span>)</span></code></pre></div>
 <pre><code>## 45.0</code></pre>
-<p>函数参数的主要限制在于：关键字参数必须位于位置参数（如果有的话）之后。你可以任何顺序指定关键字参数。也就是说，你不用死记硬背函数参数的顺序，只要记得它们的名字就可以了。</p>
-<p>注意：也可以用关键字传递位置参数，这种写法可以提高可读性。前面的例子，也可以写为：</p>
-<div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="function.html#cb315-1" aria-hidden="true" tabindex="-1"></a>my_function(x<span class="op">=</span><span class="dv">5</span>, y<span class="op">=</span><span class="dv">6</span>, z<span class="op">=</span><span class="dv">7</span>)</span>
-<span id="cb315-2"><a href="function.html#cb315-2" aria-hidden="true" tabindex="-1"></a>my_function(y<span class="op">=</span><span class="dv">6</span>, x<span class="op">=</span><span class="dv">5</span>, z<span class="op">=</span><span class="dv">7</span>)</span></code></pre></div>
-<p><strong>重要警告</strong>：默认值只会执行一次。执行函数定义时，从左到右计算默认参数值。这意味着只在函数定义的时候该表达式求一次值，以后每次调用使用相同的“提前计算好的”值。Python中向函数传递参数只能是引用传递，表示把它的内存地址传进去了。这条规则在默认值为可变对象（列表、字典以及大多数类实例）时很重要。如果函数修改了该对象（例如，向列表添加一个元素），默认值将受影响被修改。比如，下面的函数会存储在后续调用中传递给它的参数：</p>
-<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="function.html#cb316-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, L<span class="op">=</span>[]):</span>
-<span id="cb316-2"><a href="function.html#cb316-2" aria-hidden="true" tabindex="-1"></a>    L.append(a)</span>
-<span id="cb316-3"><a href="function.html#cb316-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
-<span id="cb316-4"><a href="function.html#cb316-4" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">1</span>)</span></code></pre></div>
+<p>函数参数的主要限制在于：关键字参数必须位于位置参数（如果有的话）之后。传递的所有关键字参数必须与函数接受的其中一个参数匹配，它们的顺序并不重要。不能对同一个参数多次赋值。你可以任何顺序指定关键字参数。也就是说，你不用死记硬背关键字参数的顺序，只要记得它们的名字就可以了。注意：<em>也可以用关键字传递位置参数</em>，这种写法可以提高可读性。前面的例子，也可以写为：</p>
+<div class="sourceCode" id="cb351"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb351-1"><a href="function.html#cb351-1" aria-hidden="true" tabindex="-1"></a>my_function(x<span class="op">=</span><span class="dv">5</span>, y<span class="op">=</span><span class="dv">6</span>, z<span class="op">=</span><span class="dv">7</span>)</span>
+<span id="cb351-2"><a href="function.html#cb351-2" aria-hidden="true" tabindex="-1"></a>my_function(y<span class="op">=</span><span class="dv">6</span>, x<span class="op">=</span><span class="dv">5</span>, z<span class="op">=</span><span class="dv">7</span>)</span></code></pre></div>
+<p><code>*name</code>参数可以接受任意数量的位置参数，并转换为一个元组；<code>**name</code>参数可以接受任意数量的关键字参数，并转换为一个字典。<code>*name</code>参数前面只能是位置参数，后面只能是关键字参数或者<code>**name</code>参数，<code>*name</code>必须出现在<code>**name</code>之前，<code>**name</code>参数必须是函数的最后一个参数。</p>
+<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="function.html#cb352-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(kind, <span class="op">*</span>arguments, <span class="op">**</span>keywords):</span>
+<span id="cb352-2"><a href="function.html#cb352-2" aria-hidden="true" tabindex="-1"></a>        statements</span>
+<span id="cb352-3"><a href="function.html#cb352-3" aria-hidden="true" tabindex="-1"></a>        ......</span></code></pre></div>
+<div class="sourceCode" id="cb353"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb353-1"><a href="function.html#cb353-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fun(x, <span class="op">*</span>args, y):</span>
+<span id="cb353-2"><a href="function.html#cb353-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;args = </span><span class="sc">{</span>args<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb353-3"><a href="function.html#cb353-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb353-4"><a href="function.html#cb353-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 正确的调用方式：</span></span>
+<span id="cb353-5"><a href="function.html#cb353-5" aria-hidden="true" tabindex="-1"></a>fun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>, y <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb353-6"><a href="function.html#cb353-6" aria-hidden="true" tabindex="-1"></a><span class="co"># fun(1,2,3,4,1)是错的</span></span></code></pre></div>
+<pre><code>## args = (2, 3, 4)</code></pre>
+<p>在这个例子中，y 只能是关键字参数，必须以<code>y=1</code>形式传入。</p>
+<p>如果一个参数具有默认值，所有随后的参数直到<code>*</code> 也必须具有默认值。所以下面的函数定义语句会报错。</p>
+<div class="sourceCode" id="cb355"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb355-1"><a href="function.html#cb355-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> funx(a, b <span class="op">=</span> <span class="dv">2</span>, c):</span>
+<span id="cb355-2"><a href="function.html#cb355-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a<span class="op">+</span>b<span class="op">+</span>c)</span></code></pre></div>
+<div id="强制位置参数和强制关键字参数" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> 强制位置参数和强制关键字参数</h3>
+<p>函数形参语法中，有两个符号（<code>/</code>和<code>*</code>）可以用来强制分开位置参数、关键字参数与其他参数。位于<code>/</code>之前的是强制位置参数(Positional-Only Parameters)，位于<code>*</code>之后的只能是强制关键字参数（Keyword-Only Arguments），<code>/</code>与<code>*</code>之间可以是位置形参或关键字形参。</p>
+<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="function.html#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b, <span class="op">/</span>, c, d, <span class="op">*</span>, e, f):</span>
+<span id="cb356-2"><a href="function.html#cb356-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, b, c, d, e, f)</span>
+<span id="cb356-3"><a href="function.html#cb356-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb356-4"><a href="function.html#cb356-4" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, d<span class="op">=</span><span class="dv">40</span>, e<span class="op">=</span><span class="dv">50</span>, f<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb356-5"><a href="function.html#cb356-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb356-6"><a href="function.html#cb356-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 以下都错:</span></span>
+<span id="cb356-7"><a href="function.html#cb356-7" aria-hidden="true" tabindex="-1"></a><span class="co"># f(10, b=20, c=30, d=40, e=50, f=60) # b 不能使用关键字参数的形式</span></span>
+<span id="cb356-8"><a href="function.html#cb356-8" aria-hidden="true" tabindex="-1"></a><span class="co"># f(10, 20, 30, 40, 50, f=60) # e 必须使用关键字参数的形式</span></span></code></pre></div>
+<pre><code>## 10 20 30 40 50 60</code></pre>
+</div>
+</div>
+<div id="默认值" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> 默认值</h2>
+<blockquote>
+<p><strong>重要警告</strong>：默认值只会执行一次。</p>
+</blockquote>
+<p>执行函数定义时，从左到右计算默认参数值。这意味着该表达式只在函数定义的时候求一次值，以后每次调用使用相同的“提前计算好的”值。Python中向函数传递参数只能是引用传递，表示把它的内存地址传进去了。这条规则在默认值为可变对象（列表、字典以及大多数类实例）时很重要。如果函数修改了该对象时，默认值也将被修改。比如，下面的函数会存储在后续调用中传递给它的参数：</p>
+<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="function.html#cb358-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, L<span class="op">=</span>[]):</span>
+<span id="cb358-2"><a href="function.html#cb358-2" aria-hidden="true" tabindex="-1"></a>    L.append(a)</span>
+<span id="cb358-3"><a href="function.html#cb358-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb358-4"><a href="function.html#cb358-4" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1]</code></pre>
-<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="function.html#cb318-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb360"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb360-1"><a href="function.html#cb360-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1, 2]</code></pre>
-<p>如果你不想要在后续调用之间共享默认值，你可以使用<code>None</code>作为默认值，并在函数体中明确测试它：</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb320-1"><a href="function.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, L<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb320-2"><a href="function.html#cb320-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> L <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb320-3"><a href="function.html#cb320-3" aria-hidden="true" tabindex="-1"></a>        L <span class="op">=</span> []</span>
-<span id="cb320-4"><a href="function.html#cb320-4" aria-hidden="true" tabindex="-1"></a>    L.append(a)</span>
-<span id="cb320-5"><a href="function.html#cb320-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span></code></pre></div>
-<p>在函数调用中，关键字参数必须跟随在位置参数的后面。传递的所有关键字参数必须与函数接受的其中一个参数匹配，它们的顺序并不重要。不能对同一个参数多次赋值。</p>
-<p><code>**name</code>形式的形式参数<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>将接收一个字典，这个字典包含除形式参数之外的所有关键字参数；<code>*name</code>形式的形式参数接收一个元组，这个元组包含除形式参数之外的所有位置参数。(<code>*name</code>必须出现在<code>**name</code>之前）</p>
-<div class="sourceCode" id="cb321"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb321-1"><a href="function.html#cb321-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(kind, <span class="op">*</span>arguments, <span class="op">**</span>keywords):</span>
-<span id="cb321-2"><a href="function.html#cb321-2" aria-hidden="true" tabindex="-1"></a>        statements</span>
-<span id="cb321-3"><a href="function.html#cb321-3" aria-hidden="true" tabindex="-1"></a>        ......</span></code></pre></div>
-<p>如果一个参数具有默认值，所有随后的参数直到“<code>*</code>” 也必须具有默认值。所以下面的函数定义语句会报错。</p>
-<div class="sourceCode" id="cb322"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb322-1"><a href="function.html#cb322-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> funx(a, b <span class="op">=</span> <span class="dv">2</span>, c):</span>
-<span id="cb322-2"><a href="function.html#cb322-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a<span class="op">+</span>b<span class="op">+</span>c)</span></code></pre></div>
-<div id="返回多个值" class="section level3" number="6.0.1">
-<h3><span class="header-section-number">6.0.1</span> 返回多个值</h3>
+<p>如果你不想在后续调用之间共享默认值，可以使用<code>None</code>作为默认值，并在函数体中明确测试它：</p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="function.html#cb362-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, L<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb362-2"><a href="function.html#cb362-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> L <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb362-3"><a href="function.html#cb362-3" aria-hidden="true" tabindex="-1"></a>        L <span class="op">=</span> []</span>
+<span id="cb362-4"><a href="function.html#cb362-4" aria-hidden="true" tabindex="-1"></a>    L.append(a)</span>
+<span id="cb362-5"><a href="function.html#cb362-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span></code></pre></div>
+</div>
+<div id="函数注解" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> 函数注解</h2>
+<p>函数注解（Function Annotations）是用户自定义函数的参数和输出数据的元数据信息，它是可选的。注解以字典的形式存放在函数的 <code>__annotations__</code> 属性中，并且不会影响函数的任何其他部分。形参标注的定义方式是在形参名后加冒号，后面跟一个表达式，该表达式会被求值为标注的值。返回值标注的定义方式是在括号和冒号之间加上 -&gt;，后面跟一个表达式。</p>
+<p>函数注解只不过是在编译时将任意 Python 表达式与函数的各个部分相关联的一种方式。就其本身而言，Python 没有给注解附加任何特定的含义或意义。但是可以让 IDE 知道函数期望和返回的数据类型。</p>
+<p>下面是一个示例:</p>
+<div class="sourceCode" id="cb363"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb363-1"><a href="function.html#cb363-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(ham: <span class="bu">str</span>, eggs: <span class="bu">str</span> <span class="op">=</span> <span class="st">&#39;eggs&#39;</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb363-2"><a href="function.html#cb363-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Annotations:&quot;</span>, f.__annotations__)</span>
+<span id="cb363-3"><a href="function.html#cb363-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Arguments:&quot;</span>, ham, eggs)</span>
+<span id="cb363-4"><a href="function.html#cb363-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ham <span class="op">+</span> <span class="st">&#39; and &#39;</span> <span class="op">+</span> eggs</span>
+<span id="cb363-5"><a href="function.html#cb363-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb363-6"><a href="function.html#cb363-6" aria-hidden="true" tabindex="-1"></a>f(<span class="st">&#39;spam&#39;</span>)</span></code></pre></div>
+<pre><code>## Annotations: {&#39;ham&#39;: &lt;class &#39;str&#39;&gt;, &#39;eggs&#39;: &lt;class &#39;str&#39;&gt;, &#39;return&#39;: &lt;class &#39;str&#39;&gt;}
+## Arguments: spam eggs
+## &#39;spam and eggs&#39;</code></pre>
+</div>
+<div id="返回多个值" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> 返回多个值</h2>
 <p>函数可以返回多个值。下面是一个简单的例子：</p>
-<div class="sourceCode" id="cb323"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb323-1"><a href="function.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
-<span id="cb323-2"><a href="function.html#cb323-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb323-3"><a href="function.html#cb323-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb323-4"><a href="function.html#cb323-4" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb323-5"><a href="function.html#cb323-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, b, c</span>
-<span id="cb323-6"><a href="function.html#cb323-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb323-7"><a href="function.html#cb323-7" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> f()</span></code></pre></div>
-<p>在数据分析和其他科学计算应用中，你会发现自己常常这么干。该函数其实只返回了一个对象，也就是一个元组，最后该元组会被拆包到各个结果变量中。在上面的例子中，我们还可以这样写：<code>return_value = f()</code>。这里的return_value将会是一个含有3个返回值的三元元组。此外，还有一种非常具有吸引力的多值返回方式——返回字典：</p>
-<div class="sourceCode" id="cb324"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb324-1"><a href="function.html#cb324-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
-<span id="cb324-2"><a href="function.html#cb324-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb324-3"><a href="function.html#cb324-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb324-4"><a href="function.html#cb324-4" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb324-5"><a href="function.html#cb324-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">&#39;a&#39;</span> : a, <span class="st">&#39;b&#39;</span> : b, <span class="st">&#39;c&#39;</span> : c}</span></code></pre></div>
-<p>取决于工作内容，第二种方法可能很有用。</p>
+<div class="sourceCode" id="cb365"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb365-1"><a href="function.html#cb365-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
+<span id="cb365-2"><a href="function.html#cb365-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb365-3"><a href="function.html#cb365-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb365-4"><a href="function.html#cb365-4" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb365-5"><a href="function.html#cb365-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, b, c</span>
+<span id="cb365-6"><a href="function.html#cb365-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb365-7"><a href="function.html#cb365-7" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> f()</span></code></pre></div>
+<p>该函数其实只返回一个元组，该元组被解包到各个结果变量中。在上面的例子中，我们还可以这样写：<code>output = f()</code>，这里的output将会是一个三元元组。此外，还有一种非常实用的多值返回方式——返回字典：</p>
+<div class="sourceCode" id="cb366"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb366-1"><a href="function.html#cb366-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
+<span id="cb366-2"><a href="function.html#cb366-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb366-3"><a href="function.html#cb366-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb366-4"><a href="function.html#cb366-4" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb366-5"><a href="function.html#cb366-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">&#39;a&#39;</span> : a, <span class="st">&#39;b&#39;</span> : b, <span class="st">&#39;c&#39;</span> : c}</span></code></pre></div>
+</div>
+<div id="错误和异常处理" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> 错误和异常处理</h2>
+<p>优雅地处理Python的错误和异常是构建健壮程序的重要部分。在数据分析中，许多函数函数只用于部分输入。例如，Python的float函数可以将字符串转换成浮点数，但输入有误时，有<code>ValueError</code>错误。假如想优雅地处理float的错误，让它返回输入值。我们可以写一个函数，在try/except中调用float：</p>
+<div class="sourceCode" id="cb367"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb367-1"><a href="function.html#cb367-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb367-2"><a href="function.html#cb367-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb367-3"><a href="function.html#cb367-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb367-4"><a href="function.html#cb367-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb367-5"><a href="function.html#cb367-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb367-6"><a href="function.html#cb367-6" aria-hidden="true" tabindex="-1"></a>attempt_float((<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## (1, 2)</code></pre>
+<p>当float(x)抛出异常时，才会执行except的部分。你可能注意到float抛出的异常不仅是ValueError：</p>
+<div class="sourceCode" id="cb369"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb369-1"><a href="function.html#cb369-1" aria-hidden="true" tabindex="-1"></a>In [<span class="dv">202</span>]: <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb369-2"><a href="function.html#cb369-2" aria-hidden="true" tabindex="-1"></a><span class="op">---------------------------------------------------------------------------</span></span>
+<span id="cb369-3"><a href="function.html#cb369-3" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>                                 Traceback (most recent call last)</span>
+<span id="cb369-4"><a href="function.html#cb369-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">202</span><span class="op">-</span><span class="dv">842079</span>ebb635<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb369-5"><a href="function.html#cb369-5" aria-hidden="true" tabindex="-1"></a><span class="op">----&gt;</span> <span class="dv">1</span> <span class="bu">float</span>((<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb369-6"><a href="function.html#cb369-6" aria-hidden="true" tabindex="-1"></a><span class="pp">TypeError</span>: <span class="bu">float</span>() argument must be a string <span class="kw">or</span> a number, <span class="kw">not</span> <span class="st">&#39;tuple&#39;</span></span></code></pre></div>
+<p>你可能只想处理ValueError，TypeError错误（输入不是字符串或数值）可能是合理的bug。可以写一个异常类型：</p>
+<div class="sourceCode" id="cb370"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb370-1"><a href="function.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb370-2"><a href="function.html#cb370-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb370-3"><a href="function.html#cb370-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb370-4"><a href="function.html#cb370-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb370-5"><a href="function.html#cb370-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
+<p>可以用元组包含多个异常：</p>
+<div class="sourceCode" id="cb371"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb371-1"><a href="function.html#cb371-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> attempt_float(x):</span>
+<span id="cb371-2"><a href="function.html#cb371-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb371-3"><a href="function.html#cb371-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(x)</span>
+<span id="cb371-4"><a href="function.html#cb371-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> (<span class="pp">TypeError</span>, <span class="pp">ValueError</span>):</span>
+<span id="cb371-5"><a href="function.html#cb371-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code></pre></div>
+<p>某些情况下，你可能不想抑制异常，你想无论try部分的代码是否成功，都执行一段代码，这时可以使用finally：</p>
+<div class="sourceCode" id="cb372"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb372-1"><a href="function.html#cb372-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(path, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb372-2"><a href="function.html#cb372-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb372-3"><a href="function.html#cb372-3" aria-hidden="true" tabindex="-1"></a>    write_to_file(f)</span>
+<span id="cb372-4"><a href="function.html#cb372-4" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
+<span id="cb372-5"><a href="function.html#cb372-5" aria-hidden="true" tabindex="-1"></a>    f.close()</span></code></pre></div>
 
 </div>
 </div>
