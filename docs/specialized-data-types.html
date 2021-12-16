@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-12-13" />
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -308,10 +308,17 @@ div.csl-indent {
 <li class="chapter" data-level="7.3" data-path="reg-expr.html"><a href="reg-expr.html#字节"><i class="fa fa-check"></i><b>7.3</b> 字节</a></li>
 <li class="chapter" data-level="7.4" data-path="reg-expr.html"><a href="reg-expr.html#正则表达式"><i class="fa fa-check"></i><b>7.4</b> 正则表达式</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.4.1</b> one</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#example"><i class="fa fa-check"></i><b>7.4.2</b> example</a></li>
+<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#定位符"><i class="fa fa-check"></i><b>7.4.1</b> 定位符</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#字符组"><i class="fa fa-check"></i><b>7.4.2</b> 字符组</a></li>
+<li class="chapter" data-level="7.4.3" data-path="reg-expr.html"><a href="reg-expr.html#量词"><i class="fa fa-check"></i><b>7.4.3</b> 量词</a></li>
+<li class="chapter" data-level="7.4.4" data-path="reg-expr.html"><a href="reg-expr.html#捕获组"><i class="fa fa-check"></i><b>7.4.4</b> 捕获组</a></li>
+<li class="chapter" data-level="7.4.5" data-path="reg-expr.html"><a href="reg-expr.html#元字符"><i class="fa fa-check"></i><b>7.4.5</b> 元字符</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.5</b> two</a></li>
+<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#re模块"><i class="fa fa-check"></i><b>7.5</b> re模块</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reg-expr.html"><a href="reg-expr.html#例子"><i class="fa fa-check"></i><b>7.5.1</b> 例子</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reg-expr.html"><a href="reg-expr.html#参考材料"><i class="fa fa-check"></i><b>7.5.2</b> 参考材料</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -360,7 +367,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
 <ul>
@@ -394,16 +401,16 @@ div.csl-indent {
 <div id="日期和时间" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> 日期和时间</h2>
 <p>Python内建的<code>datetime</code>模块提供了datetime、date和time类型。datetime类型结合了date和time，是最常使用的：</p>
-<div class="sourceCode" id="cb537"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb537-1"><a href="specialized-data-types.html#cb537-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, date, time</span>
-<span id="cb537-2"><a href="specialized-data-types.html#cb537-2" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datetime(<span class="dv">2011</span>, <span class="dv">10</span>, <span class="dv">29</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">21</span>)</span>
-<span id="cb537-3"><a href="specialized-data-types.html#cb537-3" aria-hidden="true" tabindex="-1"></a>dt.day</span></code></pre></div>
+<div class="sourceCode" id="cb561"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb561-1"><a href="specialized-data-types.html#cb561-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, date, time</span>
+<span id="cb561-2"><a href="specialized-data-types.html#cb561-2" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datetime(<span class="dv">2011</span>, <span class="dv">10</span>, <span class="dv">29</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">21</span>)</span>
+<span id="cb561-3"><a href="specialized-data-types.html#cb561-3" aria-hidden="true" tabindex="-1"></a>dt.day</span></code></pre></div>
 <pre><code>## 29</code></pre>
-<div class="sourceCode" id="cb539"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb539-1"><a href="specialized-data-types.html#cb539-1" aria-hidden="true" tabindex="-1"></a>dt.date()</span></code></pre></div>
+<div class="sourceCode" id="cb563"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb563-1"><a href="specialized-data-types.html#cb563-1" aria-hidden="true" tabindex="-1"></a>dt.date()</span></code></pre></div>
 <pre><code>## datetime.date(2011, 10, 29)</code></pre>
-<div class="sourceCode" id="cb541"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb541-1"><a href="specialized-data-types.html#cb541-1" aria-hidden="true" tabindex="-1"></a>dt.time()</span></code></pre></div>
+<div class="sourceCode" id="cb565"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb565-1"><a href="specialized-data-types.html#cb565-1" aria-hidden="true" tabindex="-1"></a>dt.time()</span></code></pre></div>
 <pre><code>## datetime.time(20, 30, 21)</code></pre>
 <p><code>strftime</code>方法可以将datetime格式化为字符串：</p>
-<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="specialized-data-types.html#cb543-1" aria-hidden="true" tabindex="-1"></a>dt.strftime(<span class="st">&#39;%m/</span><span class="sc">%d</span><span class="st">/%Y %H:%M&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb567"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb567-1"><a href="specialized-data-types.html#cb567-1" aria-hidden="true" tabindex="-1"></a>dt.strftime(<span class="st">&#39;%m/</span><span class="sc">%d</span><span class="st">/%Y %H:%M&#39;</span>)</span></code></pre></div>
 <pre><code>## &#39;10/29/2011 20:30&#39;</code></pre>
 <table>
 <thead>

@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-12-13" />
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -308,10 +308,17 @@ div.csl-indent {
 <li class="chapter" data-level="7.3" data-path="reg-expr.html"><a href="reg-expr.html#字节"><i class="fa fa-check"></i><b>7.3</b> 字节</a></li>
 <li class="chapter" data-level="7.4" data-path="reg-expr.html"><a href="reg-expr.html#正则表达式"><i class="fa fa-check"></i><b>7.4</b> 正则表达式</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.4.1</b> one</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#example"><i class="fa fa-check"></i><b>7.4.2</b> example</a></li>
+<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#定位符"><i class="fa fa-check"></i><b>7.4.1</b> 定位符</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#字符组"><i class="fa fa-check"></i><b>7.4.2</b> 字符组</a></li>
+<li class="chapter" data-level="7.4.3" data-path="reg-expr.html"><a href="reg-expr.html#量词"><i class="fa fa-check"></i><b>7.4.3</b> 量词</a></li>
+<li class="chapter" data-level="7.4.4" data-path="reg-expr.html"><a href="reg-expr.html#捕获组"><i class="fa fa-check"></i><b>7.4.4</b> 捕获组</a></li>
+<li class="chapter" data-level="7.4.5" data-path="reg-expr.html"><a href="reg-expr.html#元字符"><i class="fa fa-check"></i><b>7.4.5</b> 元字符</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.5</b> two</a></li>
+<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#re模块"><i class="fa fa-check"></i><b>7.5</b> re模块</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reg-expr.html"><a href="reg-expr.html#例子"><i class="fa fa-check"></i><b>7.5.1</b> 例子</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reg-expr.html"><a href="reg-expr.html#参考材料"><i class="fa fa-check"></i><b>7.5.2</b> 参考材料</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -360,7 +367,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
 <ul>
@@ -394,39 +401,39 @@ div.csl-indent {
 <div id="函数也是对象" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> 函数也是对象</h2>
 <p>由于Python函数都是对象，因此，在其他语言中较难表达的一些设计思想在Python中就要简单很多了。假设我们有下面这样一个字符串数组，希望对其进行一些数据清理工作并执行一堆转换：</p>
-<div class="sourceCode" id="cb492"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb492-1"><a href="functional.html#cb492-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> [<span class="st">&#39;   Alabama &#39;</span>, <span class="st">&#39;Georgia!&#39;</span>, <span class="st">&#39;Georgia&#39;</span>, <span class="st">&#39;georgia&#39;</span>, <span class="st">&#39;FlOrIda&#39;</span>, <span class="st">&#39;south   carolina##&#39;</span>, <span class="st">&#39;West virginia?&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb516"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb516-1"><a href="functional.html#cb516-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> [<span class="st">&#39;   Alabama &#39;</span>, <span class="st">&#39;Georgia!&#39;</span>, <span class="st">&#39;Georgia&#39;</span>, <span class="st">&#39;georgia&#39;</span>, <span class="st">&#39;FlOrIda&#39;</span>, <span class="st">&#39;south   carolina##&#39;</span>, <span class="st">&#39;West virginia?&#39;</span>]</span></code></pre></div>
 <p>为了得到一组能用于分析工作的格式统一的字符串，需要做很多事情：去除空白符、删除各种标点符号、正确的大写格式等。做法之一是使用内建的字符串方法和正则表达式<code>re</code>模块：</p>
-<div class="sourceCode" id="cb493"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb493-1"><a href="functional.html#cb493-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb493-2"><a href="functional.html#cb493-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings):</span>
-<span id="cb493-3"><a href="functional.html#cb493-3" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb493-4"><a href="functional.html#cb493-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
-<span id="cb493-5"><a href="functional.html#cb493-5" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.strip()</span>
-<span id="cb493-6"><a href="functional.html#cb493-6" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
-<span id="cb493-7"><a href="functional.html#cb493-7" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.title()</span>
-<span id="cb493-8"><a href="functional.html#cb493-8" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
-<span id="cb493-9"><a href="functional.html#cb493-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb517"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb517-1"><a href="functional.html#cb517-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb517-2"><a href="functional.html#cb517-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings):</span>
+<span id="cb517-3"><a href="functional.html#cb517-3" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb517-4"><a href="functional.html#cb517-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
+<span id="cb517-5"><a href="functional.html#cb517-5" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.strip()</span>
+<span id="cb517-6"><a href="functional.html#cb517-6" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
+<span id="cb517-7"><a href="functional.html#cb517-7" aria-hidden="true" tabindex="-1"></a>        value <span class="op">=</span> value.title()</span>
+<span id="cb517-8"><a href="functional.html#cb517-8" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
+<span id="cb517-9"><a href="functional.html#cb517-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>结果如下所示：</p>
-<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="functional.html#cb494-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states)</span></code></pre></div>
+<div class="sourceCode" id="cb518"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb518-1"><a href="functional.html#cb518-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states)</span></code></pre></div>
 <pre><code>## [&#39;Alabama&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Florida&#39;, &#39;South   Carolina&#39;, &#39;West Virginia&#39;]</code></pre>
 <p>其实还有另外一种不错的办法：将需要在一组给定字符串上执行的所有运算做成一个列表：</p>
-<div class="sourceCode" id="cb496"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb496-1"><a href="functional.html#cb496-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_punctuation(value):</span>
-<span id="cb496-2"><a href="functional.html#cb496-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
-<span id="cb496-3"><a href="functional.html#cb496-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb496-4"><a href="functional.html#cb496-4" aria-hidden="true" tabindex="-1"></a>clean_ops <span class="op">=</span> [<span class="bu">str</span>.strip, remove_punctuation, <span class="bu">str</span>.title]</span>
-<span id="cb496-5"><a href="functional.html#cb496-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb496-6"><a href="functional.html#cb496-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings, ops):</span>
-<span id="cb496-7"><a href="functional.html#cb496-7" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb496-8"><a href="functional.html#cb496-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
-<span id="cb496-9"><a href="functional.html#cb496-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> function <span class="kw">in</span> ops:</span>
-<span id="cb496-10"><a href="functional.html#cb496-10" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> function(value)</span>
-<span id="cb496-11"><a href="functional.html#cb496-11" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
-<span id="cb496-12"><a href="functional.html#cb496-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb520"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb520-1"><a href="functional.html#cb520-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_punctuation(value):</span>
+<span id="cb520-2"><a href="functional.html#cb520-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">&#39;[!#?]&#39;</span>, <span class="st">&#39;&#39;</span>, value)</span>
+<span id="cb520-3"><a href="functional.html#cb520-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb520-4"><a href="functional.html#cb520-4" aria-hidden="true" tabindex="-1"></a>clean_ops <span class="op">=</span> [<span class="bu">str</span>.strip, remove_punctuation, <span class="bu">str</span>.title]</span>
+<span id="cb520-5"><a href="functional.html#cb520-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb520-6"><a href="functional.html#cb520-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_strings(strings, ops):</span>
+<span id="cb520-7"><a href="functional.html#cb520-7" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb520-8"><a href="functional.html#cb520-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> value <span class="kw">in</span> strings:</span>
+<span id="cb520-9"><a href="functional.html#cb520-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> function <span class="kw">in</span> ops:</span>
+<span id="cb520-10"><a href="functional.html#cb520-10" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> function(value)</span>
+<span id="cb520-11"><a href="functional.html#cb520-11" aria-hidden="true" tabindex="-1"></a>        result.append(value)</span>
+<span id="cb520-12"><a href="functional.html#cb520-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>然后我们就有了：</p>
-<div class="sourceCode" id="cb497"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb497-1"><a href="functional.html#cb497-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states, clean_ops)</span></code></pre></div>
+<div class="sourceCode" id="cb521"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb521-1"><a href="functional.html#cb521-1" aria-hidden="true" tabindex="-1"></a>clean_strings(states, clean_ops)</span></code></pre></div>
 <pre><code>## [&#39;Alabama&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Georgia&#39;, &#39;Florida&#39;, &#39;South   Carolina&#39;, &#39;West Virginia&#39;]</code></pre>
 <p>这种多函数模式使你能在很高的层次上轻松修改字符串的转换方式。此时的clean_strings也更具<em>可复用性</em>！还可以将函数用作其他函数的参数，比如内置的map函数，它用于在一组数据上应用一个函数：</p>
-<div class="sourceCode" id="cb499"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb499-1"><a href="functional.html#cb499-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">map</span>(remove_punctuation, states):</span>
-<span id="cb499-2"><a href="functional.html#cb499-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb523"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb523-1"><a href="functional.html#cb523-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">map</span>(remove_punctuation, states):</span>
+<span id="cb523-2"><a href="functional.html#cb523-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>##    Alabama 
 ## Georgia
 ## Georgia
@@ -438,28 +445,28 @@ div.csl-indent {
 <div id="匿名lambda函数" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> 匿名（lambda）函数</h2>
 <p>Python支持一种被称为匿名的或lambda函数。lambda的主体是一个表达式，而不是一个代码块。它通过lambda关键字定义。</p>
-<div class="sourceCode" id="cb501"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb501-1"><a href="functional.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> short_function(x):</span>
-<span id="cb501-2"><a href="functional.html#cb501-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb501-3"><a href="functional.html#cb501-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb501-4"><a href="functional.html#cb501-4" aria-hidden="true" tabindex="-1"></a>equiv_anon <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb525-1"><a href="functional.html#cb525-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> short_function(x):</span>
+<span id="cb525-2"><a href="functional.html#cb525-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb525-3"><a href="functional.html#cb525-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb525-4"><a href="functional.html#cb525-4" aria-hidden="true" tabindex="-1"></a>equiv_anon <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <p>lambda 函数拥有自己的命名空间，且不能访问自己参数列表之外或全局命名空间里的参数。lambda 匿名函数可以使用”关键字参数”进行参数传递：</p>
-<div class="sourceCode" id="cb502"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb502-1"><a href="functional.html#cb502-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="kw">lambda</span> x,y : x<span class="op">**</span><span class="dv">2</span><span class="op">+</span>y<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb502-2"><a href="functional.html#cb502-2" aria-hidden="true" tabindex="-1"></a>g(<span class="dv">2</span>,<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb526"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb526-1"><a href="functional.html#cb526-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="kw">lambda</span> x,y : x<span class="op">**</span><span class="dv">2</span><span class="op">+</span>y<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb526-2"><a href="functional.html#cb526-2" aria-hidden="true" tabindex="-1"></a>g(<span class="dv">2</span>,<span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## 13</code></pre>
-<div class="sourceCode" id="cb504"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb504-1"><a href="functional.html#cb504-1" aria-hidden="true" tabindex="-1"></a>g(y<span class="op">=</span><span class="dv">3</span>, x<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb528"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb528-1"><a href="functional.html#cb528-1" aria-hidden="true" tabindex="-1"></a>g(y<span class="op">=</span><span class="dv">3</span>, x<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## 13</code></pre>
 <p>lambda函数在数据分析工作中非常方便，因为你会发现很多数据转换函数都以函数作为参数的。直接传入lambda函数比编写完整函数声明要少输入很多字（也更清晰），甚至比将lambda函数赋值给一个变量还要少输入很多字。看看下面这个简单的例子：</p>
-<div class="sourceCode" id="cb506"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb506-1"><a href="functional.html#cb506-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> apply_to_list(some_list, f):</span>
-<span id="cb506-2"><a href="functional.html#cb506-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> some_list]</span>
-<span id="cb506-3"><a href="functional.html#cb506-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb506-4"><a href="functional.html#cb506-4" aria-hidden="true" tabindex="-1"></a>ints <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb506-5"><a href="functional.html#cb506-5" aria-hidden="true" tabindex="-1"></a>apply_to_list(ints, <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb530"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb530-1"><a href="functional.html#cb530-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> apply_to_list(some_list, f):</span>
+<span id="cb530-2"><a href="functional.html#cb530-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> some_list]</span>
+<span id="cb530-3"><a href="functional.html#cb530-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb530-4"><a href="functional.html#cb530-4" aria-hidden="true" tabindex="-1"></a>ints <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb530-5"><a href="functional.html#cb530-5" aria-hidden="true" tabindex="-1"></a>apply_to_list(ints, <span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [8, 0, 2, 10, 12]</code></pre>
 <p>虽然你可以直接编写<code>[x*2 for x in ints]</code>，但是这里我们可以非常轻松地传入一个自定义函数给apply_to_list函数。</p>
 <p>再来看另外一个例子。假设有一组字符串，你想要根据各字符串不同字母的数量对其进行排序：</p>
-<div class="sourceCode" id="cb508"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb508-1"><a href="functional.html#cb508-1" aria-hidden="true" tabindex="-1"></a>strings <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;card&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;aaaa&#39;</span>, <span class="st">&#39;abab&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb532"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb532-1"><a href="functional.html#cb532-1" aria-hidden="true" tabindex="-1"></a>strings <span class="op">=</span> [<span class="st">&#39;foo&#39;</span>, <span class="st">&#39;card&#39;</span>, <span class="st">&#39;bar&#39;</span>, <span class="st">&#39;aaaa&#39;</span>, <span class="st">&#39;abab&#39;</span>]</span></code></pre></div>
 <p>这里，我们可以传入一个lambda函数到列表的sort方法：</p>
-<div class="sourceCode" id="cb509"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb509-1"><a href="functional.html#cb509-1" aria-hidden="true" tabindex="-1"></a>strings.sort(key<span class="op">=</span><span class="kw">lambda</span> x: <span class="bu">len</span>(<span class="bu">set</span>(<span class="bu">list</span>(x))))</span></code></pre></div>
+<div class="sourceCode" id="cb533"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb533-1"><a href="functional.html#cb533-1" aria-hidden="true" tabindex="-1"></a>strings.sort(key<span class="op">=</span><span class="kw">lambda</span> x: <span class="bu">len</span>(<span class="bu">set</span>(<span class="bu">list</span>(x))))</span></code></pre></div>
 <blockquote>
 <p>笔记：lambda函数之所以会被称为匿名函数，与def声明的函数不同，原因之一就是这种函数对象本身是没有提供名称<strong>name</strong>属性。</p>
 </blockquote>
@@ -467,13 +474,13 @@ div.csl-indent {
 <div id="柯里化" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> 柯里化</h2>
 <p>柯里化（currying）是一个有趣的计算机科学术语，它指的是通过“部分参数应用”（partial argument application）从现有函数派生出新函数的技术。例如，假设我们有一个执行两数相加的简单函数：</p>
-<div class="sourceCode" id="cb510"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb510-1"><a href="functional.html#cb510-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
-<span id="cb510-2"><a href="functional.html#cb510-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre></div>
+<div class="sourceCode" id="cb534"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb534-1"><a href="functional.html#cb534-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
+<span id="cb534-2"><a href="functional.html#cb534-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre></div>
 <p>通过这个函数，我们可以派生出一个新的只有一个参数的函数——add_five，它用于对其参数加5：</p>
-<div class="sourceCode" id="cb511"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb511-1"><a href="functional.html#cb511-1" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> <span class="kw">lambda</span> y: add_numbers(<span class="dv">5</span>, y)</span></code></pre></div>
+<div class="sourceCode" id="cb535"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb535-1"><a href="functional.html#cb535-1" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> <span class="kw">lambda</span> y: add_numbers(<span class="dv">5</span>, y)</span></code></pre></div>
 <p>add_numbers的第二个参数称为“柯里化的”（curried）。这里没什么特别花哨的东西，因为我们其实就只是定义了一个可以调用现有函数的新函数而已。内置的<code>functools</code>模块可以用<code>partial</code>函数将此过程简化：</p>
-<div class="sourceCode" id="cb512"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb512-1"><a href="functional.html#cb512-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
-<span id="cb512-2"><a href="functional.html#cb512-2" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> partial(add_numbers, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb536"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb536-1"><a href="functional.html#cb536-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
+<span id="cb536-2"><a href="functional.html#cb536-2" aria-hidden="true" tabindex="-1"></a>add_five <span class="op">=</span> partial(add_numbers, <span class="dv">5</span>)</span></code></pre></div>
 </div>
 <div id="itertools模块" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> itertools模块</h2>
@@ -610,11 +617,11 @@ div.csl-indent {
 </tbody>
 </table>
 <p>groupby可以接受任何序列和一个函数。它根据函数的返回值对序列中的连续元素进行分组。下面是一个例子：</p>
-<div class="sourceCode" id="cb513"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb513-1"><a href="functional.html#cb513-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools <span class="im">as</span> itt</span>
-<span id="cb513-2"><a href="functional.html#cb513-2" aria-hidden="true" tabindex="-1"></a>first_letter <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="dv">0</span>]</span>
-<span id="cb513-3"><a href="functional.html#cb513-3" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;Alan&#39;</span>, <span class="st">&#39;Adam&#39;</span>, <span class="st">&#39;Wes&#39;</span>, <span class="st">&#39;Will&#39;</span>, <span class="st">&#39;Albert&#39;</span>, <span class="st">&#39;Steven&#39;</span>]</span>
-<span id="cb513-4"><a href="functional.html#cb513-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter, names <span class="kw">in</span> itt.groupby(names, first_letter):</span>
-<span id="cb513-5"><a href="functional.html#cb513-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(letter, <span class="bu">list</span>(names)) </span></code></pre></div>
+<div class="sourceCode" id="cb537"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb537-1"><a href="functional.html#cb537-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools <span class="im">as</span> itt</span>
+<span id="cb537-2"><a href="functional.html#cb537-2" aria-hidden="true" tabindex="-1"></a>first_letter <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="dv">0</span>]</span>
+<span id="cb537-3"><a href="functional.html#cb537-3" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;Alan&#39;</span>, <span class="st">&#39;Adam&#39;</span>, <span class="st">&#39;Wes&#39;</span>, <span class="st">&#39;Will&#39;</span>, <span class="st">&#39;Albert&#39;</span>, <span class="st">&#39;Steven&#39;</span>]</span>
+<span id="cb537-4"><a href="functional.html#cb537-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter, names <span class="kw">in</span> itt.groupby(names, first_letter):</span>
+<span id="cb537-5"><a href="functional.html#cb537-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(letter, <span class="bu">list</span>(names)) </span></code></pre></div>
 <pre><code>## A [&#39;Alan&#39;, &#39;Adam&#39;]
 ## W [&#39;Wes&#39;, &#39;Will&#39;]
 ## A [&#39;Albert&#39;]
@@ -653,35 +660,35 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb515"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb515-1"><a href="functional.html#cb515-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.product(<span class="st">&#39;ABCD&#39;</span>, repeat<span class="op">=</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb539"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb539-1"><a href="functional.html#cb539-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.product(<span class="st">&#39;ABCD&#39;</span>, repeat<span class="op">=</span><span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## [(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;D&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;D&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;D&#39;), (&#39;D&#39;, &#39;A&#39;), (&#39;D&#39;, &#39;B&#39;), (&#39;D&#39;, &#39;C&#39;), (&#39;D&#39;, &#39;D&#39;)]</code></pre>
-<div class="sourceCode" id="cb517"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb517-1"><a href="functional.html#cb517-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.permutations(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb541"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb541-1"><a href="functional.html#cb541-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.permutations(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;D&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;D&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;D&#39;), (&#39;D&#39;, &#39;A&#39;), (&#39;D&#39;, &#39;B&#39;), (&#39;D&#39;, &#39;C&#39;)]</code></pre>
-<div class="sourceCode" id="cb519"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb519-1"><a href="functional.html#cb519-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.combinations(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="functional.html#cb543-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.combinations(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;D&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;D&#39;), (&#39;C&#39;, &#39;D&#39;)]</code></pre>
-<div class="sourceCode" id="cb521"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb521-1"><a href="functional.html#cb521-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.combinations_with_replacement(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb545"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb545-1"><a href="functional.html#cb545-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(itt.combinations_with_replacement(<span class="st">&#39;ABCD&#39;</span>, <span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## [(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;D&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;D&#39;), (&#39;C&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;D&#39;), (&#39;D&#39;, &#39;D&#39;)]</code></pre>
 </div>
 </div>
 <div id="map" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> map</h2>
 <p><code>map()</code> 函数语法：map(function, iterable, …)，第一个参数 function 以 iterable 中的每一个元素调用 function 函数，返回包含全部 function 函数返回值的一个迭代器。如果函数有多个参数（iterable）, 但每个参数序列长度不一样, 会根据最少元素的序列进行。</p>
-<div class="sourceCode" id="cb523"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb523-1"><a href="functional.html#cb523-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x.capitalize(), [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;cow&#39;</span>]))</span>
-<span id="cb523-2"><a href="functional.html#cb523-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb523-3"><a href="functional.html#cb523-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 如果提供了两个列表，函数会调用相同位置的列表元素对</span></span></code></pre></div>
+<div class="sourceCode" id="cb547"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb547-1"><a href="functional.html#cb547-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x.capitalize(), [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;cow&#39;</span>]))</span>
+<span id="cb547-2"><a href="functional.html#cb547-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb547-3"><a href="functional.html#cb547-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 如果提供了两个列表，函数会调用相同位置的列表元素对</span></span></code></pre></div>
 <pre><code>## [&#39;Cat&#39;, &#39;Dog&#39;, &#39;Cow&#39;]</code></pre>
-<div class="sourceCode" id="cb525"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb525-1"><a href="functional.html#cb525-1" aria-hidden="true" tabindex="-1"></a><span class="bu">map</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span></code></pre></div>
-<pre><code>## &lt;map object at 0x00000000266CC220&gt;</code></pre>
+<div class="sourceCode" id="cb549"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb549-1"><a href="functional.html#cb549-1" aria-hidden="true" tabindex="-1"></a><span class="bu">map</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span></code></pre></div>
+<pre><code>## &lt;map object at 0x0000000026ECB220&gt;</code></pre>
 </div>
 <div id="filter" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> filter</h2>
 <p><code>filter()</code>用于过滤序列，过滤掉不符合条件的元素，返回符合条件的元素组成新列表。<code>filter()</code>的语法是<code>filter(function, iterable)</code>，其中function是一个判断函数。<code>filter()</code>可以转换为列表推导式。</p>
-<div class="sourceCode" id="cb527"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb527-1"><a href="functional.html#cb527-1" aria-hidden="true" tabindex="-1"></a>even <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb527-2"><a href="functional.html#cb527-2" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">filter</span>(even, <span class="bu">range</span>(<span class="dv">11</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb551"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb551-1"><a href="functional.html#cb551-1" aria-hidden="true" tabindex="-1"></a>even <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb551-2"><a href="functional.html#cb551-2" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">filter</span>(even, <span class="bu">range</span>(<span class="dv">11</span>)))</span></code></pre></div>
 <pre><code>## [0, 2, 4, 6, 8, 10]</code></pre>
 <p>请注意，filter()返回一个迭代器，因此需要调用内置类型list来构造给定迭代器的列表。</p>
 <p>上面的列子转换成列表推导式如下：</p>
-<div class="sourceCode" id="cb529"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb529-1"><a href="functional.html#cb529-1" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>) <span class="cf">if</span> x<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb553"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb553-1"><a href="functional.html#cb553-1" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>) <span class="cf">if</span> x<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>]</span></code></pre></div>
 <pre><code>## [0, 2, 4, 6, 8, 10]</code></pre>
 </div>
 <div id="reduce" class="section level2" number="10.7">
@@ -692,15 +699,15 @@ div.csl-indent {
 <li>iterable：tuple ，list ，dictionary，string等可迭代对象，必需参数</li>
 <li>如果提供了 initial 参数，计算时它将被放在iterable的最前面，如果iterable是空的，它就是计算的默认结果值</li>
 </ul>
-<div class="sourceCode" id="cb531"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb531-1"><a href="functional.html#cb531-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
-<span id="cb531-2"><a href="functional.html#cb531-2" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(<span class="kw">lambda</span> x, y: x<span class="op">+</span>y, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb555"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb555-1"><a href="functional.html#cb555-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
+<span id="cb555-2"><a href="functional.html#cb555-2" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(<span class="kw">lambda</span> x, y: x<span class="op">+</span>y, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span></code></pre></div>
 <pre><code>## 15</code></pre>
-<div class="sourceCode" id="cb533"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb533-1"><a href="functional.html#cb533-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">&#39;a&#39;</span>), (<span class="dv">2</span>, <span class="st">&#39;b&#39;</span>), (<span class="dv">3</span>, <span class="st">&#39;c&#39;</span>)]</span>
-<span id="cb533-2"><a href="functional.html#cb533-2" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(<span class="kw">lambda</span> a, pair: a <span class="op">+</span> pair[<span class="dv">0</span>], pairs, <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb557"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb557-1"><a href="functional.html#cb557-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">&#39;a&#39;</span>), (<span class="dv">2</span>, <span class="st">&#39;b&#39;</span>), (<span class="dv">3</span>, <span class="st">&#39;c&#39;</span>)]</span>
+<span id="cb557-2"><a href="functional.html#cb557-2" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(<span class="kw">lambda</span> a, pair: a <span class="op">+</span> pair[<span class="dv">0</span>], pairs, <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## 6</code></pre>
 <p>一个更简洁的解决方案是使用解包：</p>
-<div class="sourceCode" id="cb535"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb535-1"><a href="functional.html#cb535-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">&#39;a&#39;</span>), (<span class="dv">2</span>, <span class="st">&#39;b&#39;</span>), (<span class="dv">3</span>, <span class="st">&#39;c&#39;</span>)]</span>
-<span id="cb535-2"><a href="functional.html#cb535-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(x <span class="cf">for</span> x, _ <span class="kw">in</span> pairs)</span></code></pre></div>
+<div class="sourceCode" id="cb559"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb559-1"><a href="functional.html#cb559-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">&#39;a&#39;</span>), (<span class="dv">2</span>, <span class="st">&#39;b&#39;</span>), (<span class="dv">3</span>, <span class="st">&#39;c&#39;</span>)]</span>
+<span id="cb559-2"><a href="functional.html#cb559-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(x <span class="cf">for</span> x, _ <span class="kw">in</span> pairs)</span></code></pre></div>
 <pre><code>## 6</code></pre>
 
 </div>

@@ -94,9 +94,14 @@ reg-expr
 字符编码检测
 字节
 正则表达式
-one
-example
-two
+定位符
+字符组
+量词
+捕获组
+元字符
+re模块
+例子
+参考材料
 module
 模块定义和使用
 以脚本的方式执行模块
@@ -133,7 +138,7 @@ reduce
 specialized-data-types
 日期和时间
 title
-one-1
+one
 applied-skills
 文件和操作系统
 文件的读写和关闭

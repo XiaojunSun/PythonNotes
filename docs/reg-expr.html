@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-12-13" />
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,28 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -308,10 +286,17 @@ div.csl-indent {
 <li class="chapter" data-level="7.3" data-path="reg-expr.html"><a href="reg-expr.html#字节"><i class="fa fa-check"></i><b>7.3</b> 字节</a></li>
 <li class="chapter" data-level="7.4" data-path="reg-expr.html"><a href="reg-expr.html#正则表达式"><i class="fa fa-check"></i><b>7.4</b> 正则表达式</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.4.1</b> one</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#example"><i class="fa fa-check"></i><b>7.4.2</b> example</a></li>
+<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#定位符"><i class="fa fa-check"></i><b>7.4.1</b> 定位符</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#字符组"><i class="fa fa-check"></i><b>7.4.2</b> 字符组</a></li>
+<li class="chapter" data-level="7.4.3" data-path="reg-expr.html"><a href="reg-expr.html#量词"><i class="fa fa-check"></i><b>7.4.3</b> 量词</a></li>
+<li class="chapter" data-level="7.4.4" data-path="reg-expr.html"><a href="reg-expr.html#捕获组"><i class="fa fa-check"></i><b>7.4.4</b> 捕获组</a></li>
+<li class="chapter" data-level="7.4.5" data-path="reg-expr.html"><a href="reg-expr.html#元字符"><i class="fa fa-check"></i><b>7.4.5</b> 元字符</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.5</b> two</a></li>
+<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#re模块"><i class="fa fa-check"></i><b>7.5</b> re模块</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reg-expr.html"><a href="reg-expr.html#例子"><i class="fa fa-check"></i><b>7.5.1</b> 例子</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reg-expr.html"><a href="reg-expr.html#参考材料"><i class="fa fa-check"></i><b>7.5.2</b> 参考材料</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -360,7 +345,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
 <ul>
@@ -404,22 +389,22 @@ div.csl-indent {
 <div id="字符编码检测" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> 字符编码检测</h2>
 <p>如果我们知道一个文本文件的编码方案，我们可以指定读取的’encoding’选项直接读取：</p>
-<div class="sourceCode" id="cb373"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb373-1"><a href="reg-expr.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;jp_str.txt&#39;</span>, <span class="st">&#39;r&#39;</span> , encoding<span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>) <span class="im">as</span> f:</span>
-<span id="cb373-2"><a href="reg-expr.html#cb373-2" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> f.readlines()</span>
-<span id="cb373-3"><a href="reg-expr.html#cb373-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="reg-expr.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;jp_str.txt&#39;</span>, <span class="st">&#39;r&#39;</span> , encoding<span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb1-2"><a href="reg-expr.html#cb1-2" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> f.readlines()</span>
+<span id="cb1-3"><a href="reg-expr.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(b)</span></code></pre></div>
 <pre><code>## [&#39;あのねせかいはじつはつながっているんだって\n&#39;, &#39;だからたとえはなれてしまってもみんなひとりじゃない\n&#39;, &#39;たいせつなひととはいつまでもずっとどこかでつながっているのさ&#39;]</code></pre>
 <p>如果不知道这个文件的编码方案，可能会遇到乱码或读取错误的问题。第三方模块 chardet 可以自动检测字符编码的类型。使用过程如下：
 1. 使用 open(文件名, ‘rb’ ) 以二进制方式打开文件；
 2. 使用 b = f.read() 将文件内容全部读入字节流对象 b；
 3. 使用 chardet.detect( b ) 可以得到一个字典，其中键 ‘encoding’ 对应的值就是 chardet 猜测的编码名称，‘confidence’ 键对应的是该猜测的可靠程度（置信度）。</p>
 <p>应用样例如下：</p>
-<div class="sourceCode" id="cb375"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb375-1"><a href="reg-expr.html#cb375-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> chardet</span>
-<span id="cb375-2"><a href="reg-expr.html#cb375-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;jp_str.txt&#39;</span>, <span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
-<span id="cb375-3"><a href="reg-expr.html#cb375-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> f.read()</span>
-<span id="cb375-4"><a href="reg-expr.html#cb375-4" aria-hidden="true" tabindex="-1"></a>    e <span class="op">=</span> chardet.detect(b)</span>
-<span id="cb375-5"><a href="reg-expr.html#cb375-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(e)</span>
-<span id="cb375-6"><a href="reg-expr.html#cb375-6" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> b.decode(e.get(<span class="st">&#39;encoding&#39;</span>))</span>
-<span id="cb375-7"><a href="reg-expr.html#cb375-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="reg-expr.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> chardet</span>
+<span id="cb3-2"><a href="reg-expr.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;jp_str.txt&#39;</span>, <span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb3-3"><a href="reg-expr.html#cb3-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> f.read()</span>
+<span id="cb3-4"><a href="reg-expr.html#cb3-4" aria-hidden="true" tabindex="-1"></a>    e <span class="op">=</span> chardet.detect(b)</span>
+<span id="cb3-5"><a href="reg-expr.html#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(e)</span>
+<span id="cb3-6"><a href="reg-expr.html#cb3-6" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> b.decode(e.get(<span class="st">&#39;encoding&#39;</span>))</span>
+<span id="cb3-7"><a href="reg-expr.html#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(s)</span></code></pre></div>
 <pre><code>## {&#39;encoding&#39;: &#39;utf-8&#39;, &#39;confidence&#39;: 0.99, &#39;language&#39;: &#39;&#39;}
 ## あのねせかいはじつはつながっているんだって
 ## だからたとえはなれてしまってもみんなひとりじゃない
@@ -433,15 +418,15 @@ div.csl-indent {
 <p>字节（bytes）是一种比特流，它的存在形式是<code>01010001110</code>这种01组合。它必须有一个编码方式，使得它变成有意义的比特流，而不是一堆晦涩难懂的数字。</p>
 <p>bytes只负责以字节序列的形式（二进制形式）来存储数据，至于这些数据到底表示什么内容（字符串、数字、图片、音频等），完全由程序的解析方式决定。如果采用合适的字符编码方式（字符集），字节串可以恢复成字符串；反之亦然，字符串也可以转换成字节串。bytes 类型的数据非常适合在互联网上传输，可以用于网络通信编程；bytes 也可以用来存储图片、音频、视频等二进制格式的文件。</p>
 <p>字符串和 bytes 存在着千丝万缕的联系。字符串类有一个encode()方法，它是从字符串向比特流的编码过程；反之，bytes类恰好有个decode()方法，它是从比特流向字符串解码的过程。</p>
-<div class="sourceCode" id="cb377"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb377-1"><a href="reg-expr.html#cb377-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;中文&quot;</span></span>
-<span id="cb377-2"><a href="reg-expr.html#cb377-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.encode(encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span>
-<span id="cb377-3"><a href="reg-expr.html#cb377-3" aria-hidden="true" tabindex="-1"></a>b.decode(encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="reg-expr.html#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;中文&quot;</span></span>
+<span id="cb5-2"><a href="reg-expr.html#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.encode(encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span>
+<span id="cb5-3"><a href="reg-expr.html#cb5-3" aria-hidden="true" tabindex="-1"></a>b.decode(encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span></code></pre></div>
 <pre><code>## &#39;中文&#39;</code></pre>
 <p>或者：</p>
-<div class="sourceCode" id="cb379"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb379-1"><a href="reg-expr.html#cb379-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">bytes</span>(a, encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span>
-<span id="cb379-2"><a href="reg-expr.html#cb379-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="reg-expr.html#cb7-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">bytes</span>(a, encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span>
+<span id="cb7-2"><a href="reg-expr.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(b)</span></code></pre></div>
 <pre><code>## &lt;class &#39;bytes&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb381"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb381-1"><a href="reg-expr.html#cb381-1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span>(b, encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="reg-expr.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span>(b, encoding <span class="op">=</span> <span class="st">&#39;UTF-8&#39;</span>)</span></code></pre></div>
 <pre><code>## &#39;中文&#39;</code></pre>
 <p>对于任何来源的文本数据（文本文件、网络网页、数据库 ……），如果发现乱码，都可以用下面的思路解决：</p>
 <ol style="list-style-type: decimal">
@@ -453,33 +438,430 @@ div.csl-indent {
 <div id="正则表达式" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> 正则表达式</h2>
 <p>正则表达式可以被看作一种 “描述语言” 的语言。通过正则表达式，我们可以定义一个“规则”或“模式”，然后在文本中匹配所有符合该规则的字符串。</p>
-<div id="one" class="section level3" number="7.4.1">
-<h3><span class="header-section-number">7.4.1</span> one</h3>
-<p>正则表达式模式在线图示网站：<a href="https://regexper.com/" class="uri">https://regexper.com/</a>
-正则表达式详细表：<a href="http://web.suda.edu.cn/hejun/chapter8/regular_expression_table.html" class="uri">http://web.suda.edu.cn/hejun/chapter8/regular_expression_table.html</a></p>
-<p><a href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html" class="uri">https://tool.oschina.net/uploads/apidocs/jquery/regexp.html</a></p>
-<p><a href="https://regex101.com/" class="uri">https://regex101.com/</a></p>
+<div id="定位符" class="section level3" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> 定位符</h3>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">\</td>
+<td align="left">将下一个字符标记为一个特殊字符、或一个原义字符、或一个 向后引用、或一个八进制转义符。例如，‘n’ 匹配字符 “n”。‘’ 匹配一个换行符。序列 ‘\\’ 匹配 “\” 而 “\(” 则匹配 “(”。</td>
+</tr>
+<tr class="even">
+<td align="left">^</td>
+<td align="left">匹配输入字符串的开始位置。如果设置了 Multiline 修饰符，^ 也匹配 ‘’ 或 ’ 之后的位置。</td>
+</tr>
+<tr class="odd">
+<td align="left">$</td>
+<td align="left">匹配输入字符串的结束位置。如果设置了 Multiline 修饰符，$ 也匹配 ‘’ 或 ’ 之前的位置。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\b</code></td>
+<td align="left">匹配一个单词边界，也就是指单词和空格间的位置。例如， ‘er 可以匹配”never” 中的 ’er’，但不能匹配 “verb” 中的 ‘er’。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\B</code></td>
+<td align="left">匹配非单词边界。‘er’ 能匹配 “verb” 中的 ‘er’，但不能匹配 “never” 中的 ‘er’。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\A</code></td>
+<td align="left">匹配字符串的开始位置，与^不同，它不会被Multiline 修饰符影响</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\Z</code></td>
+<td align="left">匹配字符串的结束位置，与$不同，它不会被Multiline 修饰符影响</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\z</code></td>
+<td align="left">匹配字符串的结束位置，与$不同，它不会被Multiline 修饰符影响；与，如果字符后面有空行，它不会匹配空行前的任何内容，即它仅匹配全文最后一个字符</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="example" class="section level3" number="7.4.2">
-<h3><span class="header-section-number">7.4.2</span> example</h3>
-<div class="sourceCode" id="cb383"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb383-1"><a href="reg-expr.html#cb383-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb383-2"><a href="reg-expr.html#cb383-2" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;第一回</span></span>
-<span id="cb383-3"><a href="reg-expr.html#cb383-3" aria-hidden="true" tabindex="-1"></a><span class="st">第二回</span></span>
-<span id="cb383-4"><a href="reg-expr.html#cb383-4" aria-hidden="true" tabindex="-1"></a><span class="st">第三回</span></span>
-<span id="cb383-5"><a href="reg-expr.html#cb383-5" aria-hidden="true" tabindex="-1"></a><span class="st">第四回五回</span></span>
-<span id="cb383-6"><a href="reg-expr.html#cb383-6" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb383-7"><a href="reg-expr.html#cb383-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.findall(<span class="st">&quot;第(.?)回&quot;</span>, s1)</span>
-<span id="cb383-8"><a href="reg-expr.html#cb383-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
-<pre><code>## [&#39;一&#39;, &#39;二&#39;, &#39;三&#39;, &#39;四&#39;]</code></pre>
-<div class="sourceCode" id="cb385"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb385-1"><a href="reg-expr.html#cb385-1" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> <span class="st">&quot;《三体》第二部《黑暗森林》作者&quot;</span></span>
-<span id="cb385-2"><a href="reg-expr.html#cb385-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.findall(<span class="st">&#39;《.*?》&#39;</span>, s2)</span>
-<span id="cb385-3"><a href="reg-expr.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<div id="字符组" class="section level3" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> 字符组</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">x|y</td>
+<td align="left">匹配 x 或 y。例如，‘z|food’ 能匹配 “z” 或 “food”。‘(z|f)ood’ 则匹配 “zood” 或 “food”。</td>
+</tr>
+<tr class="even">
+<td align="left">[xyz]</td>
+<td align="left">字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</td>
+</tr>
+<tr class="odd">
+<td align="left">[^xyz]</td>
+<td align="left">负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’、‘l’、‘i’、‘n’。</td>
+</tr>
+<tr class="even">
+<td align="left">[a-z]</td>
+<td align="left">字符范围。匹配指定范围内的任意字符。例如，‘[a-z]’ 可以匹配 ‘a’ 到 ‘z’ 范围内的任意小写字母字符。</td>
+</tr>
+<tr class="odd">
+<td align="left">[^a-z]</td>
+<td align="left">负值字符范围。匹配任何不在指定范围内的任意字符。例如，‘[^a-z]’ 可以匹配任何不在 ‘a’ 到 ‘z’ 范围内的任意字符。</td>
+</tr>
+<tr class="even">
+<td align="left">[[:alpha:]]</td>
+<td align="left">任何字母</td>
+</tr>
+<tr class="odd">
+<td align="left">[[:digit:]]</td>
+<td align="left">任何数字</td>
+</tr>
+<tr class="even">
+<td align="left">[[:alnum:]]</td>
+<td align="left">任何字母和数字</td>
+</tr>
+<tr class="odd">
+<td align="left">[[:space:]]</td>
+<td align="left">任何空白字符</td>
+</tr>
+<tr class="even">
+<td align="left">[[:upper:]]</td>
+<td align="left">任何大写字母</td>
+</tr>
+<tr class="odd">
+<td align="left">[[:lower:]]</td>
+<td align="left">任何小写字母</td>
+</tr>
+<tr class="even">
+<td align="left">[[:punct:]]</td>
+<td align="left">任何标点符号</td>
+</tr>
+<tr class="odd">
+<td align="left">[[:xdigit:]]</td>
+<td align="left">任何16进制的数字，相当于[0-9a-fA-F]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="量词" class="section level3" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> 量词</h3>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="92%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">*</td>
+<td align="left">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。*** 等价于{0,}**。</td>
+</tr>
+<tr class="even">
+<td align="left">+</td>
+<td align="left">匹配前面的子表达式一次或多次。例如，‘zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。<strong>+ 等价于 {1,}</strong>。</td>
+</tr>
+<tr class="odd">
+<td align="left">?</td>
+<td align="left">匹配前面的子表达式零次或一次。例如，“do(es)?” 可以匹配 “do” 或 “does” 。<strong>? 等价于 {0,1}</strong>。</td>
+</tr>
+<tr class="even">
+<td align="left">{n}</td>
+<td align="left">n 是一个非负整数。匹配确定的 n 次。例如，‘o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr class="odd">
+<td align="left">{n,}</td>
+<td align="left">n 是一个非负整数。至少匹配n 次。例如，‘o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。‘o{1,}’ 等价于 ‘o+’。‘o{0,}’ 则等价于 ’o*’。</td>
+</tr>
+<tr class="even">
+<td align="left">{n,m}</td>
+<td align="left">m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，“o{1,3}” 将匹配 “fooooood” 中的前三个 o。‘o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</td>
+</tr>
+<tr class="odd">
+<td align="left">?</td>
+<td align="left">当该字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是懒惰的。懒惰模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串 “oooo”，‘o+?’ 将匹配单个 “o”，而 ‘o+’ 将匹配所有 ‘o’。</td>
+</tr>
+<tr class="even">
+<td align="left">.</td>
+<td align="left">匹配除换行符（、之外的任何单个字符。要匹配包括 ‘’ 在内的任何字符，请使用像”(.|)“的模式。</td>
+</tr>
+<tr class="odd">
+<td align="left">\</td>
+<td align="left">将下一个字符标记为一个特殊字符、或一个原义字符、或一个 向后引用、或一个八进制转义符。例如，‘n’ 匹配字符 “n”。‘’ 匹配一个换行符。序列 ‘\\’ 匹配 “\” 而 “\(” 则匹配 “(”。</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="reg-expr.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb11-2"><a href="reg-expr.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="reg-expr.html#cb11-3" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> <span class="st">&quot;《三体》第二部《黑暗森林》作者&quot;</span></span>
+<span id="cb11-4"><a href="reg-expr.html#cb11-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.findall(<span class="st">&#39;《.*?》&#39;</span>, s2)</span>
+<span id="cb11-5"><a href="reg-expr.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## [&#39;《三体》&#39;, &#39;《黑暗森林》&#39;]</code></pre>
 </div>
+<div id="捕获组" class="section level3" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> 捕获组</h3>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="83%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(pattern)</td>
+<td align="left">匹配 pattern 并获取这一匹配。所获取的匹配可以从产生的 Matches 集合得到。要匹配圆括号字符，请使用 ‘\(’ 或 ‘\)’。</td>
+</tr>
+<tr class="even">
+<td align="left">(?:pattern)</td>
+<td align="left">匹配 pattern 但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用 “或” 字符 (|) 来组合一个模式的各个部分是很有用。例如， ‘industr(?:y|ies) 就是一个比 ’industry|industries’ 更简略的表达式。</td>
+</tr>
+<tr class="odd">
+<td align="left">(?=pattern)</td>
+<td align="left">正向肯定预查（look ahead positive assert），在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“Windows(?=95|98|NT|2000)”能匹配”Windows2000”中的”Windows”，但不能匹配”Windows3.1”中的”Windows”。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</td>
+</tr>
+<tr class="even">
+<td align="left">(?!pattern)</td>
+<td align="left">正向否定预查(negative assert)，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如”Windows(?!95|98|NT|2000)“能匹配”Windows3.1”中的”Windows”，但不能匹配”Windows2000”中的”Windows”。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</td>
+</tr>
+<tr class="odd">
+<td align="left">(?&lt;=pattern)</td>
+<td align="left">反向(look behind)肯定预查，与正向肯定预查类似，只是方向相反。例如，“(?&lt;=95|98|NT|2000)Windows”能匹配”2000Windows”中的”Windows”，但不能匹配”3.1Windows”中的”Windows”。</td>
+</tr>
+<tr class="even">
+<td align="left">(?&lt;!pattern)</td>
+<td align="left">反向否定预查，与正向否定预查类似，只是方向相反。例如”(?&lt;!95|98|NT|2000)Windows”能匹配”3.1Windows”中的”Windows”，但不能匹配”2000Windows”中的”Windows”。</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="reg-expr.html#cb13-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> <span class="st">&#39;123abc456dfg&#39;</span></span>
+<span id="cb13-2"><a href="reg-expr.html#cb13-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.findall(<span class="st">&quot;([1-9])([a-z]+)&quot;</span>, s1)</span>
+<span id="cb13-3"><a href="reg-expr.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## [(&#39;3&#39;, &#39;abc&#39;), (&#39;6&#39;, &#39;dfg&#39;)]</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="reg-expr.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb15-2"><a href="reg-expr.html#cb15-2" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> <span class="st">&#39;&#39;&#39;第一回</span></span>
+<span id="cb15-3"><a href="reg-expr.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="st">第二回</span></span>
+<span id="cb15-4"><a href="reg-expr.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="st">第三回</span></span>
+<span id="cb15-5"><a href="reg-expr.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="st">第四回五回</span></span>
+<span id="cb15-6"><a href="reg-expr.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb15-7"><a href="reg-expr.html#cb15-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.findall(<span class="st">&quot;第(.?)回&quot;</span>, s1)</span>
+<span id="cb15-8"><a href="reg-expr.html#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## [&#39;一&#39;, &#39;二&#39;, &#39;三&#39;, &#39;四&#39;]</code></pre>
 </div>
-<div id="two" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> two</h2>
+<div id="元字符" class="section level3" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> 元字符</h3>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="93%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\d</code></td>
+<td align="left">匹配一个数字字符。等价于 [0-9]。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\D</code></td>
+<td align="left">匹配一个非数字字符。等价于 [^0-9]。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\f</code></td>
+<td align="left">匹配一个换页符。等价于 <code>\x0c</code> 和 <code>\cL</code>。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\n</code></td>
+<td align="left">匹配一个换行符。等价于 <code>\x0a</code> 和 <code>\cJ</code>。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\r</code></td>
+<td align="left">匹配一个回车符。等价于 <code>\x0d</code> 和 <code>\cM</code>。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\s</code></td>
+<td align="left">匹配任何空白字符，包括空格、制表符、换页符等等。等价于 <code>[\f\n\r\t\v]</code>。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\S</code></td>
+<td align="left">匹配任何非空白字符。等价于 <code>[\^\f\n\r\t\v]</code>。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\t</code></td>
+<td align="left">匹配一个制表符。等价于 <code>\x09</code> 和 <code>\cI</code>。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\v</code></td>
+<td align="left">匹配一个垂直制表符。等价于 <code>\x0b</code> 和 <code>\cK</code>。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\w</code></td>
+<td align="left">匹配字母、数字、下划线。等价于’[A-Za-z0-9_]’。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\cx</code></td>
+<td align="left">匹配由 x 指明的控制字符。例如， <code>\cM</code> 匹配一个 Control-M 或回车符。x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 ‘c’ 字符。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\W</code></td>
+<td align="left">匹配非字母、数字、下划线。等价于 ‘[^A-Za-z0-9_]’。</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\num</code></td>
+<td align="left">匹配 num，其中 num 是一个正整数。对前面所获取的匹配的引用。例如，‘(.)\1’ 匹配两个连续的相同字符。</td>
+</tr>
+<tr class="even">
+<td align="left"><code>\xn</code></td>
+<td align="left">匹配 n，其中 n 为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，‘<code>\x41</code>’ 匹配 “A”。‘<code>\x041</code>’ 则等价于 ‘<code>\x04</code>’ &amp; “1”。正则表达式中可以使用 ASCII 编码。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="re模块" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> re模块</h2>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>函数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>re.match</strong></td>
+<td><code>re.match(pattern, string, flags=0)</code>；re.match 尝试从字符串的起始位置匹配一个模式，匹配成功返回一个匹配的对象，否则返回 None。</td>
+</tr>
+<tr class="even">
+<td><strong>re.search</strong></td>
+<td>re.search函数会在字符串内查找模式匹配，只到找到第一个匹配然后返回，参数与返回与re.match完全一致。</td>
+</tr>
+<tr class="odd">
+<td><strong>re.findall</strong></td>
+<td>返回列表，找不到则返回空列表</td>
+</tr>
+<tr class="even">
+<td><strong>re.compile</strong></td>
+<td>用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match() 和 search() 这两个函数使用。</td>
+</tr>
+<tr class="odd">
+<td><strong>re.sub</strong></td>
+<td>用于替换字符串中的匹配项，<code>re.sub(pattern, repl, string, count=0, flags=0)</code> ；repl : 替换的字符串，也可是一个函数。</td>
+</tr>
+</tbody>
+</table>
+<p>flags是匹配模式修饰符，见下表：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">修饰符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">re.I</td>
+<td align="left">使匹配对大小写不敏感</td>
+</tr>
+<tr class="even">
+<td align="left">re.L</td>
+<td align="left">做本地化识别（locale-aware）匹配</td>
+</tr>
+<tr class="odd">
+<td align="left">re.M</td>
+<td align="left">多行匹配，影响 ^ 和 $</td>
+</tr>
+<tr class="even">
+<td align="left">re.S</td>
+<td align="left">使. 匹配包括换行在内的所有字符</td>
+</tr>
+<tr class="odd">
+<td align="left">re.U</td>
+<td align="left">根据Unicode字符集解析字符。这个标志影响 \w, \W, \b, \B.</td>
+</tr>
+<tr class="even">
+<td align="left">re.X</td>
+<td align="left">这个选项忽略空格和 # 后面的注释，以便把规则写得更易于理解。</td>
+</tr>
+</tbody>
+</table>
+<p>可以使用 group(num) 或 groups() 匹配对象函数来获取匹配表达式。</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="reg-expr.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb17-2"><a href="reg-expr.html#cb17-2" aria-hidden="true" tabindex="-1"></a>msg <span class="op">=</span> <span class="st">&#39;name:Alice,age:6&#39;</span></span>
+<span id="cb17-3"><a href="reg-expr.html#cb17-3" aria-hidden="true" tabindex="-1"></a>obj <span class="op">=</span> re.search(<span class="st">&#39;name:(\w+),age:(\d+)&#39;</span>, msg)</span>
+<span id="cb17-4"><a href="reg-expr.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(obj.group(<span class="dv">0</span>))    <span class="co"># name:Alice,age:6  原始字符</span></span></code></pre></div>
+<pre><code>## name:Alice,age:6</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="reg-expr.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(obj.group(<span class="dv">1</span>))    <span class="co"># Alice   第一个匹配</span></span></code></pre></div>
+<pre><code>## Alice</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="reg-expr.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(obj.group(<span class="dv">2</span>))    <span class="co"># 6 第二个匹配</span></span></code></pre></div>
+<pre><code>## 6</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="reg-expr.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(obj.groups())    <span class="co"># (&#39;Alice&#39;, &#39;6&#39;)</span></span></code></pre></div>
+<pre><code>## (&#39;Alice&#39;, &#39;6&#39;)</code></pre>
+<div id="例子" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> 例子</h3>
+<p><code>re.sub</code> 字符串替换：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="reg-expr.html#cb25-1" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">&#39;1A2B3C&#39;</span></span>
+<span id="cb25-2"><a href="reg-expr.html#cb25-2" aria-hidden="true" tabindex="-1"></a>re.sub(<span class="vs">r&#39;\D&#39;</span>, <span class="st">&quot;-&quot;</span>, txt) <span class="co"># 将非数字转换为- </span></span></code></pre></div>
+<pre><code>## &#39;1-2-3-&#39;</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="reg-expr.html#cb27-1" aria-hidden="true" tabindex="-1"></a>re.sub(<span class="vs">r&#39;\D&#39;</span>, <span class="st">&quot;&quot;</span>, txt) <span class="co"># 删除非数字</span></span></code></pre></div>
+<pre><code>## &#39;123&#39;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="reg-expr.html#cb29-1" aria-hidden="true" tabindex="-1"></a>re.sub(<span class="vs">r&#39;(\d)&#39;</span>, <span class="kw">lambda</span> x : <span class="bu">str</span>(<span class="dv">2</span><span class="op">*</span><span class="bu">int</span>(x.group())), txt) <span class="co"># 数字乘以2</span></span></code></pre></div>
+<pre><code>## &#39;2A4B6C&#39;</code></pre>
+<p><code>'(.)\\1+'</code>：匹配任意字符的一次或多次重复出现。</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="reg-expr.html#cb31-1" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">&#39;1123aa&#39;</span></span>
+<span id="cb31-2"><a href="reg-expr.html#cb31-2" aria-hidden="true" tabindex="-1"></a>re.findall(<span class="st">&#39;(.)</span><span class="ch">\\</span><span class="st">1+&#39;</span>, txt)</span></code></pre></div>
+<pre><code>## [&#39;1&#39;, &#39;a&#39;]</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="reg-expr.html#cb33-1" aria-hidden="true" tabindex="-1"></a>re.findall(<span class="vs">r&#39;(.)\1+&#39;</span>, txt)</span></code></pre></div>
+<pre><code>## [&#39;1&#39;, &#39;a&#39;]</code></pre>
+<p><code>'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,._]).{8,}$'</code>：检查给定字符串是否为强密码，必须同时包含英语字母大写字母、英文小写字母、数字或特殊符号（如英文逗号、英文句号、下划线），并且长度必须至少8位。</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="reg-expr.html#cb35-1" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">&#39;123abCD,&#39;</span></span>
+<span id="cb35-2"><a href="reg-expr.html#cb35-2" aria-hidden="true" tabindex="-1"></a>rex <span class="op">=</span> <span class="vs">r&#39;^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,._]).{8,}$&#39;</span></span>
+<span id="cb35-3"><a href="reg-expr.html#cb35-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> re.match(rex, txt)</span>
+<span id="cb35-4"><a href="reg-expr.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## &lt;re.Match object; span=(0, 8), match=&#39;123abCD,&#39;&gt;</code></pre>
+<p>或者</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="reg-expr.html#cb37-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> re.<span class="bu">compile</span>(rex)</span>
+<span id="cb37-2"><a href="reg-expr.html#cb37-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> pattern.match(txt)</span>
+<span id="cb37-3"><a href="reg-expr.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## &lt;re.Match object; span=(0, 8), match=&#39;123abCD,&#39;&gt;</code></pre>
+<p>Email地址：<code>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</code></p>
+<p>空白行的正则表达式：<code>\n\s*\r</code> (可以用来删除空白行)</p>
+</div>
+<div id="参考材料" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> 参考材料</h3>
+<ul>
+<li>正则表达式模式在线图示网站：<a href="https://regexper.com/" class="uri">https://regexper.com/</a></li>
+<li>正则表达式详语法：<a href="https://www.runoob.com/regexp/regexp-syntax.html" class="uri">https://www.runoob.com/regexp/regexp-syntax.html</a></li>
+<li>在线测试工具：<a href="https://regex101.com/" class="uri">https://regex101.com/</a></li>
+<li>在线测试工具：<a href="https://c.runoob.com/front-end/854/" class="uri">https://c.runoob.com/front-end/854/</a></li>
+</ul>
 
+</div>
 </div>
 </div>
             </section>
@@ -529,20 +911,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

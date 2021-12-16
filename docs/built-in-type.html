@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2021-12-13" />
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -308,10 +308,17 @@ div.csl-indent {
 <li class="chapter" data-level="7.3" data-path="reg-expr.html"><a href="reg-expr.html#字节"><i class="fa fa-check"></i><b>7.3</b> 字节</a></li>
 <li class="chapter" data-level="7.4" data-path="reg-expr.html"><a href="reg-expr.html#正则表达式"><i class="fa fa-check"></i><b>7.4</b> 正则表达式</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#one"><i class="fa fa-check"></i><b>7.4.1</b> one</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#example"><i class="fa fa-check"></i><b>7.4.2</b> example</a></li>
+<li class="chapter" data-level="7.4.1" data-path="reg-expr.html"><a href="reg-expr.html#定位符"><i class="fa fa-check"></i><b>7.4.1</b> 定位符</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reg-expr.html"><a href="reg-expr.html#字符组"><i class="fa fa-check"></i><b>7.4.2</b> 字符组</a></li>
+<li class="chapter" data-level="7.4.3" data-path="reg-expr.html"><a href="reg-expr.html#量词"><i class="fa fa-check"></i><b>7.4.3</b> 量词</a></li>
+<li class="chapter" data-level="7.4.4" data-path="reg-expr.html"><a href="reg-expr.html#捕获组"><i class="fa fa-check"></i><b>7.4.4</b> 捕获组</a></li>
+<li class="chapter" data-level="7.4.5" data-path="reg-expr.html"><a href="reg-expr.html#元字符"><i class="fa fa-check"></i><b>7.4.5</b> 元字符</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#two"><i class="fa fa-check"></i><b>7.5</b> two</a></li>
+<li class="chapter" data-level="7.5" data-path="reg-expr.html"><a href="reg-expr.html#re模块"><i class="fa fa-check"></i><b>7.5</b> re模块</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reg-expr.html"><a href="reg-expr.html#例子"><i class="fa fa-check"></i><b>7.5.1</b> 例子</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reg-expr.html"><a href="reg-expr.html#参考材料"><i class="fa fa-check"></i><b>7.5.2</b> 参考材料</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>8</b> 模块</a>
 <ul>
@@ -360,7 +367,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>12</b> Title</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
+<li class="chapter" data-level="12.1" data-path="title.html"><a href="title.html#one"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>13</b> 实用技能</a>
 <ul>
@@ -696,18 +703,18 @@ type            ::=  &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quo
 <pre><code>## 5</code></pre>
 <div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="built-in-type.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 提取出 N 个不同元素的样本：</span></span>
 <span id="cb134-2"><a href="built-in-type.html#cb134-2" aria-hidden="true" tabindex="-1"></a>random.sample(values, <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## [4, 1, 2]</code></pre>
+<pre><code>## [6, 2, 1]</code></pre>
 <div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="built-in-type.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 打乱序列中元素的顺序</span></span>
 <span id="cb136-2"><a href="built-in-type.html#cb136-2" aria-hidden="true" tabindex="-1"></a>random.shuffle(values)</span>
 <span id="cb136-3"><a href="built-in-type.html#cb136-3" aria-hidden="true" tabindex="-1"></a>values</span></code></pre></div>
-<pre><code>## [4, 5, 1, 2, 3, 6]</code></pre>
+<pre><code>## [3, 2, 5, 6, 4, 1]</code></pre>
 <div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="built-in-type.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成随机整数</span></span>
 <span id="cb138-2"><a href="built-in-type.html#cb138-2" aria-hidden="true" tabindex="-1"></a>random.randint(<span class="dv">0</span>,<span class="dv">20</span>)</span>
 <span id="cb138-3"><a href="built-in-type.html#cb138-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb138-4"><a href="built-in-type.html#cb138-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成 0 到 1 范围内均匀分布的浮点数</span></span></code></pre></div>
-<pre><code>## 3</code></pre>
+<pre><code>## 19</code></pre>
 <div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="built-in-type.html#cb140-1" aria-hidden="true" tabindex="-1"></a>random.random()</span></code></pre></div>
-<pre><code>## 0.15146045159358423</code></pre>
+<pre><code>## 0.8471810777208886</code></pre>
 <p>可以通过 random.seed() 函数修改初始化种子：</p>
 <div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="built-in-type.html#cb142-1" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">123</span>)</span>
 <span id="cb142-2"><a href="built-in-type.html#cb142-2" aria-hidden="true" tabindex="-1"></a>random.random()</span></code></pre></div>
@@ -906,7 +913,7 @@ type            ::=  &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quo
 <p>为提高程序效率，Python会预先创建好 -5 至 256 范围内的常用小整数，保存在内存中固定位置。当程序用到这些整数时，不必再次重复创建，因而执行 a=3 和 b=1+2 后，a 与 b 指向同一内存地址，即 a is b 返回 True。</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb152-1"><a href="built-in-type.html#cb152-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> b <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb152-2"><a href="built-in-type.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;a的内存地址是</span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss">，b的内存地址是</span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
-<pre><code>## a的内存地址是140711062939424，b的内存地址是140711062939424</code></pre>
+<pre><code>## a的内存地址是140710889334560，b的内存地址是140710889334560</code></pre>
 <div class="sourceCode" id="cb154"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb154-1"><a href="built-in-type.html#cb154-1" aria-hidden="true" tabindex="-1"></a>a <span class="kw">is</span> b</span></code></pre></div>
 <pre><code>## True</code></pre>
 <div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="built-in-type.html#cb156-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span><span class="dv">5555</span><span class="op">;</span> b<span class="op">=</span><span class="dv">5555</span></span>
