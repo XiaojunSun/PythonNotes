@@ -16,4 +16,6 @@ PythonNotes.Rproj
 *.bib
 *.rds
 *.txt
-snack.py
+*.py
+*.R
+snack.ipynb
