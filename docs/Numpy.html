@@ -24,7 +24,7 @@
 <meta name="author" content="Xiaojun Sun" />
 
 
-<meta name="date" content="2022-01-03" />
+<meta name="date" content="2022-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="specialized-data-types.html"/>
-<link rel="next" href="Pandas.html"/>
+<link rel="next" href="Pandas0.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -206,7 +206,8 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="built-in-type.html"><a href="built-in-type.html#none"><i class="fa fa-check"></i><b>3.1</b> None</a></li>
 <li class="chapter" data-level="3.2" data-path="built-in-type.html"><a href="built-in-type.html#字符串"><i class="fa fa-check"></i><b>3.2</b> 字符串</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="built-in-type.html"><a href="built-in-type.html#字符串格式化语法"><i class="fa fa-check"></i><b>3.2.1</b> 字符串格式化语法</a></li>
+<li class="chapter" data-level="3.2.1" data-path="built-in-type.html"><a href="built-in-type.html#f-strings"><i class="fa fa-check"></i><b>3.2.1</b> f-Strings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="built-in-type.html"><a href="built-in-type.html#字符串格式化语法"><i class="fa fa-check"></i><b>3.2.2</b> 字符串格式化语法</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="built-in-type.html"><a href="built-in-type.html#数字"><i class="fa fa-check"></i><b>3.3</b> 数字</a>
 <ul>
@@ -384,25 +385,75 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="Numpy.html"><a href="Numpy.html"><i class="fa fa-check"></i><b>12</b> Numpy</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="Numpy.html"><a href="Numpy.html#one"><i class="fa fa-check"></i><b>12.1</b> One</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="Pandas.html"><a href="Pandas.html"><i class="fa fa-check"></i><b>13</b> Pandas</a>
+<li class="chapter" data-level="12.1" data-path="Numpy.html"><a href="Numpy.html#什么是数组"><i class="fa fa-check"></i><b>12.1</b> 什么是数组？</a></li>
+<li class="chapter" data-level="12.2" data-path="Numpy.html"><a href="Numpy.html#数组的属性"><i class="fa fa-check"></i><b>12.2</b> 数组的属性</a></li>
+<li class="chapter" data-level="12.3" data-path="Numpy.html"><a href="Numpy.html#数组创建"><i class="fa fa-check"></i><b>12.3</b> 数组创建</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="Pandas.html"><a href="Pandas.html#one-1"><i class="fa fa-check"></i><b>13.1</b> One</a></li>
+<li class="chapter" data-level="12.3.1" data-path="Numpy.html"><a href="Numpy.html#将-python-序列转换为-numpy-数组"><i class="fa fa-check"></i><b>12.3.1</b> 将 Python 序列转换为 NumPy 数组</a></li>
+<li class="chapter" data-level="12.3.2" data-path="Numpy.html"><a href="Numpy.html#内在的-numpy-数组创建函数"><i class="fa fa-check"></i><b>12.3.2</b> 内在的 NumPy 数组创建函数</a></li>
+<li class="chapter" data-level="12.3.3" data-path="Numpy.html"><a href="Numpy.html#复制加入或改变现有数组"><i class="fa fa-check"></i><b>12.3.3</b> 复制、加入或改变现有数组</a></li>
+<li class="chapter" data-level="12.3.4" data-path="Numpy.html"><a href="Numpy.html#从磁盘读取数组"><i class="fa fa-check"></i><b>12.3.4</b> 从磁盘读取数组</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>14</b> Title</a>
+<li class="chapter" data-level="12.4" data-path="Numpy.html"><a href="Numpy.html#数组操作"><i class="fa fa-check"></i><b>12.4</b> 数组操作</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="title.html"><a href="title.html#one-2"><i class="fa fa-check"></i><b>14.1</b> One</a></li>
+<li class="chapter" data-level="12.4.1" data-path="Numpy.html"><a href="Numpy.html#添加和排序元素"><i class="fa fa-check"></i><b>12.4.1</b> 添加和排序元素</a></li>
+<li class="chapter" data-level="12.4.2" data-path="Numpy.html"><a href="Numpy.html#重塑数组"><i class="fa fa-check"></i><b>12.4.2</b> 重塑数组</a></li>
+<li class="chapter" data-level="12.4.3" data-path="Numpy.html"><a href="Numpy.html#将新轴添加到数组中"><i class="fa fa-check"></i><b>12.4.3</b> 将新轴添加到数组中</a></li>
+<li class="chapter" data-level="12.4.4" data-path="Numpy.html"><a href="Numpy.html#数组索引"><i class="fa fa-check"></i><b>12.4.4</b> 数组索引</a></li>
+<li class="chapter" data-level="12.4.5" data-path="Numpy.html"><a href="Numpy.html#数组运算"><i class="fa fa-check"></i><b>12.4.5</b> 数组运算</a></li>
+<li class="chapter" data-level="12.4.6" data-path="Numpy.html"><a href="Numpy.html#常用函数"><i class="fa fa-check"></i><b>12.4.6</b> 常用函数</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>15</b> 实用技能</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>15.1</b> 文件和操作系统</a>
-<ul>
-<li class="chapter" data-level="15.1.1" data-path="applied-skills.html"><a href="applied-skills.html#文件的读写和关闭"><i class="fa fa-check"></i><b>15.1.1</b> 文件的读写和关闭</a></li>
-<li class="chapter" data-level="15.1.2" data-path="applied-skills.html"><a href="applied-skills.html#os模块"><i class="fa fa-check"></i><b>15.1.2</b> os模块</a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="applied-skills.html"><a href="applied-skills.html#爬虫"><i class="fa fa-check"></i><b>15.2</b> 爬虫</a></li>
-<li class="chapter" data-level="15.3" data-path="applied-skills.html"><a href="applied-skills.html#中文分词"><i class="fa fa-check"></i><b>15.3</b> 中文分词</a></li>
+<li class="chapter" data-level="13" data-path="Pandas0.html"><a href="Pandas0.html"><i class="fa fa-check"></i><b>13</b> Pandas : 快速入门</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="Pandas0.html"><a href="Pandas0.html#创建数据集"><i class="fa fa-check"></i><b>13.1</b> 创建数据集</a></li>
+<li class="chapter" data-level="13.2" data-path="Pandas0.html"><a href="Pandas0.html#数据探查"><i class="fa fa-check"></i><b>13.2</b> 数据探查</a></li>
+<li class="chapter" data-level="13.3" data-path="Pandas0.html"><a href="Pandas0.html#排序-1"><i class="fa fa-check"></i><b>13.3</b> 排序</a></li>
+<li class="chapter" data-level="13.4" data-path="Pandas0.html"><a href="Pandas0.html#数据选取"><i class="fa fa-check"></i><b>13.4</b> 数据选取</a></li>
+<li class="chapter" data-level="13.5" data-path="Pandas0.html"><a href="Pandas0.html#新增列和赋值"><i class="fa fa-check"></i><b>13.5</b> 新增列和赋值</a></li>
+<li class="chapter" data-level="13.6" data-path="Pandas0.html"><a href="Pandas0.html#缺失数据"><i class="fa fa-check"></i><b>13.6</b> 缺失数据</a></li>
+<li class="chapter" data-level="13.7" data-path="Pandas0.html"><a href="Pandas0.html#数据运算"><i class="fa fa-check"></i><b>13.7</b> 数据运算</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="Pandas0.html"><a href="Pandas0.html#stats"><i class="fa fa-check"></i><b>13.7.1</b> Stats</a></li>
+<li class="chapter" data-level="13.7.2" data-path="Pandas0.html"><a href="Pandas0.html#apply"><i class="fa fa-check"></i><b>13.7.2</b> Apply</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="Pandas0.html"><a href="Pandas0.html#合并"><i class="fa fa-check"></i><b>13.8</b> 合并</a>
+<ul>
+<li class="chapter" data-level="13.8.1" data-path="Pandas0.html"><a href="Pandas0.html#concat"><i class="fa fa-check"></i><b>13.8.1</b> Concat</a></li>
+<li class="chapter" data-level="13.8.2" data-path="Pandas0.html"><a href="Pandas0.html#join"><i class="fa fa-check"></i><b>13.8.2</b> Join</a></li>
+</ul></li>
+<li class="chapter" data-level="13.9" data-path="Pandas0.html"><a href="Pandas0.html#分组聚合"><i class="fa fa-check"></i><b>13.9</b> 分组聚合</a></li>
+<li class="chapter" data-level="13.10" data-path="Pandas0.html"><a href="Pandas0.html#重塑"><i class="fa fa-check"></i><b>13.10</b> 重塑</a>
+<ul>
+<li class="chapter" data-level="13.10.1" data-path="Pandas0.html"><a href="Pandas0.html#stack"><i class="fa fa-check"></i><b>13.10.1</b> Stack</a></li>
+<li class="chapter" data-level="13.10.2" data-path="Pandas0.html"><a href="Pandas0.html#数据透视表pivot-table"><i class="fa fa-check"></i><b>13.10.2</b> 数据透视表（Pivot Table）</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="Pandas0.html"><a href="Pandas0.html#时间序列"><i class="fa fa-check"></i><b>13.11</b> 时间序列</a></li>
+<li class="chapter" data-level="13.12" data-path="Pandas0.html"><a href="Pandas0.html#分类变量"><i class="fa fa-check"></i><b>13.12</b> 分类变量</a></li>
+<li class="chapter" data-level="13.13" data-path="Pandas0.html"><a href="Pandas0.html#作图"><i class="fa fa-check"></i><b>13.13</b> 作图</a></li>
+<li class="chapter" data-level="13.14" data-path="Pandas0.html"><a href="Pandas0.html#数据读写"><i class="fa fa-check"></i><b>13.14</b> 数据读写</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Pandas1.html"><a href="Pandas1.html"><i class="fa fa-check"></i><b>14</b> Pandas深入学习（1）</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Pandas1.html"><a href="Pandas1.html#one"><i class="fa fa-check"></i><b>14.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>15</b> Title</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="title.html"><a href="title.html#one-1"><i class="fa fa-check"></i><b>15.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="title-1.html"><a href="title-1.html"><i class="fa fa-check"></i><b>16</b> Title</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="title-1.html"><a href="title-1.html#one-2"><i class="fa fa-check"></i><b>16.1</b> One</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="applied-skills.html"><a href="applied-skills.html"><i class="fa fa-check"></i><b>17</b> 实用技能</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="applied-skills.html"><a href="applied-skills.html#文件和操作系统"><i class="fa fa-check"></i><b>17.1</b> 文件和操作系统</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="applied-skills.html"><a href="applied-skills.html#文件的读写和关闭"><i class="fa fa-check"></i><b>17.1.1</b> 文件的读写和关闭</a></li>
+<li class="chapter" data-level="17.1.2" data-path="applied-skills.html"><a href="applied-skills.html#os模块"><i class="fa fa-check"></i><b>17.1.2</b> os模块</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="applied-skills.html"><a href="applied-skills.html#爬虫"><i class="fa fa-check"></i><b>17.2</b> 爬虫</a></li>
+<li class="chapter" data-level="17.3" data-path="applied-skills.html"><a href="applied-skills.html#中文分词"><i class="fa fa-check"></i><b>17.3</b> 中文分词</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -427,10 +478,407 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="Numpy" class="section level1" number="12">
 <h1><span class="header-section-number">Chapter 12</span> Numpy</h1>
-<p>参考：<a href="https://numpy.org/doc/stable/user/basics.creation.html" class="uri">https://numpy.org/doc/stable/user/basics.creation.html</a></p>
-<div id="one" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> One</h2>
+<p>NumPy ( Numerical Python ) 是一个开源 Python 库，几乎用于所有科学和工程领域。它是在 Python 中处理数值数据的通用标准。参考：<a href="https://numpy.org/doc/stable/user/basics.creation.html" class="uri">https://numpy.org/doc/stable/user/basics.creation.html</a></p>
+<div id="什么是数组" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> 什么是数组？</h2>
+<p>数组是 NumPy 库的核心数据结构。数组是值的网格，它包含有关原始数据、如何定位元素以及如何解释元素的信息。它有一个可以以各种方式索引的元素网格。元素都是相同的类型，称为数组dtype。</p>
+<p>NumPy 数组比 Python 列表更快、更紧凑。数组占用内存少，使用方便。NumPy 使用更少的内存来存储数据，它提供了一种指定数据类型的机制。这允许进一步优化代码。</p>
+</div>
+<div id="数组的属性" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> 数组的属性</h2>
+<p>数组中的维数和项数由其形状定义。数组的形状是指定每个维度大小的非负整数元组。在 NumPy 中，维度称为轴。这意味着如果您有一个如下所示的二维数组：</p>
+<div class="sourceCode" id="cb650"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb650-1"><a href="Numpy.html#cb650-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb650-2"><a href="Numpy.html#cb650-2" aria-hidden="true" tabindex="-1"></a>nd <span class="op">=</span> np.array([[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>], [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>]])</span>
+<span id="cb650-3"><a href="Numpy.html#cb650-3" aria-hidden="true" tabindex="-1"></a>nd <span class="co"># 这个数组有 2 个轴。第一个轴的长度为 2，第二个轴的长度为 3</span></span></code></pre></div>
+<pre><code>## array([[0, 0, 0],
+##        [1, 1, 1]])</code></pre>
+<div class="sourceCode" id="cb652"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb652-1"><a href="Numpy.html#cb652-1" aria-hidden="true" tabindex="-1"></a>nd.ndim <span class="co">#数组的轴数或维度数</span></span></code></pre></div>
+<pre><code>## 2</code></pre>
+<div class="sourceCode" id="cb654"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb654-1"><a href="Numpy.html#cb654-1" aria-hidden="true" tabindex="-1"></a>nd.shape <span class="co">#一个整数元组，指示沿数组每个维度存储的元素数</span></span></code></pre></div>
+<pre><code>## (2, 3)</code></pre>
+<div class="sourceCode" id="cb656"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb656-1"><a href="Numpy.html#cb656-1" aria-hidden="true" tabindex="-1"></a>nd.size <span class="co">#数组的元素总数</span></span></code></pre></div>
+<pre><code>## 6</code></pre>
+<div class="sourceCode" id="cb658"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb658-1"><a href="Numpy.html#cb658-1" aria-hidden="true" tabindex="-1"></a>nd.dtype <span class="co">#数据类型</span></span></code></pre></div>
+<pre><code>## dtype(&#39;int32&#39;)</code></pre>
+</div>
+<div id="数组创建" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> 数组创建</h2>
+<p>通常，任何数组对象在 NumPy 中都称为ndarray。有 6 种创建数组的通用机制：</p>
+<ol style="list-style-type: decimal">
+<li>从其他 Python 数据结构（即列表和元组）转换</li>
+<li>内在的 NumPy 数组创建函数（例如 arange、ones、zeros 等）</li>
+<li>复制、加入或改变现有数组</li>
+<li>从磁盘读取数组，无论是标准格式还是自定义格式</li>
+<li>通过使用字符串或缓冲区从原始字节创建数组(不常用)</li>
+<li>使用其他模块函数（例如Pandas，后续介绍）</li>
+</ol>
+<div id="将-python-序列转换为-numpy-数组" class="section level3" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> 将 Python 序列转换为 NumPy 数组</h3>
+<p>NumPy 数组可以使用 Python 序列来定义，例如列表和元组。</p>
+<ul>
+<li>一个数字列表将创建一个一维数组，</li>
+<li>列表的列表将创建一个二维数组，</li>
+<li>进一步的嵌套列表将创建更高维的数组。</li>
+</ul>
+<div class="sourceCode" id="cb660"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb660-1"><a href="Numpy.html#cb660-1" aria-hidden="true" tabindex="-1"></a>a3D <span class="op">=</span> np.array([[[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]], [[<span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>]]])</span>
+<span id="cb660-2"><a href="Numpy.html#cb660-2" aria-hidden="true" tabindex="-1"></a>a3D</span></code></pre></div>
+<pre><code>## array([[[1, 2],
+##         [3, 4]],
+## 
+##        [[5, 6],
+##         [7, 8]]])</code></pre>
+</div>
+<div id="内在的-numpy-数组创建函数" class="section level3" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> 内在的 NumPy 数组创建函数</h3>
+<div class="sourceCode" id="cb662"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb662-1"><a href="Numpy.html#cb662-1" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">2</span>, <span class="dv">3</span>, <span class="fl">0.1</span>) <span class="co"># arange(start, stop, step)</span></span></code></pre></div>
+<pre><code>## array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9])</code></pre>
+<div class="sourceCode" id="cb664"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb664-1"><a href="Numpy.html#cb664-1" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
+<div class="sourceCode" id="cb666"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb666-1"><a href="Numpy.html#cb666-1" aria-hidden="true" tabindex="-1"></a>np.linspace(<span class="fl">1.</span>, <span class="fl">4.</span>, <span class="dv">6</span>) <span class="co">#指定元素数量、起点和终点</span></span></code></pre></div>
+<pre><code>## array([1. , 1.6, 2.2, 2.8, 3.4, 4. ])</code></pre>
+<div class="sourceCode" id="cb668"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb668-1"><a href="Numpy.html#cb668-1" aria-hidden="true" tabindex="-1"></a>np.eye(<span class="dv">3</span>) <span class="co"># 单位矩阵</span></span></code></pre></div>
+<pre><code>## array([[1., 0., 0.],
+##        [0., 1., 0.],
+##        [0., 0., 1.]])</code></pre>
+<div class="sourceCode" id="cb670"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb670-1"><a href="Numpy.html#cb670-1" aria-hidden="true" tabindex="-1"></a>np.diag([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) <span class="co">#对角矩阵</span></span></code></pre></div>
+<pre><code>## array([[1, 0, 0],
+##        [0, 2, 0],
+##        [0, 0, 3]])</code></pre>
+<div class="sourceCode" id="cb672"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb672-1"><a href="Numpy.html#cb672-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]]) <span class="co">#返回只有对角元素的一维数组</span></span>
+<span id="cb672-2"><a href="Numpy.html#cb672-2" aria-hidden="true" tabindex="-1"></a>np.diag(a)</span></code></pre></div>
+<pre><code>## array([1, 4])</code></pre>
+<div class="sourceCode" id="cb674"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb674-1"><a href="Numpy.html#cb674-1" aria-hidden="true" tabindex="-1"></a>np.zeros((<span class="dv">2</span>, <span class="dv">3</span>))</span></code></pre></div>
+<pre><code>## array([[0., 0., 0.],
+##        [0., 0., 0.]])</code></pre>
+<div class="sourceCode" id="cb676"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb676-1"><a href="Numpy.html#cb676-1" aria-hidden="true" tabindex="-1"></a>np.zeros((<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## array([[[0., 0.],
+##         [0., 0.],
+##         [0., 0.]],
+## 
+##        [[0., 0.],
+##         [0., 0.],
+##         [0., 0.]]])</code></pre>
+<div class="sourceCode" id="cb678"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb678-1"><a href="Numpy.html#cb678-1" aria-hidden="true" tabindex="-1"></a>np.ones((<span class="dv">2</span>, <span class="dv">3</span>))</span></code></pre></div>
+<pre><code>## array([[1., 1., 1.],
+##        [1., 1., 1.]])</code></pre>
+<div class="sourceCode" id="cb680"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb680-1"><a href="Numpy.html#cb680-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty array with 4 elements</span></span>
+<span id="cb680-2"><a href="Numpy.html#cb680-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 初始内容是随机的并且取决于内存的状态。</span></span>
+<span id="cb680-3"><a href="Numpy.html#cb680-3" aria-hidden="true" tabindex="-1"></a>np.empty(<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## array([ 0.00000000e+000, -1.11368188e+269,  0.00000000e+000,
+##         0.00000000e+000])</code></pre>
+<div id="随机数组" class="section level4" number="12.3.2.1">
+<h4><span class="header-section-number">12.3.2.1</span> 随机数组</h4>
+<p>default_rng方法将创建一个填充有 0 到 1 之间的随机值的数组。</p>
+<div class="sourceCode" id="cb682"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb682-1"><a href="Numpy.html#cb682-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng()</span>
+<span id="cb682-2"><a href="Numpy.html#cb682-2" aria-hidden="true" tabindex="-1"></a>rng.random((<span class="dv">2</span>,<span class="dv">3</span>))</span></code></pre></div>
+<pre><code>## array([[0.20095688, 0.28426952, 0.28278959],
+##        [0.67162376, 0.62140518, 0.30574233]])</code></pre>
+</div>
+</div>
+<div id="复制加入或改变现有数组" class="section level3" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> 复制、加入或改变现有数组</h3>
+<p>创建数组后，您可以复制、连接或改变这些现有数组以创建新数组。当您将数组或其元素分配给新变量时，您必须显式地numpy.copy指定数组，否则该变量是原始数组的视图。</p>
+<div class="sourceCode" id="cb684"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb684-1"><a href="Numpy.html#cb684-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb684-2"><a href="Numpy.html#cb684-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a[:<span class="dv">2</span>]</span>
+<span id="cb684-3"><a href="Numpy.html#cb684-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb684-4"><a href="Numpy.html#cb684-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;a =&#39;</span>, a, <span class="st">&#39;; b =&#39;</span>, b)</span></code></pre></div>
+<pre><code>## a = [2 3 3 4 5 6] ; b = [2 3]</code></pre>
+<div class="sourceCode" id="cb686"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb686-1"><a href="Numpy.html#cb686-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb686-2"><a href="Numpy.html#cb686-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb686-3"><a href="Numpy.html#cb686-3" aria-hidden="true" tabindex="-1"></a>np.vstack((a,b))</span></code></pre></div>
+<pre><code>## array([[1, 2, 3],
+##        [4, 5, 6]])</code></pre>
+<div class="sourceCode" id="cb688"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb688-1"><a href="Numpy.html#cb688-1" aria-hidden="true" tabindex="-1"></a>np.hstack((a,b))</span></code></pre></div>
+<pre><code>## array([1, 2, 3, 4, 5, 6])</code></pre>
+<div class="sourceCode" id="cb690"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb690-1"><a href="Numpy.html#cb690-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[<span class="fl">1.</span>,<span class="fl">2.</span>],[<span class="fl">3.</span>,<span class="fl">4.</span>]])</span>
+<span id="cb690-2"><a href="Numpy.html#cb690-2" aria-hidden="true" tabindex="-1"></a>x.T</span></code></pre></div>
+<pre><code>## array([[1., 3.],
+##        [2., 4.]])</code></pre>
+</div>
+<div id="从磁盘读取数组" class="section level3" number="12.3.4">
+<h3><span class="header-section-number">12.3.4</span> 从磁盘读取数组</h3>
+<p>NumPy 有两个标准方法用于导入带分隔数据的文件：numpy.loadtxt 和numpy.genfromtxt。</p>
+<div class="sourceCode" id="cb692"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb692-1"><a href="Numpy.html#cb692-1" aria-hidden="true" tabindex="-1"></a>np.loadtxt(<span class="st">&#39;simple.csv&#39;</span>, delimiter <span class="op">=</span> <span class="st">&#39;,&#39;</span>, skiprows <span class="op">=</span> <span class="dv">1</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb693"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb693-1"><a href="Numpy.html#cb693-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> StringIO</span>
+<span id="cb693-2"><a href="Numpy.html#cb693-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">u&quot;1, 2, 3</span><span class="ch">\n</span><span class="st">4, 5, 6&quot;</span></span>
+<span id="cb693-3"><a href="Numpy.html#cb693-3" aria-hidden="true" tabindex="-1"></a>np.genfromtxt(StringIO(data), delimiter<span class="op">=</span><span class="st">&quot;,&quot;</span>)</span></code></pre></div>
+<pre><code>## array([[1., 2., 3.],
+##        [4., 5., 6.]])</code></pre>
+</div>
+</div>
+<div id="数组操作" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> 数组操作</h2>
+<div id="添加和排序元素" class="section level3" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> 添加和排序元素</h3>
+<div class="sourceCode" id="cb695"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb695-1"><a href="Numpy.html#cb695-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>,<span class="dv">4</span>],[<span class="dv">3</span>,<span class="dv">1</span>]])</span>
+<span id="cb695-2"><a href="Numpy.html#cb695-2" aria-hidden="true" tabindex="-1"></a>np.sort(a)                <span class="co"># sort along the last axis</span></span></code></pre></div>
+<pre><code>## array([[1, 4],
+##        [1, 3]])</code></pre>
+<div class="sourceCode" id="cb697"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb697-1"><a href="Numpy.html#cb697-1" aria-hidden="true" tabindex="-1"></a>np.sort(a, axis<span class="op">=</span><span class="va">None</span>)     <span class="co"># sort the flattened array</span></span></code></pre></div>
+<pre><code>## array([1, 1, 3, 4])</code></pre>
+<div class="sourceCode" id="cb699"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb699-1"><a href="Numpy.html#cb699-1" aria-hidden="true" tabindex="-1"></a>np.sort(a, axis<span class="op">=</span><span class="dv">0</span>)        <span class="co"># sort along the first axis (列)</span></span></code></pre></div>
+<pre><code>## array([[1, 1],
+##        [3, 4]])</code></pre>
+<div class="sourceCode" id="cb701"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb701-1"><a href="Numpy.html#cb701-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb701-2"><a href="Numpy.html#cb701-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>])</span>
+<span id="cb701-3"><a href="Numpy.html#cb701-3" aria-hidden="true" tabindex="-1"></a>np.concatenate((a, b))</span></code></pre></div>
+<pre><code>## array([1, 2, 3, 4, 5, 6, 7, 8])</code></pre>
+<div class="sourceCode" id="cb703"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb703-1"><a href="Numpy.html#cb703-1" aria-hidden="true" tabindex="-1"></a>np.concatenate((a, b), axis<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## array([1, 2, 3, 4, 5, 6, 7, 8])</code></pre>
+</div>
+<div id="重塑数组" class="section level3" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> 重塑数组</h3>
+<p>reshape()方法将在不更改数据的情况下为数组提供新形状。当您使用 reshape 方法时，您要生成的数组需要与原始数组具有相同数量的元素。</p>
+<div class="sourceCode" id="cb705"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb705-1"><a href="Numpy.html#cb705-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.arange(<span class="dv">6</span>)</span>
+<span id="cb705-2"><a href="Numpy.html#cb705-2" aria-hidden="true" tabindex="-1"></a>a.reshape(<span class="dv">3</span>, <span class="dv">2</span>) <span class="co"># 默认按照行读取和填充，即order=&#39;C&#39;</span></span></code></pre></div>
+<pre><code>## array([[0, 1],
+##        [2, 3],
+##        [4, 5]])</code></pre>
+<div class="sourceCode" id="cb707"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb707-1"><a href="Numpy.html#cb707-1" aria-hidden="true" tabindex="-1"></a>a.reshape(<span class="dv">3</span>, <span class="dv">2</span>, order<span class="op">=</span><span class="st">&#39;F&#39;</span>) <span class="co"># 按照列读取和填充</span></span></code></pre></div>
+<pre><code>## array([[0, 3],
+##        [1, 4],
+##        [2, 5]])</code></pre>
+<p>特别地，由于被调用数组的大小是确定的， reshape 允许有一个维度存在空缺，此时只需填充-1即可：</p>
+<div class="sourceCode" id="cb709"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb709-1"><a href="Numpy.html#cb709-1" aria-hidden="true" tabindex="-1"></a>a.reshape(<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## array([[0, 1, 2],
+##        [3, 4, 5]])</code></pre>
+<p>下面将n维数组转为1维数组的操作是经常使用的：</p>
+<div class="sourceCode" id="cb711"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb711-1"><a href="Numpy.html#cb711-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.reshape(<span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb711-2"><a href="Numpy.html#cb711-2" aria-hidden="true" tabindex="-1"></a>b.reshape(<span class="op">-</span><span class="dv">1</span>) <span class="co"># 等价于 b.flatten()</span></span></code></pre></div>
+<pre><code>## array([0, 1, 2, 3, 4, 5])</code></pre>
+<div class="sourceCode" id="cb713"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb713-1"><a href="Numpy.html#cb713-1" aria-hidden="true" tabindex="-1"></a>b.reshape(<span class="op">-</span><span class="dv">1</span>, order<span class="op">=</span><span class="st">&#39;F&#39;</span>)</span></code></pre></div>
+<pre><code>## array([0, 2, 4, 1, 3, 5])</code></pre>
+</div>
+<div id="将新轴添加到数组中" class="section level3" number="12.4.3">
+<h3><span class="header-section-number">12.4.3</span> 将新轴添加到数组中</h3>
+<p>可以使用np.newaxis和np.expand_dims来增加现有数组的维度。</p>
+<div class="sourceCode" id="cb715"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb715-1"><a href="Numpy.html#cb715-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb715-2"><a href="Numpy.html#cb715-2" aria-hidden="true" tabindex="-1"></a>a.shape</span></code></pre></div>
+<pre><code>## (6,)</code></pre>
+<div class="sourceCode" id="cb717"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb717-1"><a href="Numpy.html#cb717-1" aria-hidden="true" tabindex="-1"></a>row_vector <span class="op">=</span> a[np.newaxis, :]</span>
+<span id="cb717-2"><a href="Numpy.html#cb717-2" aria-hidden="true" tabindex="-1"></a>row_vector.shape</span></code></pre></div>
+<pre><code>## (1, 6)</code></pre>
+<div class="sourceCode" id="cb719"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb719-1"><a href="Numpy.html#cb719-1" aria-hidden="true" tabindex="-1"></a>col_vector <span class="op">=</span> a[:, np.newaxis]</span>
+<span id="cb719-2"><a href="Numpy.html#cb719-2" aria-hidden="true" tabindex="-1"></a>col_vector.shape</span></code></pre></div>
+<pre><code>## (6, 1)</code></pre>
+<div class="sourceCode" id="cb721"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb721-1"><a href="Numpy.html#cb721-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.expand_dims(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb721-2"><a href="Numpy.html#cb721-2" aria-hidden="true" tabindex="-1"></a>b.shape</span></code></pre></div>
+<pre><code>## (6, 1)</code></pre>
+</div>
+<div id="数组索引" class="section level3" number="12.4.4">
+<h3><span class="header-section-number">12.4.4</span> 数组索引</h3>
+<p>ndarrays 可以使用Python标准的 <code>x[obj]</code> 语法进行索引。Python中 <code>x[(exp1, exp2, ..., expN)]</code> 与 <code>x[exp1, exp2, ..., expN]</code> 是等价的。后者只是前者的语法糖。大多数索引的语法在赋值时也一样适用。</p>
+<div id="基本索引" class="section level4" number="12.4.4.1">
+<h4><span class="header-section-number">12.4.4.1</span> 基本索引</h4>
+<div class="sourceCode" id="cb723"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb723-1"><a href="Numpy.html#cb723-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb723-2"><a href="Numpy.html#cb723-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## 2</code></pre>
+<p>必须注意，返回的数组是一个视图，即它不是原始数组的副本，而是指向与原始数组相同的内存值。</p>
+<div class="sourceCode" id="cb725"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb725-1"><a href="Numpy.html#cb725-1" aria-hidden="true" tabindex="-1"></a>x.shape <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">5</span>)  <span class="co"># now x is 2-dimensional</span></span>
+<span id="cb725-2"><a href="Numpy.html#cb725-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>, <span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## 8</code></pre>
+<div class="sourceCode" id="cb727"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb727-1"><a href="Numpy.html#cb727-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>]</span></code></pre></div>
+<pre><code>## array([0, 1, 2, 3, 4])</code></pre>
+<div class="sourceCode" id="cb729"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb729-1"><a href="Numpy.html#cb729-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>][<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## 2</code></pre>
+<p>基本切片语法是<code>i:j:k</code>，其中i是起始索引，j是停止索引，k是步长 。</p>
+<div class="sourceCode" id="cb731"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb731-1"><a href="Numpy.html#cb731-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb731-2"><a href="Numpy.html#cb731-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>:<span class="dv">7</span>:<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## array([1, 3, 5])</code></pre>
+<div class="sourceCode" id="cb733"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb733-1"><a href="Numpy.html#cb733-1" aria-hidden="true" tabindex="-1"></a>x[<span class="op">-</span><span class="dv">2</span>:<span class="dv">10</span>]</span></code></pre></div>
+<pre><code>## array([8, 9])</code></pre>
+<div class="sourceCode" id="cb735"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb735-1"><a href="Numpy.html#cb735-1" aria-hidden="true" tabindex="-1"></a>x[<span class="op">-</span><span class="dv">3</span>:<span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## array([7, 6, 5, 4])</code></pre>
+<div class="sourceCode" id="cb737"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb737-1"><a href="Numpy.html#cb737-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[[<span class="dv">1</span>],[<span class="dv">2</span>],[<span class="dv">3</span>]], [[<span class="dv">4</span>],[<span class="dv">5</span>],[<span class="dv">6</span>]]])</span>
+<span id="cb737-2"><a href="Numpy.html#cb737-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## array([[[1],
+##         [2],
+##         [3]],
+## 
+##        [[4],
+##         [5],
+##         [6]]])</code></pre>
+<div class="sourceCode" id="cb739"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb739-1"><a href="Numpy.html#cb739-1" aria-hidden="true" tabindex="-1"></a>x[..., <span class="dv">0</span>] <span class="co"># 相当于x[..., 0]</span></span></code></pre></div>
+<pre><code>## array([[1, 2, 3],
+##        [4, 5, 6]])</code></pre>
+<p>选择元组中的每个<code>newaxis</code>，都可以将选择结果数组扩展一个维度。</p>
+<div class="sourceCode" id="cb741"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb741-1"><a href="Numpy.html#cb741-1" aria-hidden="true" tabindex="-1"></a>x[:, np.newaxis, :, :].shape</span></code></pre></div>
+<pre><code>## (2, 1, 3, 1)</code></pre>
+<div class="sourceCode" id="cb743"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb743-1"><a href="Numpy.html#cb743-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">5</span>)</span>
+<span id="cb743-2"><a href="Numpy.html#cb743-2" aria-hidden="true" tabindex="-1"></a>x[:, np.newaxis] <span class="op">+</span> x[np.newaxis, :]</span></code></pre></div>
+<pre><code>## array([[0, 1, 2, 3, 4],
+##        [1, 2, 3, 4, 5],
+##        [2, 3, 4, 5, 6],
+##        [3, 4, 5, 6, 7],
+##        [4, 5, 6, 7, 8]])</code></pre>
+</div>
+<div id="高级索引" class="section level4" number="12.4.4.2">
+<h4><span class="header-section-number">12.4.4.2</span> 高级索引</h4>
+<p>高级索引在所有对象不是元组序列时触发，比如 ndarray，或包含序列或ndarray的元组。高级索引有两种类型：整数和布尔。所有x[(1, 2, 3),]是高级索引，而x[(1, 2, 3)]是基本索引。</p>
+<p>高级索引总是返回数据的副本。</p>
+<div class="sourceCode" id="cb745"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb745-1"><a href="Numpy.html#cb745-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">10</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb745-2"><a href="Numpy.html#cb745-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## array([10,  9,  8,  7,  6,  5,  4,  3,  2])</code></pre>
+<div class="sourceCode" id="cb747"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb747-1"><a href="Numpy.html#cb747-1" aria-hidden="true" tabindex="-1"></a>x[np.array([<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>])]</span></code></pre></div>
+<pre><code>## array([7, 7, 9, 2])</code></pre>
+<div class="sourceCode" id="cb749"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb749-1"><a href="Numpy.html#cb749-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb749-2"><a href="Numpy.html#cb749-2" aria-hidden="true" tabindex="-1"></a>x[np.array([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>])]</span></code></pre></div>
+<pre><code>## array([[3, 4],
+##        [5, 6]])</code></pre>
+<p>高级索引总是作为一个整体进行广播和迭代。</p>
+<div class="sourceCode" id="cb751"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb751-1"><a href="Numpy.html#cb751-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.arange(<span class="dv">35</span>).reshape(<span class="dv">5</span>, <span class="dv">7</span>)</span>
+<span id="cb751-2"><a href="Numpy.html#cb751-2" aria-hidden="true" tabindex="-1"></a>y[np.array([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>])]</span></code></pre></div>
+<pre><code>## array([[ 0,  1,  2,  3,  4,  5,  6],
+##        [14, 15, 16, 17, 18, 19, 20],
+##        [28, 29, 30, 31, 32, 33, 34]])</code></pre>
+<div class="sourceCode" id="cb753"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb753-1"><a href="Numpy.html#cb753-1" aria-hidden="true" tabindex="-1"></a>y[np.array([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>]), <span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## array([ 2, 16, 30])</code></pre>
+<div class="sourceCode" id="cb755"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb755-1"><a href="Numpy.html#cb755-1" aria-hidden="true" tabindex="-1"></a>y[np.array([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>]), np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>])]</span></code></pre></div>
+<pre><code>## array([ 0, 15, 30])</code></pre>
+<p>如果<code>obj.ndim == x.ndim</code>，那么结果将作为一个一维数组返回。</p>
+<div class="sourceCode" id="cb757"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb757-1"><a href="Numpy.html#cb757-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[<span class="fl">1.</span>, <span class="fl">2.</span>], [np.nan, <span class="fl">3.</span>], [np.nan, np.nan]])</span>
+<span id="cb757-2"><a href="Numpy.html#cb757-2" aria-hidden="true" tabindex="-1"></a>x[<span class="op">~</span>np.isnan(x)]</span></code></pre></div>
+<pre><code>## array([1., 2., 3.])</code></pre>
+<div class="sourceCode" id="cb759"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb759-1"><a href="Numpy.html#cb759-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="fl">1.</span>, <span class="op">-</span><span class="fl">1.</span>, <span class="op">-</span><span class="fl">2.</span>, <span class="dv">3</span>])</span>
+<span id="cb759-2"><a href="Numpy.html#cb759-2" aria-hidden="true" tabindex="-1"></a>x[x <span class="op">&lt;</span> <span class="dv">0</span>] <span class="op">+=</span> <span class="dv">20</span></span></code></pre></div>
+<div class="sourceCode" id="cb760"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb760-1"><a href="Numpy.html#cb760-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">35</span>).reshape(<span class="dv">5</span>, <span class="dv">7</span>)</span>
+<span id="cb760-2"><a href="Numpy.html#cb760-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> x <span class="op">&gt;</span> <span class="dv">20</span></span>
+<span id="cb760-3"><a href="Numpy.html#cb760-3" aria-hidden="true" tabindex="-1"></a>b[:, <span class="dv">5</span>]</span></code></pre></div>
+<pre><code>## array([False, False, False,  True,  True])</code></pre>
+<div class="sourceCode" id="cb762"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb762-1"><a href="Numpy.html#cb762-1" aria-hidden="true" tabindex="-1"></a>x[b[:, <span class="dv">5</span>]]</span></code></pre></div>
+<pre><code>## array([[21, 22, 23, 24, 25, 26, 27],
+##        [28, 29, 30, 31, 32, 33, 34]])</code></pre>
+<p>从数组中，选择总和小于或等于 2 的所有行：</p>
+<div class="sourceCode" id="cb764"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb764-1"><a href="Numpy.html#cb764-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">2</span>]])</span>
+<span id="cb764-2"><a href="Numpy.html#cb764-2" aria-hidden="true" tabindex="-1"></a>rowsum <span class="op">=</span> x.<span class="bu">sum</span>(<span class="op">-</span><span class="dv">1</span>) <span class="co"># equal to x.sum(1)</span></span>
+<span id="cb764-3"><a href="Numpy.html#cb764-3" aria-hidden="true" tabindex="-1"></a>x[rowsum <span class="op">&lt;=</span> <span class="dv">2</span>, :]</span></code></pre></div>
+<pre><code>## array([[0, 1],
+##        [1, 1]])</code></pre>
+<p>结合高级和基本索引：</p>
+<div class="sourceCode" id="cb766"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb766-1"><a href="Numpy.html#cb766-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.arange(<span class="dv">35</span>).reshape(<span class="dv">5</span>,<span class="dv">7</span>)</span>
+<span id="cb766-2"><a href="Numpy.html#cb766-2" aria-hidden="true" tabindex="-1"></a>y[np.array([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>]), <span class="dv">1</span>:<span class="dv">3</span>] <span class="co"># y[:, 1:3][np.array([0, 2, 4]), :]</span></span></code></pre></div>
+<pre><code>## array([[ 1,  2],
+##        [15, 16],
+##        [29, 30]])</code></pre>
+</div>
+<div id="为索引数组赋值" class="section level4" number="12.4.4.3">
+<h4><span class="header-section-number">12.4.4.3</span> 为索引数组赋值</h4>
+<div class="sourceCode" id="cb768"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb768-1"><a href="Numpy.html#cb768-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb768-2"><a href="Numpy.html#cb768-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>:<span class="dv">7</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb768-3"><a href="Numpy.html#cb768-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## array([0, 1, 1, 1, 1, 1, 1, 7, 8, 9])</code></pre>
+<div class="sourceCode" id="cb770"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb770-1"><a href="Numpy.html#cb770-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>:<span class="dv">7</span>] <span class="op">=</span> np.arange(<span class="dv">5</span>)</span>
+<span id="cb770-2"><a href="Numpy.html#cb770-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## array([0, 1, 0, 1, 2, 3, 4, 7, 8, 9])</code></pre>
+</div>
+</div>
+<div id="数组运算" class="section level3" number="12.4.5">
+<h3><span class="header-section-number">12.4.5</span> 数组运算</h3>
+<div class="sourceCode" id="cb772"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb772-1"><a href="Numpy.html#cb772-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>])</span>
+<span id="cb772-2"><a href="Numpy.html#cb772-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">+</span> data</span></code></pre></div>
+<pre><code>## array([2, 4])</code></pre>
+<div class="sourceCode" id="cb774"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb774-1"><a href="Numpy.html#cb774-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">-</span> data</span></code></pre></div>
+<pre><code>## array([0, 0])</code></pre>
+<div class="sourceCode" id="cb776"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb776-1"><a href="Numpy.html#cb776-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">*</span> data</span></code></pre></div>
+<pre><code>## array([1, 4])</code></pre>
+<div class="sourceCode" id="cb778"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb778-1"><a href="Numpy.html#cb778-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">/</span> data</span></code></pre></div>
+<pre><code>## array([1., 1.])</code></pre>
+<div class="sourceCode" id="cb780"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb780-1"><a href="Numpy.html#cb780-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
+<span id="cb780-2"><a href="Numpy.html#cb780-2" aria-hidden="true" tabindex="-1"></a>b.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## array([4, 6])</code></pre>
+<div class="sourceCode" id="cb782"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb782-1"><a href="Numpy.html#cb782-1" aria-hidden="true" tabindex="-1"></a>b.<span class="bu">max</span>()</span></code></pre></div>
+<pre><code>## 4</code></pre>
+<div class="sourceCode" id="cb784"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb784-1"><a href="Numpy.html#cb784-1" aria-hidden="true" tabindex="-1"></a>b.<span class="bu">min</span>()</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<div class="sourceCode" id="cb786"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb786-1"><a href="Numpy.html#cb786-1" aria-hidden="true" tabindex="-1"></a>a.<span class="bu">min</span>(axis<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<p>查找唯一值：</p>
+<div class="sourceCode" id="cb788"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb788-1"><a href="Numpy.html#cb788-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>]])</span>
+<span id="cb788-2"><a href="Numpy.html#cb788-2" aria-hidden="true" tabindex="-1"></a>np.unique(b)</span></code></pre></div>
+<pre><code>## array([1, 2, 3])</code></pre>
+<div class="sourceCode" id="cb790"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb790-1"><a href="Numpy.html#cb790-1" aria-hidden="true" tabindex="-1"></a>np.unique(b, axis<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## array([[1, 2, 3],
+##        [3, 1, 1]])</code></pre>
+<p>反转数组：如果不指定轴，np.flip()将沿输入数组的所有轴反转内容。</p>
+<div class="sourceCode" id="cb792"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb792-1"><a href="Numpy.html#cb792-1" aria-hidden="true" tabindex="-1"></a>arr_2d <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>], [<span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]])</span>
+<span id="cb792-2"><a href="Numpy.html#cb792-2" aria-hidden="true" tabindex="-1"></a>np.flip(arr_2d)</span></code></pre></div>
+<pre><code>## array([[12, 11, 10,  9],
+##        [ 8,  7,  6,  5],
+##        [ 4,  3,  2,  1]])</code></pre>
+<div class="sourceCode" id="cb794"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb794-1"><a href="Numpy.html#cb794-1" aria-hidden="true" tabindex="-1"></a>np.flip(arr_2d, axis<span class="op">=</span><span class="dv">0</span>) <span class="co"># axis=0 表示列</span></span></code></pre></div>
+<pre><code>## array([[ 9, 10, 11, 12],
+##        [ 5,  6,  7,  8],
+##        [ 1,  2,  3,  4]])</code></pre>
+<p>有两种方法来展平数组：flatten()和ravel()，两者的主要区别在于ravel()实际上是对父数组的引用（即“视图”）。这意味着对新数组的任何更改也会影响父数组。由于ravel不创建副本，因此它的内存效率很高。使用 flatten 时，对新数组的更改不会更改父数组。</p>
+<div class="sourceCode" id="cb796"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb796-1"><a href="Numpy.html#cb796-1" aria-hidden="true" tabindex="-1"></a>arr_2d.flatten()</span></code></pre></div>
+<pre><code>## array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])</code></pre>
+<div class="sourceCode" id="cb798"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb798-1"><a href="Numpy.html#cb798-1" aria-hidden="true" tabindex="-1"></a>a2 <span class="op">=</span> arr_2d.ravel()</span>
+<span id="cb798-2"><a href="Numpy.html#cb798-2" aria-hidden="true" tabindex="-1"></a>a2[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">98</span></span>
+<span id="cb798-3"><a href="Numpy.html#cb798-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a2)</span></code></pre></div>
+<pre><code>## [98  2  3  4  5  6  7  8  9 10 11 12]</code></pre>
+</div>
+<div id="常用函数" class="section level3" number="12.4.6">
+<h3><span class="header-section-number">12.4.6</span> 常用函数</h3>
+<div id="where" class="section level4" number="12.4.6.1">
+<h4><span class="header-section-number">12.4.6.1</span> where</h4>
+<p>where 是一种条件函数，可以指定满足条件与不满足条件位置对应的填充值：</p>
+<div class="sourceCode" id="cb800"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb800-1"><a href="Numpy.html#cb800-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>,<span class="dv">0</span>])</span>
+<span id="cb800-2"><a href="Numpy.html#cb800-2" aria-hidden="true" tabindex="-1"></a>np.where(a<span class="op">&gt;</span><span class="dv">0</span>, a, <span class="dv">99</span>)</span></code></pre></div>
+<pre><code>## array([99,  1, 99, 99])</code></pre>
+<div class="sourceCode" id="cb802"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb802-1"><a href="Numpy.html#cb802-1" aria-hidden="true" tabindex="-1"></a>np.argwhere(x<span class="op">&gt;</span><span class="dv">0</span>) <span class="co">#find the indices of array elements that are non-zero</span></span></code></pre></div>
+<pre><code>## array([[1],
+##        [3],
+##        [4],
+##        [5],
+##        [6],
+##        [7],
+##        [8],
+##        [9]], dtype=int64)</code></pre>
+</div>
+<div id="nonzero-argmax-argmin" class="section level4" number="12.4.6.2">
+<h4><span class="header-section-number">12.4.6.2</span> nonzero, argmax, argmin</h4>
+<p>这三个函数返回的都是索引，nonzero 返回非零数的索引，argmax, argmin 分别返回最大和最小数的索引：</p>
+<div class="sourceCode" id="cb804"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb804-1"><a href="Numpy.html#cb804-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="op">-</span><span class="dv">2</span>,<span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>],[<span class="dv">1</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>]])</span>
+<span id="cb804-2"><a href="Numpy.html#cb804-2" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>## array([[-2, -5,  0],
+##        [ 1,  3, -1]])</code></pre>
+<div class="sourceCode" id="cb806"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb806-1"><a href="Numpy.html#cb806-1" aria-hidden="true" tabindex="-1"></a>np.nonzero(a)</span></code></pre></div>
+<pre><code>## (array([0, 0, 1, 1, 1], dtype=int64), array([0, 1, 0, 1, 2], dtype=int64))</code></pre>
+<div class="sourceCode" id="cb808"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb808-1"><a href="Numpy.html#cb808-1" aria-hidden="true" tabindex="-1"></a>a[a.nonzero()] </span></code></pre></div>
+<pre><code>## array([-2, -5,  1,  3, -1])</code></pre>
+<div class="sourceCode" id="cb810"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb810-1"><a href="Numpy.html#cb810-1" aria-hidden="true" tabindex="-1"></a>a.argmax(axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## array([2, 1], dtype=int64)</code></pre>
+<div class="sourceCode" id="cb812"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb812-1"><a href="Numpy.html#cb812-1" aria-hidden="true" tabindex="-1"></a>np.amax(a, axis<span class="op">=</span><span class="dv">1</span>) </span></code></pre></div>
+<pre><code>## array([0, 3])</code></pre>
+<div class="sourceCode" id="cb814"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb814-1"><a href="Numpy.html#cb814-1" aria-hidden="true" tabindex="-1"></a>a.argmin()</span></code></pre></div>
+<pre><code>## 1</code></pre>
+</div>
+<div id="any-all" class="section level4" number="12.4.6.3">
+<h4><span class="header-section-number">12.4.6.3</span> any, all</h4>
+<div class="sourceCode" id="cb816"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb816-1"><a href="Numpy.html#cb816-1" aria-hidden="true" tabindex="-1"></a>a.<span class="bu">any</span>()</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb818"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb818-1"><a href="Numpy.html#cb818-1" aria-hidden="true" tabindex="-1"></a>a.<span class="bu">all</span></span></code></pre></div>
+<pre><code>## &lt;built-in method all of numpy.ndarray object at 0x000000002AF720F0&gt;</code></pre>
+</div>
+<div id="cumprod-cumsum-diff" class="section level4" number="12.4.6.4">
+<h4><span class="header-section-number">12.4.6.4</span> cumprod, cumsum, diff</h4>
+<div class="sourceCode" id="cb820"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb820-1"><a href="Numpy.html#cb820-1" aria-hidden="true" tabindex="-1"></a>a.cumprod()</span></code></pre></div>
+<pre><code>## array([-2, 10,  0,  0,  0,  0], dtype=int32)</code></pre>
+<div class="sourceCode" id="cb822"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb822-1"><a href="Numpy.html#cb822-1" aria-hidden="true" tabindex="-1"></a>a.cumsum()</span></code></pre></div>
+<pre><code>## array([-2, -7, -7, -6, -3, -4], dtype=int32)</code></pre>
+<div class="sourceCode" id="cb824"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb824-1"><a href="Numpy.html#cb824-1" aria-hidden="true" tabindex="-1"></a>np.diff(a)</span></code></pre></div>
+<pre><code>## array([[-3,  5],
+##        [ 2, -4]])</code></pre>
+</div>
+<div id="统计函数" class="section level4" number="12.4.6.5">
+<h4><span class="header-section-number">12.4.6.5</span> 统计函数</h4>
+<div class="sourceCode" id="cb826"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb826-1"><a href="Numpy.html#cb826-1" aria-hidden="true" tabindex="-1"></a>a.mean()</span></code></pre></div>
+<pre><code>## -0.6666666666666666</code></pre>
+<div class="sourceCode" id="cb828"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb828-1"><a href="Numpy.html#cb828-1" aria-hidden="true" tabindex="-1"></a>np.average(np.arange(<span class="dv">1</span>, <span class="dv">11</span>), weights<span class="op">=</span>np.arange(<span class="dv">10</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## 4.0</code></pre>
 
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -439,7 +887,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="specialized-data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Pandas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Pandas0.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
