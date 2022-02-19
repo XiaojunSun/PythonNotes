@@ -18,5 +18,6 @@ PythonNotes.Rproj
 *.txt
 *.py
 *.R
+*.xlsx
 snack.ipynb
 data
